@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AESwiftWorking_Example' do
+  pod 'AESwiftWorking', :path => '../'
+
+  target 'AESwiftWorking_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
