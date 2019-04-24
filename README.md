@@ -1,4 +1,5 @@
 # AESwiftWorking
+<<<<<<< HEAD
 
 [![CI Status](https://img.shields.io/travis/HYAdonisCoding/AESwiftWorking.svg?style=flat)](https://travis-ci.org/HYAdonisCoding/AESwiftWorking)
 [![Version](https://img.shields.io/cocoapods/v/AESwiftWorking.svg?style=flat)](https://cocoapods.org/pods/AESwiftWorking)
@@ -27,3 +28,6 @@ HYAdonisCoding, 296786475@qq.com
 ## License
 
 AESwiftWorking is available under the MIT license. See the LICENSE file for more info.
+=======
+一个自动、高效的Swift Work工具。
+>>>>>>> c212fcc087e1ace3511fd7f27eb77c9bef014984

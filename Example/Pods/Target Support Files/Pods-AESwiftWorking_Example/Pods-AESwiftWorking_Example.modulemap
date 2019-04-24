@@ -1,0 +1,6 @@
+framework module Pods_AESwiftWorking_Example {
+  umbrella header "Pods-AESwiftWorking_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

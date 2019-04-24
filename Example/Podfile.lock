@@ -1,0 +1,16 @@
+PODS:
+  - AESwiftWorking (0.1.0)
+
+DEPENDENCIES:
+  - AESwiftWorking (from `../`)
+
+EXTERNAL SOURCES:
+  AESwiftWorking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AESwiftWorking: 70c658f2414b40cac76295650840e816906b216d
+
+PODFILE CHECKSUM: 406cde3143d944f31ca663423162336b12daf43e
+
+COCOAPODS: 1.6.1
