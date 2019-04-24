@@ -10,11 +10,11 @@
 		062849ECBA32CB8AA2F46CE32C33B6BA /* Pods-AESwiftWorking_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7965492A179EDE02024973B302549577 /* Pods-AESwiftWorking_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A81CA7F4310F3D1536A6FE1EDCF1321 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		577EE3C1960298DDBC2DBAB433DA2B8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		74D402D493FCD73020511AD71CB8F8B6 /* AESwiftWorking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 174974F2204F9CD66BF26F14A7FBEB44 /* AESwiftWorking-dummy.m */; };
+		5F0701686BB790152F1B09FD50B0F514 /* HYAuthenticationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150806C03192C63D777CCE12EE803EF5 /* HYAuthenticationTool.swift */; };
+		648CFF03DEFA5FFB1A4F15596DC6FC46 /* AESwiftWorking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B693E96DC5AF6231726465183316 /* AESwiftWorking-dummy.m */; };
 		7D9F45A03C5BA5A476E929F63E86709A /* Pods-AESwiftWorking_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99048E0246BCE3FF9654FA706F6BA /* Pods-AESwiftWorking_Example-dummy.m */; };
-		9C5F4DEC73C232BF8E826D3E6295A1EE /* AESwiftWorking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F761E6AA259E19DB891C36C15EAC31 /* AESwiftWorking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5F4DEC73C232BF8E826D3E6295A1EE /* AESwiftWorking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B7B9FC52D159716B3F4AEAA318F47E /* AESwiftWorking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D5850F0296A9CB4C34CBE7F5DE0BC53 /* Pods-AESwiftWorking_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 105461D2BAB4E4760BD798B71BA49FCF /* Pods-AESwiftWorking_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A04F95F312B8899C06A698FC1A3FF58F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF113B309A7CF97B28EB64D228414882 /* ReplaceMe.swift */; };
 		B19DB565886326969AD31A53C2D4BAE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		DA39D6A399A7A4056A8B2EE64B64423A /* Pods-AESwiftWorking_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6B3902626F9DE7917A7CE65C5DD30 /* Pods-AESwiftWorking_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -40,32 +40,32 @@
 		00D12825EC75A756E4AEDAD696FC1D88 /* Pods-AESwiftWorking_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AESwiftWorking_Tests.modulemap"; sourceTree = "<group>"; };
 		0C9F4E4C528E908C5165033DB073FD45 /* Pods-AESwiftWorking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D10D365A9451983A1D1211BF0EDB254 /* Pods-AESwiftWorking_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AESwiftWorking_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0F0636A85B06B61BDB9AB7EE65B8F229 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		105461D2BAB4E4760BD798B71BA49FCF /* Pods-AESwiftWorking_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AESwiftWorking_Tests-umbrella.h"; sourceTree = "<group>"; };
-		174974F2204F9CD66BF26F14A7FBEB44 /* AESwiftWorking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AESwiftWorking-dummy.m"; sourceTree = "<group>"; };
+		150806C03192C63D777CCE12EE803EF5 /* HYAuthenticationTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HYAuthenticationTool.swift; path = AESwiftWorking/Classes/HYAuthenticationTool.swift; sourceTree = "<group>"; };
 		1D19D0B0231D0CE6751E1A5608BCAE8C /* Pods-AESwiftWorking_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AESwiftWorking_Example.modulemap"; sourceTree = "<group>"; };
+		24F6B693E96DC5AF6231726465183316 /* AESwiftWorking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AESwiftWorking-dummy.m"; sourceTree = "<group>"; };
 		25C586B9C11256E1C097D5D7074116AC /* Pods-AESwiftWorking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		350044797E6AA1F3082A2C07CE451AA0 /* Pods-AESwiftWorking_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D4E03FE1FB96BA3F71BF2B5864F6989 /* Pods-AESwiftWorking_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4102FC723E95F64E6FAF5F4F9C59081A /* AESwiftWorking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AESwiftWorking.modulemap; sourceTree = "<group>"; };
-		43EE92B9A7E0B0C184B2223E44A138C7 /* AESwiftWorking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking-prefix.pch"; sourceTree = "<group>"; };
+		53B7B9FC52D159716B3F4AEAA318F47E /* AESwiftWorking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking-umbrella.h"; sourceTree = "<group>"; };
+		5718121F24E069D5361A4E8138BB83E9 /* AESwiftWorking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AESwiftWorking-Info.plist"; sourceTree = "<group>"; };
 		5C47C6825F34B653E48B98A2226E1F4F /* Pods-AESwiftWorking_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Tests-Info.plist"; sourceTree = "<group>"; };
 		649965EA15CAFCC0DAF41480B29A5A94 /* Pods_AESwiftWorking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AESwiftWorking_Example.framework; path = "Pods-AESwiftWorking_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7800D99E71A2101B044BDC30523CF94C /* AESwiftWorking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AESwiftWorking-Info.plist"; sourceTree = "<group>"; };
 		7965492A179EDE02024973B302549577 /* Pods-AESwiftWorking_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AESwiftWorking_Example-umbrella.h"; sourceTree = "<group>"; };
 		7EB99048E0246BCE3FF9654FA706F6BA /* Pods-AESwiftWorking_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AESwiftWorking_Example-dummy.m"; sourceTree = "<group>"; };
 		8725FE2DC5AFE84A56031F6A373B6EA9 /* Pods_AESwiftWorking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AESwiftWorking_Tests.framework; path = "Pods-AESwiftWorking_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F4479E84786F6B2899939917FE7392F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8A5DB9CF5C83BDD68D04DA1448088528 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		913FAE2F7327548CB41666062F4E1496 /* Pods-AESwiftWorking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		91D6EF4D329D7A99AE155CE7FB64BA7C /* Pods-AESwiftWorking_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AESwiftWorking_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EA6B3902626F9DE7917A7CE65C5DD30 /* Pods-AESwiftWorking_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AESwiftWorking_Tests-dummy.m"; sourceTree = "<group>"; };
-		AF113B309A7CF97B28EB64D228414882 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AESwiftWorking/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		A9E02E46DB9CAC31DD35E20D16DE182A /* AESwiftWorking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking-prefix.pch"; sourceTree = "<group>"; };
+		B1846652D51D1140958DFD7D0271106A /* AESwiftWorking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AESwiftWorking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B68B6DA10F464CC7B40429C3F5B522B7 /* AESwiftWorking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AESwiftWorking.modulemap; sourceTree = "<group>"; };
 		CAD0F296C0DDD963696561EC85DA5789 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D261556A5628E3B6A12588AE9AB70F0B /* AESwiftWorking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AESwiftWorking.xcconfig; sourceTree = "<group>"; };
-		D6F761E6AA259E19DB891C36C15EAC31 /* AESwiftWorking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking-umbrella.h"; sourceTree = "<group>"; };
-		DEF029A3EDABEF226C3FF4BEACBC6A77 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		DFCB8AC3E3CDF2C78E4AD873FB4B7304 /* AESwiftWorking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AESwiftWorking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CC54C9C3A702306E100D20C6520E4965 /* AESwiftWorking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AESwiftWorking.xcconfig; sourceTree = "<group>"; };
 		EA1ABE29C3B0431D3CD88C5C3F974FCF /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AESwiftWorking.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA79CC5FFE8F5FB81600FA1BA4AAC772 /* Pods-AESwiftWorking_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AESwiftWorking_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F96ADD09E64C8C1A40F32F8C4AA622C1 /* Pods-AESwiftWorking_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Example-Info.plist"; sourceTree = "<group>"; };
@@ -99,26 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FC3DB8AB159C2B126DF28BDCF72A053 /* Support Files */ = {
+		0D7C83E6515C8466637925B6895A517C /* AESwiftWorking */ = {
 			isa = PBXGroup;
 			children = (
-				4102FC723E95F64E6FAF5F4F9C59081A /* AESwiftWorking.modulemap */,
-				D261556A5628E3B6A12588AE9AB70F0B /* AESwiftWorking.xcconfig */,
-				174974F2204F9CD66BF26F14A7FBEB44 /* AESwiftWorking-dummy.m */,
-				7800D99E71A2101B044BDC30523CF94C /* AESwiftWorking-Info.plist */,
-				43EE92B9A7E0B0C184B2223E44A138C7 /* AESwiftWorking-prefix.pch */,
-				D6F761E6AA259E19DB891C36C15EAC31 /* AESwiftWorking-umbrella.h */,
+				150806C03192C63D777CCE12EE803EF5 /* HYAuthenticationTool.swift */,
+				4ED026232CE2065FD50EC6A8D2837161 /* Pod */,
+				FC2E4E3BDBC97CF87C91CBCAB2E89ECE /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AESwiftWorking";
+			name = AESwiftWorking;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		844313FCAA8AE173CEC578E250AAF436 /* Pod */ = {
+		4ED026232CE2065FD50EC6A8D2837161 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				DFCB8AC3E3CDF2C78E4AD873FB4B7304 /* AESwiftWorking.podspec */,
-				8F4479E84786F6B2899939917FE7392F /* LICENSE */,
-				DEF029A3EDABEF226C3FF4BEACBC6A77 /* README.md */,
+				B1846652D51D1140958DFD7D0271106A /* AESwiftWorking.podspec */,
+				8A5DB9CF5C83BDD68D04DA1448088528 /* LICENSE */,
+				0F0636A85B06B61BDB9AB7EE65B8F229 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -147,17 +144,6 @@
 			path = "Target Support Files/Pods-AESwiftWorking_Tests";
 			sourceTree = "<group>";
 		};
-		B2570E73233F8C026A53849F33F36518 /* AESwiftWorking */ = {
-			isa = PBXGroup;
-			children = (
-				AF113B309A7CF97B28EB64D228414882 /* ReplaceMe.swift */,
-				844313FCAA8AE173CEC578E250AAF436 /* Pod */,
-				1FC3DB8AB159C2B126DF28BDCF72A053 /* Support Files */,
-			);
-			name = AESwiftWorking;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		BA4D8B28544019651D9A23C771C34F39 /* Pods-AESwiftWorking_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +164,7 @@
 		CAFF02B8A73789AC65F809C5201D8BC9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B2570E73233F8C026A53849F33F36518 /* AESwiftWorking */,
+				0D7C83E6515C8466637925B6895A517C /* AESwiftWorking */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -219,6 +205,20 @@
 				A642163000DEB1B5B8A2F827A5F80A02 /* Pods-AESwiftWorking_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FC2E4E3BDBC97CF87C91CBCAB2E89ECE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B68B6DA10F464CC7B40429C3F5B522B7 /* AESwiftWorking.modulemap */,
+				CC54C9C3A702306E100D20C6520E4965 /* AESwiftWorking.xcconfig */,
+				24F6B693E96DC5AF6231726465183316 /* AESwiftWorking-dummy.m */,
+				5718121F24E069D5361A4E8138BB83E9 /* AESwiftWorking-Info.plist */,
+				A9E02E46DB9CAC31DD35E20D16DE182A /* AESwiftWorking-prefix.pch */,
+				53B7B9FC52D159716B3F4AEAA318F47E /* AESwiftWorking-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AESwiftWorking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +275,7 @@
 			buildConfigurationList = FC414C4F0BB546EE7AA5CB411A58EB43 /* Build configuration list for PBXNativeTarget "AESwiftWorking" */;
 			buildPhases = (
 				07C708C77933C27487E02452FD9AF836 /* Headers */,
-				E97BD67CD9DC18B8D9EB9B0E8E79ED57 /* Sources */,
+				58FA9EC234A3941FB36CD4D2BA592651 /* Sources */,
 				D8EA91A1EC0BAB42B4DE143BB64D3098 /* Frameworks */,
 				CF3A48677333D8A2CD7841605910B580 /* Resources */,
 			);
@@ -368,20 +368,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58FA9EC234A3941FB36CD4D2BA592651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648CFF03DEFA5FFB1A4F15596DC6FC46 /* AESwiftWorking-dummy.m in Sources */,
+				5F0701686BB790152F1B09FD50B0F514 /* HYAuthenticationTool.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8410977B254E444FD6D3CA8121EFC4D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DA39D6A399A7A4056A8B2EE64B64423A /* Pods-AESwiftWorking_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E97BD67CD9DC18B8D9EB9B0E8E79ED57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74D402D493FCD73020511AD71CB8F8B6 /* AESwiftWorking-dummy.m in Sources */,
-				A04F95F312B8899C06A698FC1A3FF58F /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,38 +403,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04738797F77B879845131E02AA62F21E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D261556A5628E3B6A12588AE9AB70F0B /* AESwiftWorking.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AESwiftWorking/AESwiftWorking-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking.modulemap";
-				PRODUCT_MODULE_NAME = AESwiftWorking;
-				PRODUCT_NAME = AESwiftWorking;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		113F7EF2B6A37DE87FE536958F6ADC19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 913FAE2F7327548CB41666062F4E1496 /* Pods-AESwiftWorking_Example.release.xcconfig */;
@@ -469,6 +437,69 @@
 			};
 			name = Release;
 		};
+		224B74B731D4E048C7621E247C83451C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC54C9C3A702306E100D20C6520E4965 /* AESwiftWorking.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AESwiftWorking/AESwiftWorking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking.modulemap";
+				PRODUCT_MODULE_NAME = AESwiftWorking;
+				PRODUCT_NAME = AESwiftWorking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4D962B2C4005963F7168BEC14D2CD989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC54C9C3A702306E100D20C6520E4965 /* AESwiftWorking.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AESwiftWorking/AESwiftWorking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking.modulemap";
+				PRODUCT_MODULE_NAME = AESwiftWorking;
+				PRODUCT_NAME = AESwiftWorking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5E027EBC165CE99FFF5B1E976A0A77C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25C586B9C11256E1C097D5D7074116AC /* Pods-AESwiftWorking_Example.debug.xcconfig */;
@@ -496,37 +527,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5E25F51AED6C34EF788E9279F648AF22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D261556A5628E3B6A12588AE9AB70F0B /* AESwiftWorking.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AESwiftWorking/AESwiftWorking-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AESwiftWorking/AESwiftWorking.modulemap";
-				PRODUCT_MODULE_NAME = AESwiftWorking;
-				PRODUCT_NAME = AESwiftWorking;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -757,8 +757,8 @@
 		FC414C4F0BB546EE7AA5CB411A58EB43 /* Build configuration list for PBXNativeTarget "AESwiftWorking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E25F51AED6C34EF788E9279F648AF22 /* Debug */,
-				04738797F77B879845131E02AA62F21E /* Release */,
+				224B74B731D4E048C7621E247C83451C /* Debug */,
+				4D962B2C4005963F7168BEC14D2CD989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

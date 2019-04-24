@@ -1,8 +1,8 @@
 {
   "name": "AESwiftWorking",
   "version": "0.1.0",
-  "summary": "A short description of AESwiftWorking.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "一个自动、高效的Swift Work工具。",
+  "description": "一个自动、高效的Swift Work工具。也是小伙伴们学习swift的进程。",
   "homepage": "https://github.com/HYAdonisCoding/AESwiftWorking",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "AESwiftWorking/Classes/**/*"
 }

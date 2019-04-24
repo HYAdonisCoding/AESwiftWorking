@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AESwiftWorking'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AESwiftWorking.'
+  s.summary          = '一个自动、高效的Swift Work工具。'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+一个自动、高效的Swift Work工具。也是小伙伴们学习swift的进程。
                        DESC
 
   s.homepage         = 'https://github.com/HYAdonisCoding/AESwiftWorking'
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/HYAdonisCoding/AESwiftWorking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'AESwiftWorking/Classes/**/*'
   
