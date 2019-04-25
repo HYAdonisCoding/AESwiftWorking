@@ -10,20 +10,12 @@ import UIKit
 import LocalAuthentication
 
 public class AEAuthenticationTool: NSObject {
-    typealias completionHandlers = (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error)  -> Void //逃逸闭包
-      var completionHandlerArr: [completionHandlers] = []//闭包数组
-    
-   public  func testCompletionMethod() -> Array<Any> {
-   
-    return  completionHandlerArr
-    }
-    
     ///闭包
-//    var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error) -> Void] = []
+    public var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String,  _ error: Error) -> Void] = []
     
 
     ///ID验证枚举
-    enum HYAuthenticationVerifyType {
+    public enum HYAuthenticationVerifyType {
         case FaceID
         case TouchID
         case SecretCode
@@ -39,19 +31,19 @@ public class AEAuthenticationTool: NSObject {
     private var type = HYAuthenticationVerifyType.TouchID
     
     
-    func authenticatedByBiometryOrDevicePasscode (completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String, _ error: Error?) -> Void) -> Void {
+    public func authenticatedByBiometryOrDevicePasscode (completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String, _ error: Error?) -> Void) -> Void {
         
         if isIPhoneXSeries() {
             self.type = HYAuthenticationVerifyType.FaceID
         }
 
-        self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, errorString, error) in
+        self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, descString, error) in
             if secretCodeVerifySuccess {
                 completionHandlers(true, self.type, "Verify success", error)
             } else {
                 if let error = error as NSError? {
-                    self.callBackWithFaceIDOrTouchID(context: self.context, error: error, completionHandlers: { (success, type, errorString1, error) in
-                            completionHandlers(success, type, errorString1, error!)
+                    self.callBackWithFaceIDOrTouchID(context: self.context, error: error, completionHandlers: { (success, type, descString1, error) in
+                            completionHandlers(success, type, descString1, error!)
                     })
                 }
             }
@@ -59,7 +51,7 @@ public class AEAuthenticationTool: NSObject {
         
     }
     
-    private func authenticatedByBiometryOrDevicePasscodeVerify(completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String, _ errorX: Error) -> Void) -> Void {
+    private func authenticatedByBiometryOrDevicePasscodeVerify(completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String, _ errorX: Error) -> Void) -> Void {
         var error1 : NSError?
 
         //开始识别
@@ -70,8 +62,8 @@ public class AEAuthenticationTool: NSObject {
                     
                 } else {
                     if let error2 = errorSys as NSError? {
-                        self.callBackWithFaceIDOrTouchID(context: self.context, error: error2, completionHandlers: { (success, type, errorString, error3) in
-                            completionHandlers(success, type, errorString, error3!)
+                        self.callBackWithFaceIDOrTouchID(context: self.context, error: error2, completionHandlers: { (success, type, descString, error3) in
+                            completionHandlers(success, type, descString, error3!)
                         })
                     }
                     
@@ -95,7 +87,7 @@ public class AEAuthenticationTool: NSObject {
 
     ///   - error: 错误
     ///   - completionHandlers: 回调
-    private func callBackWithFaceIDOrTouchID(context: LAContext, error: NSError, completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String, _ error: Error?) -> Void) -> Void {
+    private func callBackWithFaceIDOrTouchID(context: LAContext, error: NSError, completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String, _ error: Error?) -> Void) -> Void {
         var type = HYAuthenticationVerifyType.TouchID
         if isIPhoneXSeries() {
             type = HYAuthenticationVerifyType.FaceID
@@ -113,8 +105,8 @@ public class AEAuthenticationTool: NSObject {
         case LAError.authenticationFailed.rawValue:
             debugPrint("The user failed to provide valid credentials")
             if type != HYAuthenticationVerifyType.SecretCode {
-                self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, errorString, error) in
-                    completionHandlers(secretCodeVerifySuccess, type, errorString, error)
+                self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, descString, error) in
+                    completionHandlers(secretCodeVerifySuccess, type, descString, error)
                 }
             }
         case LAError.invalidContext.rawValue:
@@ -125,8 +117,8 @@ public class AEAuthenticationTool: NSObject {
             completionHandlers(false, type, "Authentication was cancelled by the system", error)
         case LAError.touchIDLockout.rawValue:
             debugPrint("Too many failed attempts.")
-            self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, errorString, error) in
-                completionHandlers(secretCodeVerifySuccess, type, errorString, error)
+            self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, descString, error) in
+                completionHandlers(secretCodeVerifySuccess, type, descString, error)
             }
         case LAError.touchIDNotAvailable.rawValue:
             completionHandlers(false, type, "TouchID is not available on the device", error)
@@ -134,8 +126,8 @@ public class AEAuthenticationTool: NSObject {
             completionHandlers(false, type, "The user did cancel", error)
         case LAError.userFallback.rawValue:
             debugPrint("The user chose to use the fallback")
-            self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, errorString, error) in
-                completionHandlers(secretCodeVerifySuccess, type, errorString, error)
+            self.authenticatedByBiometryOrDevicePasscodeVerify { (secretCodeVerifySuccess, type, descString, error) in
+                completionHandlers(secretCodeVerifySuccess, type, descString, error)
             }
         default:
             completionHandlers(false, type, "Did not find error code on LAError object", error)
