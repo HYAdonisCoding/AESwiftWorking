@@ -52,21 +52,21 @@
 		3D4E03FE1FB96BA3F71BF2B5864F6989 /* Pods-AESwiftWorking_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		43CC5EF2BF090EF3BFC54A801684EF84 /* AESwiftWorking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AESwiftWorking.modulemap; sourceTree = "<group>"; };
 		5C47C6825F34B653E48B98A2226E1F4F /* Pods-AESwiftWorking_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Tests-Info.plist"; sourceTree = "<group>"; };
-		649965EA15CAFCC0DAF41480B29A5A94 /* Pods_AESwiftWorking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AESwiftWorking_Example.framework; path = "Pods-AESwiftWorking_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EF8C3E586C96FE0AF11A13D3E67BA7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		649965EA15CAFCC0DAF41480B29A5A94 /* Pods_AESwiftWorking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AESwiftWorking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF8C3E586C96FE0AF11A13D3E67BA7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7965492A179EDE02024973B302549577 /* Pods-AESwiftWorking_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AESwiftWorking_Example-umbrella.h"; sourceTree = "<group>"; };
 		7EB99048E0246BCE3FF9654FA706F6BA /* Pods-AESwiftWorking_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AESwiftWorking_Example-dummy.m"; sourceTree = "<group>"; };
-		8725FE2DC5AFE84A56031F6A373B6EA9 /* Pods_AESwiftWorking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AESwiftWorking_Tests.framework; path = "Pods-AESwiftWorking_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8725FE2DC5AFE84A56031F6A373B6EA9 /* Pods_AESwiftWorking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AESwiftWorking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		913FAE2F7327548CB41666062F4E1496 /* Pods-AESwiftWorking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		91D6EF4D329D7A99AE155CE7FB64BA7C /* Pods-AESwiftWorking_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AESwiftWorking_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EA6B3902626F9DE7917A7CE65C5DD30 /* Pods-AESwiftWorking_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AESwiftWorking_Tests-dummy.m"; sourceTree = "<group>"; };
 		CAD0F296C0DDD963696561EC85DA5789 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CAE53C4E78CBBCE88E86B7AF4A066FB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CAE53C4E78CBBCE88E86B7AF4A066FB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CE86D26D12DF723C828AC24743A81F64 /* AESwiftWorking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AESwiftWorking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE86D26D12DF723C828AC24743A81F64 /* AESwiftWorking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AESwiftWorking.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		E105BD8E8013AF32A18D5148688F9AB8 /* AESwiftWorking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking-prefix.pch"; sourceTree = "<group>"; };
-		EA1ABE29C3B0431D3CD88C5C3F974FCF /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AESwiftWorking.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1ABE29C3B0431D3CD88C5C3F974FCF /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA79CC5FFE8F5FB81600FA1BA4AAC772 /* Pods-AESwiftWorking_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AESwiftWorking_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F96ADD09E64C8C1A40F32F8C4AA622C1 /* Pods-AESwiftWorking_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AESwiftWorking_Example-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +321,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -717,8 +718,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
