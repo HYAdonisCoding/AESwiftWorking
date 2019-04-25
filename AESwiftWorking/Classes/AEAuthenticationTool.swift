@@ -1,18 +1,15 @@
 //
-//  HYAuthenticationTool
+//  AEAuthenticationTool
 //  Adam_20190423_TouchID_Swift
 //
-//  Created by Adonis_HongYang on 2019/4/23.
-//  Copyright © 2019 Nikoyo (China）Electronics Systems Co., Ltd. All rights reserved.
+//  Created by HYAdonisCoding on 2019/4/23.
+//  Copyright (c) 2019 HYAdonisCoding. All rights reserved.
 //
 
 import UIKit
 import LocalAuthentication
 
-
-
-public class HYAuthenticationTool: NSObject {
-    
+public class AEAuthenticationTool: NSObject {
     typealias completionHandlers = (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error)  -> Void //逃逸闭包
       var completionHandlerArr: [completionHandlers] = []//闭包数组
     

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AEViewController.swift
 //  AESwiftWorking
 //
 //  Created by HYAdonisCoding on 04/24/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import AESwiftWorking
 
-class ViewController: UIViewController {
+class AEViewController: UIViewController {
     
     
     
@@ -77,7 +77,8 @@ class ViewController: UIViewController {
         let moneySum = Float(money!)
         let userNameStr = userName
         if  moneySum  != nil && userNameStr != nil  {
-            HYAuthenticationTool().testDemo()
+
+            AEAuthenticationTool().testCompletionMethod()
 //            //调起指纹支付
 //            HYAuthenticationTool().authenticatedByBiometryOrDevicePasscode { (success, type, errorString, error) in
 //
@@ -123,6 +124,7 @@ class ViewController: UIViewController {
 //
 //                }
 //            }
+
         } else {
             if moneySum  == nil && userNameStr!.count <= 0 {
                 debugPrint("姓名和金额不能为空")

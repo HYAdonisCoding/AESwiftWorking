@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-一个自动、高效的Swift Work工具。也是小伙伴们学习swift的进程。
+一个自动、高效的Swift Work工具。也是学习swift进程的记录。
                        DESC
 
   s.homepage         = 'https://github.com/HYAdonisCoding/AESwiftWorking'
