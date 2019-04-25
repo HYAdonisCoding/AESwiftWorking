@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  AEAppDelegate.swift
 //  AESwiftWorking
 //
 //  Created by HYAdonisCoding on 04/24/2019.
@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AEAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
