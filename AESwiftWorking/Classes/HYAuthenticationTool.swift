@@ -9,11 +9,22 @@
 import UIKit
 import LocalAuthentication
 
+
+
 public class HYAuthenticationTool: NSObject {
     
-    ///闭包
-    var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error?) -> Void] = []
+    typealias completionHandlers = (_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error)  -> Void //逃逸闭包
+      var completionHandlerArr: [completionHandlers] = []//闭包数组
     
+   public  func testCompletionMethod() -> Array<Any> {
+   
+    return  completionHandlerArr
+    }
+    
+    ///闭包
+//    var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ errorString: String,  _ error: Error) -> Void] = []
+    
+
     ///ID验证枚举
     enum HYAuthenticationVerifyType {
         case FaceID

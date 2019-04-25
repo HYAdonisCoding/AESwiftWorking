@@ -77,51 +77,52 @@ class ViewController: UIViewController {
         let moneySum = Float(money!)
         let userNameStr = userName
         if  moneySum  != nil && userNameStr != nil  {
-            //调起指纹支付
-            HYAuthenticationTool().authenticatedByBiometryOrDevicePasscode { (success, type, errorString, error) in
-                
-                var typeStr = ""
-                
-                switch type {
-                case .FaceID:
-                    typeStr = "FaceID"
-                case .TouchID:
-                    typeStr = "TouchID"
-                case .SecretCode:
-                    typeStr = "SecretCode"
-                case .NullID:
-                    typeStr = "NullID"
-                }
-                if success {
-                    debugPrint("验证成功, \(type)")
-                    self.userName = nil
-                    self.money = nil
-                    
-                    let alertController = UIAlertController(title: "恭喜您", message: "-转账成功--\(typeStr)-\(errorString)", preferredStyle:.alert)
-                    
-                    let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
-                        print("you have pressed OK button 恭喜您");
-                    }
-                    alertController.addAction(OKAction)
-                    
-                    self.present(alertController, animated: true, completion:{ () -> Void in
-                        //your code here
-                    })
-                } else {
-                    
-                    let alertController = UIAlertController(title: "对不起", message: "-转账转账失败-\(typeStr)-\(errorString)", preferredStyle:.alert)
-                    
-                    let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
-                        print("you have pressed OK button 对不起");
-                    }
-                    alertController.addAction(OKAction)
-                    
-                    self.present(alertController, animated: true, completion:{ () -> Void in
-                        //your code here
-                    })
-                    
-                }
-            }
+            HYAuthenticationTool().testDemo()
+//            //调起指纹支付
+//            HYAuthenticationTool().authenticatedByBiometryOrDevicePasscode { (success, type, errorString, error) in
+//
+//                var typeStr = ""
+//
+//                switch type {
+//                case .FaceID:
+//                    typeStr = "FaceID"
+//                case .TouchID:
+//                    typeStr = "TouchID"
+//                case .SecretCode:
+//                    typeStr = "SecretCode"
+//                case .NullID:
+//                    typeStr = "NullID"
+//                }
+//                if success {
+//                    debugPrint("验证成功, \(type)")
+//                    self.userName = nil
+//                    self.money = nil
+//
+//                    let alertController = UIAlertController(title: "恭喜您", message: "-转账成功--\(typeStr)-\(errorString)", preferredStyle:.alert)
+//
+//                    let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
+//                        print("you have pressed OK button 恭喜您");
+//                    }
+//                    alertController.addAction(OKAction)
+//
+//                    self.present(alertController, animated: true, completion:{ () -> Void in
+//                        //your code here
+//                    })
+//                } else {
+//
+//                    let alertController = UIAlertController(title: "对不起", message: "-转账转账失败-\(typeStr)-\(errorString)", preferredStyle:.alert)
+//
+//                    let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
+//                        print("you have pressed OK button 对不起");
+//                    }
+//                    alertController.addAction(OKAction)
+//
+//                    self.present(alertController, animated: true, completion:{ () -> Void in
+//                        //your code here
+//                    })
+//
+//                }
+//            }
         } else {
             if moneySum  == nil && userNameStr!.count <= 0 {
                 debugPrint("姓名和金额不能为空")
