@@ -11,7 +11,7 @@ import LocalAuthentication
 
 public class AEAuthenticationTool: NSObject {
     ///闭包
-    public var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String,  _ error: Error) -> Void] = []
+    public var completionHandlers: [(_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String,  _ error: Error?) -> Void] = []
     
 
     ///ID验证枚举
@@ -51,23 +51,20 @@ public class AEAuthenticationTool: NSObject {
         
     }
     
-    private func authenticatedByBiometryOrDevicePasscodeVerify(completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String, _ errorX: Error) -> Void) -> Void {
+    private func authenticatedByBiometryOrDevicePasscodeVerify(completionHandlers: @escaping (_ success: Bool, _ type: HYAuthenticationVerifyType, _ descString: String, _ errorX: Error?) -> Void) -> Void {
         var error1 : NSError?
 
         //开始识别
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error1) {
             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "请使用\(type)验证") { (success, errorSys) in
                 if success {
-                    completionHandlers(true, self.type, "verify success", (errorSys)!)
-                    
+                  completionHandlers(true, self.type, "verify success", errorSys)
                 } else {
                     if let error2 = errorSys as NSError? {
                         self.callBackWithFaceIDOrTouchID(context: self.context, error: error2, completionHandlers: { (success, type, descString, error3) in
                             completionHandlers(success, type, descString, error3!)
                         })
                     }
-                    
-                    
                 }
             }
         } else {
