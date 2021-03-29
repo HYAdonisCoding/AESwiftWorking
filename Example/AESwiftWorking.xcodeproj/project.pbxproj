@@ -14,6 +14,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		666CF07C2611B7F800BCDF1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF0782611B7F800BCDF1E /* HomeViewController.swift */; };
+		666CF07D2611B7F800BCDF1E /* DispatchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF0792611B7F800BCDF1E /* DispatchGroupViewController.swift */; };
+		666CF07E2611B7F800BCDF1E /* SemaphoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF07A2611B7F800BCDF1E /* SemaphoreViewController.swift */; };
+		666CF07F2611B7F800BCDF1E /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF07B2611B7F800BCDF1E /* WKWebViewController.swift */; };
+		666CF0842611B82000BCDF1E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF0832611B82000BCDF1E /* BaseViewController.swift */; };
 		9652B8135E9E68DD4F58BFBE /* Pods_AESwiftWorking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F502EDBFA36EF30AD5BC8405 /* Pods_AESwiftWorking_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		607FACE51AFB9204008FA782 /* AESwiftWorking_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AESwiftWorking_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		666CF0782611B7F800BCDF1E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		666CF0792611B7F800BCDF1E /* DispatchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroupViewController.swift; sourceTree = "<group>"; };
+		666CF07A2611B7F800BCDF1E /* SemaphoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemaphoreViewController.swift; sourceTree = "<group>"; };
+		666CF07B2611B7F800BCDF1E /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		666CF0832611B82000BCDF1E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7440E94017EFBC310F0FDC01 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESwiftWorking_Tests.release.xcconfig"; path = "Target Support Files/Pods-AESwiftWorking_Tests/Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AABD71E227068E700D945B9 /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA58474F4124D02CD1C4B77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -115,8 +125,8 @@
 		607FACD21AFB9204008FA782 /* Example for AESwiftWorking */ = {
 			isa = PBXGroup;
 			children = (
+				666CF0772611B7EB00BCDF1E /* Classes */,
 				607FACD51AFB9204008FA782 /* AEAppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* AEViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -159,6 +169,27 @@
 				9BA58474F4124D02CD1C4B77 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		666CF0772611B7EB00BCDF1E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				666CF0822611B80E00BCDF1E /* Base */,
+				666CF0782611B7F800BCDF1E /* HomeViewController.swift */,
+				666CF0792611B7F800BCDF1E /* DispatchGroupViewController.swift */,
+				666CF07A2611B7F800BCDF1E /* SemaphoreViewController.swift */,
+				666CF07B2611B7F800BCDF1E /* WKWebViewController.swift */,
+				607FACD71AFB9204008FA782 /* AEViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		666CF0822611B80E00BCDF1E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				666CF0832611B82000BCDF1E /* BaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666CF07D2611B7F800BCDF1E /* DispatchGroupViewController.swift in Sources */,
+				666CF07E2611B7F800BCDF1E /* SemaphoreViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* AEViewController.swift in Sources */,
+				666CF07F2611B7F800BCDF1E /* WKWebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
+				666CF0842611B82000BCDF1E /* BaseViewController.swift in Sources */,
+				666CF07C2611B7F800BCDF1E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
