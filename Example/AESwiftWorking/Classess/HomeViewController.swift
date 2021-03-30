@@ -7,39 +7,17 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: AEBaseTableViewController {
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .plain)
-        tableView.separatorStyle = .singleLine
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.estimatedRowHeight = 62
-        tableView.rowHeight = UITableView.automaticDimension
-        
-        
-        self.view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-        return tableView
-    }()
-    
-
-    
-    lazy var dataArray: [String] = {
-        
-        return ["AEEmptyViewController",
-                "SemaphoreViewController",
-                "DispatchGroupViewController",
-                "WKWebViewController"]
-    }()
     
     
     override func configEvent() {
         super.configEvent()
         
+        dataArray = ["AEEmptyViewController",
+                     "SemaphoreViewController",
+                     "DispatchGroupViewController",
+                     "WKWebViewController"]
     }
     
     override func configUI() {
@@ -50,24 +28,22 @@ class HomeViewController: BaseViewController {
 
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
-    }
+extension HomeViewController {
+
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "reuseIdentifier"
         
         var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
         }
-        cell!.textLabel?.text = dataArray[indexPath.row]
+        cell!.textLabel?.text = dataArray?[indexPath.row] as? String
         cell!.backgroundColor = ((indexPath.row%2) != 0) ? UIColor.systemTeal : UIColor.orange
         cell!.textLabel?.textColor = ((indexPath.row%2) != 0) ? UIColor.yellow : UIColor.magenta
-        var detail = dataArray[indexPath.row]
-        detail = "About "+detail.replacingOccurrences(of: "ViewController", with: "")+" Something!"
-        cell!.detailTextLabel?.text = detail
+        var detail = dataArray?[indexPath.row] ?? ""
+        detail = "About "+(detail as AnyObject).replacingOccurrences(of: "ViewController", with: "")+" Something!"
+        cell!.detailTextLabel?.text = detail as? String
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,9 +54,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         //2.根据字符串获取对应的Class
-        let detail = dataArray[indexPath.row]
+        let detail = dataArray?[indexPath.row]
         // 生成 当前类
-        let cls : AnyClass? = NSClassFromString(nameSpace+"."+detail)
+        let cls : AnyClass? = NSClassFromString(nameSpace+"."+(detail as? String)!)
         // 如果不是 UIViewController类型,则renturn
         guard let clsType = cls as? UIViewController.Type else{
             print("Can not append")
@@ -89,7 +65,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         
         let vc = clsType.init()
-        vc.navigationItem.title = detail.replacingOccurrences(of: "ViewController", with: "")
+        vc.navigationItem.title = (detail as AnyObject).replacingOccurrences(of: "ViewController", with: "")
         navigationController?.pushViewController(vc, animated: true)
     }
 }

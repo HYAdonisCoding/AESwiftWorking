@@ -20,10 +20,11 @@ class BaseViewController: UIViewController {
         
         print("\(self) deinit")
     }
-    func configEvent() {
-        
-    }
-    func configUI() {
+}
+extension BaseViewController: ICBaseProtocol {
+    @objc func configUI() {
         self.view.backgroundColor = UIColor.white
+    }
+    @objc func configEvent() {
     }
 }

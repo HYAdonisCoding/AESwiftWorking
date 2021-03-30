@@ -34,6 +34,13 @@
 		66C5EBA22612C49D00375131 /* AEEmptyTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBA12612C49D00375131 /* AEEmptyTool.swift */; };
 		66C5EBA62612EFAF00375131 /* AEBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBA52612EFAF00375131 /* AEBaseView.swift */; };
 		66C5EBAA2612EFED00375131 /* AETableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBA92612EFED00375131 /* AETableHeaderView.swift */; };
+		66C5EBB1261307E800375131 /* AEBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBB0261307E800375131 /* AEBaseCollectionViewController.swift */; };
+		66C5EBB52613088300375131 /* AEBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBB42613088300375131 /* AEBaseCollectionViewCell.swift */; };
+		66C5EBB9261308DC00375131 /* AEBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBB8261308DC00375131 /* AEBaseTableViewCell.swift */; };
+		66C5EBBD2613098C00375131 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBBC2613098C00375131 /* Const.swift */; };
+		66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */; };
+		66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDA2613147900375131 /* AECollectionReusableView.swift */; };
+		66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDE2613158D00375131 /* AECHeaderView.swift */; };
 		9652B8135E9E68DD4F58BFBE /* Pods_AESwiftWorking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F502EDBFA36EF30AD5BC8405 /* Pods_AESwiftWorking_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +88,13 @@
 		66C5EBA12612C49D00375131 /* AEEmptyTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEmptyTool.swift; sourceTree = "<group>"; };
 		66C5EBA52612EFAF00375131 /* AEBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseView.swift; sourceTree = "<group>"; };
 		66C5EBA92612EFED00375131 /* AETableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETableHeaderView.swift; sourceTree = "<group>"; };
+		66C5EBB0261307E800375131 /* AEBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseCollectionViewController.swift; sourceTree = "<group>"; };
+		66C5EBB42613088300375131 /* AEBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		66C5EBB8261308DC00375131 /* AEBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseTableViewCell.swift; sourceTree = "<group>"; };
+		66C5EBBC2613098C00375131 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseTableViewController.swift; sourceTree = "<group>"; };
+		66C5EBDA2613147900375131 /* AECollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECollectionReusableView.swift; sourceTree = "<group>"; };
+		66C5EBDE2613158D00375131 /* AECHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECHeaderView.swift; sourceTree = "<group>"; };
 		7440E94017EFBC310F0FDC01 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESwiftWorking_Tests.release.xcconfig"; path = "Target Support Files/Pods-AESwiftWorking_Tests/Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AABD71E227068E700D945B9 /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA58474F4124D02CD1C4B77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -157,6 +171,7 @@
 			children = (
 				66C5EB4C2612B2FF00375131 /* Classess */,
 				607FACD51AFB9204008FA782 /* AEAppDelegate.swift */,
+				66C5EBBC2613098C00375131 /* Const.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -236,7 +251,12 @@
 			isa = PBXGroup;
 			children = (
 				66C5EB542612B2FF00375131 /* BaseViewController.swift */,
+				66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */,
+				66C5EBB0261307E800375131 /* AEBaseCollectionViewController.swift */,
 				66C5EBA52612EFAF00375131 /* AEBaseView.swift */,
+				66C5EBB42613088300375131 /* AEBaseCollectionViewCell.swift */,
+				66C5EBB8261308DC00375131 /* AEBaseTableViewCell.swift */,
+				66C5EBDA2613147900375131 /* AECollectionReusableView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -248,6 +268,7 @@
 				66C5EB992612BF1900375131 /* AEEmptyTViewController.swift */,
 				66C5EB9D2612BF2300375131 /* AEEmptyCViewController.swift */,
 				66C5EBA92612EFED00375131 /* AETableHeaderView.swift */,
+				66C5EBDE2613158D00375131 /* AECHeaderView.swift */,
 				66C5EBA12612C49D00375131 /* AEEmptyTool.swift */,
 			);
 			path = Empty;
@@ -443,11 +464,16 @@
 				66C5EBA22612C49D00375131 /* AEEmptyTool.swift in Sources */,
 				66C5EB7A2612B43D00375131 /* Swizzling_Cv.swift in Sources */,
 				66C5EB6E2612B3E400375131 /* EmptyDataView.swift in Sources */,
+				66C5EBB9261308DC00375131 /* AEBaseTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* AEViewController.swift in Sources */,
+				66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */,
+				66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */,
 				66C5EB5A2612B2FF00375131 /* BaseViewController.swift in Sources */,
 				66C5EB7E2612B45400375131 /* Swizzling_Tv.swift in Sources */,
+				66C5EBB52613088300375131 /* AEBaseCollectionViewCell.swift in Sources */,
 				66C5EB552612B2FF00375131 /* WKWebViewController.swift in Sources */,
 				66C5EBAA2612EFED00375131 /* AETableHeaderView.swift in Sources */,
+				66C5EBB1261307E800375131 /* AEBaseCollectionViewController.swift in Sources */,
 				66C5EB622612B35500375131 /* UICollectionViewEx.swift in Sources */,
 				66C5EB662612B37B00375131 /* AssociatedObject.swift in Sources */,
 				66C5EB942612BEDA00375131 /* AEEmptyViewController.swift in Sources */,
@@ -459,6 +485,8 @@
 				66C5EB9E2612BF2300375131 /* AEEmptyCViewController.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
+				66C5EBBD2613098C00375131 /* Const.swift in Sources */,
+				66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
