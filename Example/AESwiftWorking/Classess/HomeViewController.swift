@@ -8,9 +8,34 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-    @IBOutlet weak var tableView: UITableView!
     
-    let dataArray = ["SemaphoreViewController", "DispatchGroupViewController", "WKWebViewController"]
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+        tableView.separatorStyle = .singleLine
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 62
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        return tableView
+    }()
+    
+
+    
+    lazy var dataArray: [String] = {
+        
+        return ["AEEmptyViewController",
+                "SemaphoreViewController",
+                "DispatchGroupViewController",
+                "WKWebViewController"]
+    }()
+    
     
     override func configEvent() {
         super.configEvent()

@@ -2,7 +2,9 @@ use_frameworks!
 
 target 'AESwiftWorking_Example' do
   pod 'AESwiftWorking', :path => '../'
-
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'RxSwift', '~> 6.1.0'
+  pod 'RxCocoa', '~> 6.1.0'
   target 'AESwiftWorking_Tests' do
     inherit! :search_paths
 

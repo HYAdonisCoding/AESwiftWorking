@@ -1,8 +1,25 @@
 PODS:
   - AESwiftWorking (0.1.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - AESwiftWorking (from `../`)
+  - RxCocoa
+  - RxSwift (~> 6.1.0)
+  - SnapKit (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
 
 EXTERNAL SOURCES:
   AESwiftWorking:
@@ -10,7 +27,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AESwiftWorking: 93d01c6b157fde832c562c165482317dcb3286ba
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 406cde3143d944f31ca663423162336b12daf43e
+PODFILE CHECKSUM: c54249daefb8ef809db285928f14835408aa8be6
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.0
