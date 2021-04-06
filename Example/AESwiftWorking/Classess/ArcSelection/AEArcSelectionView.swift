@@ -92,14 +92,15 @@ class AEArcSelectionView: UIView {
             myStackView.addArrangedSubview(view)
         }
         bottomView.addSubview(cancelBtn)
-    }
-    func show()  {
         backView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(0)//(UIScreen.main.bounds.size.height)
+            make.left.right.equalToSuperview()
+            make.height.equalToSuperview()
         }
         bottomView.snp.makeConstraints { (make) in
             make.height.equalTo(backView.snp.height).multipliedBy(0.4)
-            make.left.right.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-UIScreen.main.bounds.size.height*0.4)
         }
         myStackView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(80)
@@ -108,15 +109,38 @@ class AEArcSelectionView: UIView {
             make.height.equalTo(90)
         }
         cancelBtn.snp.makeConstraints { (make) in
-            make.top.equalTo(myStackView.snp.bottom).offset(50)
+            make.top.lessThanOrEqualTo(myStackView.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
             make.width.equalTo(60)
             make.height.equalTo(70)
+            make.bottom.lessThanOrEqualTo(-10)
         }
-        
+    }
+    func show()  {
+        UIView.animate(withDuration: 15.2, delay: 2, options: .transitionCurlUp) {
+//            self.backView.snp.updateConstraints { (make) in
+//                make.top.equalToSuperview().offset(10)
+//            }
+            self.bottomView.snp.updateConstraints { (make) in
+                make.bottom.equalToSuperview().offset(-40)
+            }
+            
+        } completion: { (success) in
+            //
+            self.bottomView.snp.updateConstraints { (make) in
+                make.bottom.equalToSuperview().offset(0)
+            }
+        }
+
     }
     func hide()  {
-        self.removeFromSuperview()
+        UIView.animate(withDuration:0.2, animations: {
+            self.bottomView.snp.updateConstraints { (make) in
+                make.bottom.equalToSuperview().offset(-UIScreen.main.bounds.size.height*0.4)
+            }
+        }) { (_) in
+            self.removeFromSuperview()
+        }
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
