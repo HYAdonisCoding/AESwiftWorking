@@ -23,14 +23,20 @@ class HomeViewController: AEBaseTableViewController {
     override func configUI() {
         super.configUI()
         tableView.tableFooterView = UIView()
-        navigationItem.title = "Swift"
+        navigationItem.title = "Swift Study"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightBarAction))
     }
 
 }
 
 extension HomeViewController {
 
-    
+    @objc func rightBarAction() {
+        AEArcSelectionView.shared { (idx, title) in
+            print("idx:\(idx) title:\(title)")
+        };
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "reuseIdentifier"
         
