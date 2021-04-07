@@ -53,7 +53,6 @@ class AEArcSelectionView: UIView {
         view.closure = closure
         view.titleArray = titleArray
         view.configUI()
-        UIApplication.shared.keyWindow?.addSubview(view)
         view.show()
     }
     override init(frame: CGRect) {
@@ -62,6 +61,8 @@ class AEArcSelectionView: UIView {
     }
     
     func configUI() {
+        UIApplication.shared.keyWindow?.addSubview(self)
+
         self.addSubview(backView)
         backView.addSubview(bottomView)
         bottomView.addSubview(myStackView)
@@ -100,7 +101,7 @@ class AEArcSelectionView: UIView {
         bottomView.snp.makeConstraints { (make) in
             make.height.equalTo(backView.snp.height).multipliedBy(0.4)
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-UIScreen.main.bounds.size.height*0.4)
+            make.bottom.equalToSuperview().offset(UIScreen.main.bounds.size.height)
         }
         myStackView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(80)
@@ -115,29 +116,41 @@ class AEArcSelectionView: UIView {
             make.height.equalTo(70)
             make.bottom.lessThanOrEqualTo(-10)
         }
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(coverClick(_:)))
+        tapGR.numberOfTouchesRequired = 1
+        addGestureRecognizer(tapGR)
     }
-    func show()  {
-        UIView.animate(withDuration: 15.2, delay: 2, options: .transitionCurlUp) {
-//            self.backView.snp.updateConstraints { (make) in
-//                make.top.equalToSuperview().offset(10)
-//            }
-            self.bottomView.snp.updateConstraints { (make) in
-                make.bottom.equalToSuperview().offset(-40)
+    @objc func coverClick(_ tap: UITapGestureRecognizer?) {
+            let point = tap?.location(in: self)
+            if (point?.y ?? 0.0) <= UIScreen.main.bounds.size.height*0.6 {
+                hide()
             }
-            
-        } completion: { (success) in
-            //
+        }
+    func show() {
+
+        self.layoutIfNeeded()
+        UIView.animate(withDuration: 0.25,
+                       delay: 0,
+                       usingSpringWithDamping: 0.7,
+                       initialSpringVelocity: 0.6,
+                       options: .curveLinear) {
             self.bottomView.snp.updateConstraints { (make) in
                 make.bottom.equalToSuperview().offset(0)
             }
+            self.layoutIfNeeded()
+
+        } completion: { (success) in
+            //
         }
 
+
     }
-    func hide()  {
+    func hide() {
         UIView.animate(withDuration:0.2, animations: {
             self.bottomView.snp.updateConstraints { (make) in
-                make.bottom.equalToSuperview().offset(-UIScreen.main.bounds.size.height*0.4)
+                make.bottom.equalToSuperview().offset(UIScreen.main.bounds.size.height)
             }
+            self.layoutIfNeeded()
         }) { (_) in
             self.removeFromSuperview()
         }
