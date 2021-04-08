@@ -17,6 +17,8 @@
 		6613D4C3261C3FCB00083684 /* AEArcSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */; };
 		6613D4C9261C429400083684 /* ICEfficientTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C8261C429400083684 /* ICEfficientTool.swift */; };
 		664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F8807261C5535001BE1A9 /* AEArcView.swift */; };
+		669332A7261D440A0064608F /* AEFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669332A6261D440A0064608F /* AEFormViewController.swift */; };
+		66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66933318261D816E0064608F /* AEXLFormViewController.swift */; };
 		66C5EB552612B2FF00375131 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EB4D2612B2FF00375131 /* WKWebViewController.swift */; };
 		66C5EB562612B2FF00375131 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EB4E2612B2FF00375131 /* HomeViewController.swift */; };
 		66C5EB572612B2FF00375131 /* DispatchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EB4F2612B2FF00375131 /* DispatchGroupViewController.swift */; };
@@ -74,6 +76,8 @@
 		6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcSelectionView.swift; sourceTree = "<group>"; };
 		6613D4C8261C429400083684 /* ICEfficientTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICEfficientTool.swift; sourceTree = "<group>"; };
 		664F8807261C5535001BE1A9 /* AEArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcView.swift; sourceTree = "<group>"; };
+		669332A6261D440A0064608F /* AEFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormViewController.swift; sourceTree = "<group>"; };
+		66933318261D816E0064608F /* AEXLFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEXLFormViewController.swift; sourceTree = "<group>"; };
 		66C5EB4D2612B2FF00375131 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		66C5EB4E2612B2FF00375131 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		66C5EB4F2612B2FF00375131 /* DispatchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroupViewController.swift; sourceTree = "<group>"; };
@@ -239,9 +243,19 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		669332A5261D43C30064608F /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				669332A6261D440A0064608F /* AEFormViewController.swift */,
+				66933318261D816E0064608F /* AEXLFormViewController.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				669332A5261D43C30064608F /* Form */,
 				6613D4CC261C429D00083684 /* Utils */,
 				6613D4C1261C3F5600083684 /* ArcSelection */,
 				66C5EB922612BEA600375131 /* Empty */,
@@ -441,6 +455,8 @@
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyFORM/SwiftyFORM.framework",
+				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -450,6 +466,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyFORM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,6 +521,7 @@
 				66C5EB552612B2FF00375131 /* WKWebViewController.swift in Sources */,
 				66C5EBAA2612EFED00375131 /* AETableHeaderView.swift in Sources */,
 				66C5EBB1261307E800375131 /* AEBaseCollectionViewController.swift in Sources */,
+				66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */,
 				66C5EB622612B35500375131 /* UICollectionViewEx.swift in Sources */,
 				66C5EB662612B37B00375131 /* AssociatedObject.swift in Sources */,
 				66C5EB942612BEDA00375131 /* AEEmptyViewController.swift in Sources */,
@@ -515,6 +534,7 @@
 				66C5EB9E2612BF2300375131 /* AEEmptyCViewController.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
+				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,
 				66C5EBBD2613098C00375131 /* Const.swift in Sources */,
 				66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */,
 			);
@@ -666,7 +686,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 53VUVA3CT9;
 				INFOPLIST_FILE = AESwiftWorking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebbank.test;
@@ -686,7 +706,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 53VUVA3CT9;
 				INFOPLIST_FILE = AESwiftWorking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebbank.test;

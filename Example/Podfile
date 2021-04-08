@@ -1,3 +1,5 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
 use_frameworks!
 
 target 'AESwiftWorking_Example' do
@@ -7,6 +9,8 @@ target 'AESwiftWorking_Example' do
   pod 'RxCocoa', '~> 6.1.0'
   
   pod 'CryptoSwift', '~> 1.3.8'
+  pod 'SwiftyFORM', '~> 1.8.6'# 需要ios 12.0
+  pod 'XLForm', '~> 4.3.0'
   target 'AESwiftWorking_Tests' do
     inherit! :search_paths
 

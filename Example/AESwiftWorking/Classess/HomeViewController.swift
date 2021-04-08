@@ -14,7 +14,9 @@ class HomeViewController: AEBaseTableViewController {
     override func configEvent() {
         super.configEvent()
         
-        dataArray = ["AEEmptyViewController",
+        dataArray = ["AEXLFormViewController",
+                     "AEFormViewController",
+                     "AEEmptyViewController",
                      "SemaphoreViewController",
                      "DispatchGroupViewController",
                      "WKWebViewController"]
@@ -35,6 +37,14 @@ extension HomeViewController {
     @objc func rightBarAction() {
         AEArcSelectionView.shared { (idx, title) in
             print("idx:\(idx) title:\(title)")
+            
+            var mutile = 6
+            let Block: ((Int) -> Int)? = { num in
+                return num * mutile
+            }
+            mutile = 4
+            
+            print("\(String(describing: Block?(2)))")
         };
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +80,16 @@ extension HomeViewController {
         }
 
         
-        let vc = clsType.init()
+        var vc = clsType.init()
+        if let _ = cls as? AEFormViewController.Type {
+            if #available(iOS 13.0, *) {
+                vc = AEFormViewController(style:.insetGrouped)
+            } else {
+                // Fallback on earlier versions
+                vc = AEFormViewController(style:.grouped)
+
+            }
+        }
         vc.navigationItem.title = (detail as AnyObject).replacingOccurrences(of: "ViewController", with: "")
         navigationController?.pushViewController(vc, animated: true)
     }
