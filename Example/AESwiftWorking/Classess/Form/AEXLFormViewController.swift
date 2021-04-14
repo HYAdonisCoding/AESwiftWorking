@@ -11,10 +11,30 @@ import XLForm
 
 class AEXLFormViewController: XLFormViewController {
 
+    var modelProerty = AETestModel()
+    
+    var struProerty = AETestStruct()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
+        do {
+            let arr = try modelProerty.allProperties()
+            for (i, item) in arr.enumerated() {
+                print("i-\(i) item--\(item)")
+                modelProerty.setValue(item.key, forKey: item.key)
+            }
+
+        } catch _ {
+
+        }
+
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(savePressed(_:)))
+        
     }
     
     fileprivate struct Tags {
@@ -33,6 +53,9 @@ class AEXLFormViewController: XLFormViewController {
         static let SelectorWithSegueClass = "selectorWithSegueClass"
         static let SelectorWithNibName = "selectorWithNibName"
         static let SelectorWithStoryboardId = "selectorWithStoryboardId"
+        
+        static let TextView = "selectorTextView"
+
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -52,31 +75,29 @@ class AEXLFormViewController: XLFormViewController {
         var section : XLFormSectionDescriptor
         var row : XLFormRowDescriptor
         
-        form = XLFormDescriptor(title: "Selectors")
+        form = XLFormDescriptor(title: "")
         section = XLFormSectionDescriptor.formSection(withTitle: "Selectors")
-        section.footerTitle = "SelectorsFormViewController.swift"
         form.addFormSection(section)
         
+
+        row = XLFormRowDescriptor(tag: modelProerty.type, rowType: XLFormRowDescriptorTypeRate, title: "发布类型")
+        row.value = 1
+        section.addFormRow(row)
         
         // Selector Push
-        row = XLFormRowDescriptor(tag: Tags.Push, rowType:XLFormRowDescriptorTypeSelectorPush, title:"Push")
-        row.selectorOptions = [XLFormOptionsObject(value: 0, displayText: "Option 1")!,
-                                    XLFormOptionsObject(value: 1, displayText:"Option 2")!,
-                                    XLFormOptionsObject(value: 2, displayText:"Option 3")!,
-                                    XLFormOptionsObject(value: 3, displayText:"Option 4")!,
-                                    XLFormOptionsObject(value: 4, displayText:"Option 5")!
-                                    ]
-        row.value = XLFormOptionsObject(value: 1, displayText:"Option 2")
+        row = XLFormRowDescriptor(tag: modelProerty.type, rowType:XLFormRowDescriptorTypeSelectorPickerView, title:"发布类型")
+//        row.selectorOptions = [XLFormOptionsObject(value: 0, displayText: "提醒类")!,
+//                                    XLFormOptionsObject(value: 1, displayText:"业绩类")!,
+//                                    XLFormOptionsObject(value: 2, displayText:"管理类")!,
+//                                    XLFormOptionsObject(value: 3, displayText:"其他")!
+//                                    ]
+        row.value = XLFormOptionsObject(value: 0, displayText:"业绩类")
+        row.action.formBlock = { [weak self] (sender: XLFormRowDescriptor!) -> Void in
+            print("`11111")
+        }
         section.addFormRow(row)
 
-        
-        // Selector Popover
-        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad){
-            row = XLFormRowDescriptor(tag: Tags.Popover, rowType:XLFormRowDescriptorTypeSelectorPopover, title:"PopOver")
-            row.selectorOptions = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6"]
-            row.value = "Option 2"
-            section.addFormRow(row)
-        }
+      
     
         // Selector Action Sheet
         row = XLFormRowDescriptor(tag :Tags.ActionSheet, rowType:XLFormRowDescriptorTypeSelectorActionSheet, title:"Sheet")
@@ -170,7 +191,9 @@ class AEXLFormViewController: XLFormViewController {
         form.addFormSection(section)
         
         row = XLFormRowDescriptor(tag: Tags.CustomSelectors, rowType:XLFormRowDescriptorTypeButton, title:"Custom Selectors")
-        row.action.viewControllerClass = AEFormViewController.self
+        row.action.formBlock = { (descriptor)in
+            print("descriptor ---- \(descriptor)")
+        }
         section.addFormRow(row)
         
 
@@ -179,11 +202,23 @@ class AEXLFormViewController: XLFormViewController {
         form.addFormSection(section)
         
         // selector with segue class
-        
+        row = XLFormRowDescriptor(tag: Tags.TextView, rowType: XLFormRowDescriptorTypeTextView)
+        section.addFormRow(row)
+
         
         self.form = form
       }
 
+    @objc func savePressed(_ button: UIBarButtonItem)
+    {
+        let validationErrors : Array<NSError> = self.formValidationErrors() as! Array<NSError>
+        if (validationErrors.count > 0){
+            self.showFormValidationError(validationErrors.first)
+            return
+        }
+        self.tableView.endEditing(true)
+        print("\(String(describing: self.form.formValues().keys.first))")
+    }
 }
 
 class ISOLanguageCodesValueTranformer : ValueTransformer {

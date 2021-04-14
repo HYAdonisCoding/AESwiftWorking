@@ -19,7 +19,7 @@ class AEEmptyViewController: HomeViewController {
     }
     
     override func configEvent() {
-        self.dataArray = ["AEEmptyTViewController", "AEEmptyCViewController"]
+        self.dataArray = ["AEEmptyTViewController", "AEEmptyCViewController", "AEEmptyDataSetTViewController"]
         navigationItem.title = "Empty_Test"
     }
 
