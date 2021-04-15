@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-class ICBaseTableViewController: ICBaseViewController {
+class ICBaseTableViewController: AEBaseViewController {
     
     override func configEvent() {
         super.configEvent()
@@ -33,7 +34,7 @@ class ICBaseTableViewController: ICBaseViewController {
         }
     }
     
-    var tableView:UITableView = {
+    var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .plain)
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableView.automaticDimension

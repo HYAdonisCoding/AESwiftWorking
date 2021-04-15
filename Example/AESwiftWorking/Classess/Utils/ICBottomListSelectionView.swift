@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ICSelectionModel: ICBaseModel {
     var title: String?
@@ -15,7 +16,7 @@ class ICSelectionModel: ICBaseModel {
 typealias ICBottomListSelectionClosure = (_ selected: ICSelectionModel?) -> Void
 
 
-class ICBottomListSelectionView: ICBaseView {
+class ICBottomListSelectionView: AEBaseView {
     class func bottomListSelectionView(_ title: String, data: [String], selected: String = "", _ closure: @escaping ICBottomListSelectionClosure) -> Void {
         let view = ICBottomListSelectionView(frame: UIScreen.main.bounds)
         view.bottomListSelectionClosure = closure
@@ -224,7 +225,7 @@ extension ICBottomListSelectionView: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
 //    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        let view = ICBaseView()
+//        let view = AEBaseView()
 //        return view
 //    }
 }

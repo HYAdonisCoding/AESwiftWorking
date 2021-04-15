@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 typealias ICDateSelectionClosure = (_ dateString: String) -> Void
-class ICDateSelectionView: ICBaseView {
+class ICDateSelectionView: AEBaseView {
     class func dateSelectionView(_ title: String, _ closure: @escaping ICDateSelectionClosure) -> Void {
         let view = ICDateSelectionView(frame: UIScreen.main.bounds)
         view.dateSelectionClosure = closure

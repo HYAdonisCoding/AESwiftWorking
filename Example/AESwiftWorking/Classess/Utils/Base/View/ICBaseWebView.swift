@@ -8,14 +8,14 @@
 import Foundation
 import WebKit
 
-class ICBaseWebView: ICBaseView {
+class ICBaseWebView: AEBaseView {
     private lazy var showHUDAndAlet: Bool = {
         let name = true
         
         return name
     }()
     private lazy var mutableURLRequest: NSMutableURLRequest = {
-        let mutableURLRequest = NSMutableURLRequest(url: URL.init(string: ICAppManager.shared.defaultSserverBaseUrl)!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
+        let mutableURLRequest = NSMutableURLRequest(url: URL.init(string: "")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
         
         return mutableURLRequest
     }()

@@ -1,5 +1,5 @@
 //
-//  ICBaseViewController.swift
+//  AEBaseViewController.swift
 //  ICMS
 //
 //  Created by Adam on 2021/2/11.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ICBaseViewController: UIViewController {
+class AEBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrintLog("\(self) viewDidLoad")
@@ -60,7 +60,7 @@ class ICBaseViewController: UIViewController {
     }
 }
 
-extension ICBaseViewController {
+extension AEBaseViewController {
     /// 返回
     @objc func backItemPressed() {
         if let nav = self.navigationController {

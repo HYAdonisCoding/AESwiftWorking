@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ICBaseHeaderView: ICBaseView {
+class ICBaseHeaderView: AEBaseView {
     
 }
 extension ICBaseHeaderView {

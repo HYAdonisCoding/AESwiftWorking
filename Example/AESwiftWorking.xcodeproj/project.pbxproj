@@ -16,6 +16,11 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6613D4C3261C3FCB00083684 /* AEArcSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */; };
 		6613D4C9261C429400083684 /* ICEfficientTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C8261C429400083684 /* ICEfficientTool.swift */; };
+		661EF47426286486009E7037 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF47126286486009E7037 /* CalenderView.swift */; };
+		661EF47526286486009E7037 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF47226286486009E7037 /* MonthView.swift */; };
+		661EF47626286486009E7037 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF47326286486009E7037 /* WeekdaysView.swift */; };
+		661EF47A2628654D009E7037 /* ICSystemAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF4792628654D009E7037 /* ICSystemAlert.swift */; };
+		661EF49E26286632009E7037 /* ICViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF49D26286632009E7037 /* ICViewExtension.swift */; };
 		66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */; };
 		6640EB85261FE33100256DC4 /* AETestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB84261FE33100256DC4 /* AETestModel.swift */; };
 		6640EB89261FE35200256DC4 /* AEBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB88261FE35200256DC4 /* AEBaseModel.swift */; };
@@ -90,6 +95,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcSelectionView.swift; sourceTree = "<group>"; };
 		6613D4C8261C429400083684 /* ICEfficientTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICEfficientTool.swift; sourceTree = "<group>"; };
+		661EF47126286486009E7037 /* CalenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		661EF47226286486009E7037 /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		661EF47326286486009E7037 /* WeekdaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		661EF4792628654D009E7037 /* ICSystemAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSystemAlert.swift; sourceTree = "<group>"; };
+		661EF49D26286632009E7037 /* ICViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICViewExtension.swift; sourceTree = "<group>"; };
 		66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEmptyDataSetTViewController.swift; sourceTree = "<group>"; };
 		6640EB84261FE33100256DC4 /* AETestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestModel.swift; sourceTree = "<group>"; };
 		6640EB88261FE35200256DC4 /* AEBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseModel.swift; sourceTree = "<group>"; };
@@ -268,12 +278,25 @@
 		6613D4CC261C429D00083684 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				661EF47026286486009E7037 /* CalenderView */,
 				6685A92D2626DD8000EE4E44 /* Base */,
 				6613D4C8261C429400083684 /* ICEfficientTool.swift */,
 				6685A9242626DD3F00EE4E44 /* ICBottomListSelectionView.swift */,
 				6685A9232626DD3F00EE4E44 /* ICDateSelectionView.swift */,
+				661EF49D26286632009E7037 /* ICViewExtension.swift */,
+				661EF4792628654D009E7037 /* ICSystemAlert.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		661EF47026286486009E7037 /* CalenderView */ = {
+			isa = PBXGroup;
+			children = (
+				661EF47126286486009E7037 /* CalenderView.swift */,
+				661EF47226286486009E7037 /* MonthView.swift */,
+				661EF47326286486009E7037 /* WeekdaysView.swift */,
+			);
+			path = CalenderView;
 			sourceTree = "<group>";
 		};
 		6685A92D2626DD8000EE4E44 /* Base */ = {
@@ -513,11 +536,13 @@
 				"${BUILT_PRODUCTS_DIR}/AESwiftWorking/AESwiftWorking.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftForms/SwiftForms.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -525,11 +550,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AESwiftWorking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftForms.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,9 +621,13 @@
 				66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */,
 				66C5EB622612B35500375131 /* UICollectionViewEx.swift in Sources */,
 				66C5EB662612B37B00375131 /* AssociatedObject.swift in Sources */,
+				661EF47526286486009E7037 /* MonthView.swift in Sources */,
+				661EF47426286486009E7037 /* CalenderView.swift in Sources */,
 				66C5EB942612BEDA00375131 /* AEEmptyViewController.swift in Sources */,
+				661EF47A2628654D009E7037 /* ICSystemAlert.swift in Sources */,
 				6640EB932620439200256DC4 /* AEFormPickerTCell.swift in Sources */,
 				6685A93B2626DD8000EE4E44 /* ICBaseModel.swift in Sources */,
+				661EF47626286486009E7037 /* WeekdaysView.swift in Sources */,
 				66C5EB562612B2FF00375131 /* HomeViewController.swift in Sources */,
 				66C5EBA62612EFAF00375131 /* AEBaseView.swift in Sources */,
 				6640EB85261FE33100256DC4 /* AETestModel.swift in Sources */,
@@ -614,6 +645,7 @@
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
 				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,
 				66C5EBBD2613098C00375131 /* Const.swift in Sources */,
+				661EF49E26286632009E7037 /* ICViewExtension.swift in Sources */,
 				66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-class ICBaseWebVC: ICBaseViewController {
+class ICBaseWebVC: AEBaseViewController {
     
     lazy var web: ICBaseWebView = {
         let web = ICBaseWebView()
