@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import XLForm
 
 @UIApplicationMain
 class AEAppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AEAppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//       nib XLFormViewController.cellClassesForRowDescriptorTypes()[XLFormRowDescriptorTypeRate] =  NSStringFromClass(AEFormPickerTCell.self)
+        XLFormViewController.cellClassesForRowDescriptorTypes()[XLFormRowDescriptorTypeRate] = AEFormPickerTCell.self
         return true
     }
     
@@ -89,4 +92,15 @@ class AEAppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+}
+
+/// 打印
+public func debugPrintLog(_ message: Any? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+    #if DEBUG
+        if let message = message {
+            print("\((file as NSString).lastPathComponent):\(function):\(line) -> \(message)")
+        } else {
+            print("\((file as NSString).lastPathComponent):\(function):\(line)")
+        }
+    #endif
 }

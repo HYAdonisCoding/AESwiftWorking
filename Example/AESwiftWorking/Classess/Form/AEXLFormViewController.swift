@@ -18,6 +18,7 @@ class AEXLFormViewController: XLFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         // Do any additional setup after loading the view.
       
         do {
@@ -85,16 +86,15 @@ class AEXLFormViewController: XLFormViewController {
         section.addFormRow(row)
         
         // Selector Push
-        row = XLFormRowDescriptor(tag: modelProerty.type, rowType:XLFormRowDescriptorTypeSelectorPickerView, title:"发布类型")
-//        row.selectorOptions = [XLFormOptionsObject(value: 0, displayText: "提醒类")!,
-//                                    XLFormOptionsObject(value: 1, displayText:"业绩类")!,
-//                                    XLFormOptionsObject(value: 2, displayText:"管理类")!,
-//                                    XLFormOptionsObject(value: 3, displayText:"其他")!
-//                                    ]
-        row.value = XLFormOptionsObject(value: 0, displayText:"业绩类")
+        row = XLFormRowDescriptor(tag: modelProerty.type, rowType:XLFormRowDescriptorTypeRate, title:"发布类型")
+        row.title = "发布类型"
+        row.value = "提醒类"
+        row.selectorOptions = ["提醒类", "业绩类", "管理类", "其他"]
         row.action.formBlock = { [weak self] (sender: XLFormRowDescriptor!) -> Void in
+            
             print("`11111")
         }
+        
         section.addFormRow(row)
 
       

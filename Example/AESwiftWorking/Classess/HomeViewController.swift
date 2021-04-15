@@ -81,6 +81,16 @@ extension HomeViewController {
 
         
         var vc = clsType.init()
+//        if let _ = cls as? AEXLFormViewController.Type {
+//            if #available(iOS 13.0, *) {
+//                vc = AEFormViewController().init
+//            } else {
+//                // Fallback on earlier versions
+//                vc = AEFormViewController(style:.grouped)
+//
+//            }
+//        }
+
         vc.navigationItem.title = (detail as AnyObject).replacingOccurrences(of: "ViewController", with: "")
         navigationController?.pushViewController(vc, animated: true)
     }
