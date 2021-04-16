@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import XLForm
 
 @UIApplicationMain
 class AEAppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +16,7 @@ class AEAppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//       nib XLFormViewController.cellClassesForRowDescriptorTypes()[XLFormRowDescriptorTypeRate] =  NSStringFromClass(AEFormPickerTCell.self)
-        XLFormViewController.cellClassesForRowDescriptorTypes()[XLFormRowDescriptorTypeRate] = AEFormPickerTCell.self
+
         return true
     }
     

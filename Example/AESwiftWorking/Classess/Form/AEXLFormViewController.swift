@@ -81,22 +81,8 @@ class AEXLFormViewController: XLFormViewController {
         form.addFormSection(section)
         
 
-        row = XLFormRowDescriptor(tag: modelProerty.type, rowType: XLFormRowDescriptorTypeRate, title: "发布类型")
-        row.value = 1
-        section.addFormRow(row)
         
-        // Selector Push
-        row = XLFormRowDescriptor(tag: modelProerty.type, rowType:XLFormRowDescriptorTypeRate, title:"发布类型")
-        row.title = "发布类型"
-        row.value = "提醒类"
-        row.selectorOptions = ["提醒类", "业绩类", "管理类", "其他"]
-        row.action.formBlock = { [weak self] (sender: XLFormRowDescriptor!) -> Void in
-            
-            print("`11111")
-        }
         
-        section.addFormRow(row)
-
       
     
         // Selector Action Sheet

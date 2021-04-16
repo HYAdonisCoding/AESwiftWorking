@@ -44,7 +44,7 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.colorHex(0x231A2F)
-        addSubview(label)
+        self.contentView.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(5)
             make.width.greaterThanOrEqualTo(0)
@@ -64,8 +64,34 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     
 }
 
-class AEFormModel: AEBaseModel {
+enum AEFormType {
+    case picker
+    case input
+    case show
+    case custom
+    case calender
+}
+
+
+class AEFormListModel: AEBaseModel {
+    
+    var list: [AEBaseModel]? = []
     var title: String?
+    
+    /// 是否是圆角
+    var round: Bool = false
+    
+    
+}
+class AEFormModel: AEBaseModel {
+    
+    var title: String?
+    var value: String?
+    var valueName: String?
+
     var inputInformation: String?
+    var selectedArray: [String]?
+    var cellType: AEFormType?
+    
     
 }
