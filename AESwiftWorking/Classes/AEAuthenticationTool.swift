@@ -3,7 +3,7 @@
 //  Adam_20190423_TouchID_Swift
 //
 //  Created by HYAdonisCoding on 2019/4/23.
-//  Copyright (c) 2019 HYAdonisCoding. All rights reserved.
+//  Copyright (c) 2021 HYAdonisCoding. All rights reserved.
 //
 
 import UIKit
