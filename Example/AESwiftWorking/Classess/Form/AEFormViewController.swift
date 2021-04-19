@@ -37,11 +37,10 @@ class AEFormViewController: AEBaseTableViewController {
         
         /// 第三行
         itemModel = AEFormModel()
-        itemModel.title = "发布类型"
-        itemModel.value = "提醒类"
+        itemModel.title = "完成期限"
+        itemModel.value = "2021-04-21"
         itemModel.valueName = ""
-        itemModel.selectedArray = ["提醒类", "业绩类", "管理类", "其他"]
-        itemModel.cellType = .picker
+        itemModel.cellType = .calender
         action.list?.append(itemModel)
     
         array.append(action)
@@ -142,6 +141,21 @@ extension AEFormViewController {
         } else if model.cellType == .input {
             
             let cell = AEFormTextFieldTCell.loadCode(tableView: tableView, index: indexPath)
+            cell.roundType = roundType
+            cell.detailModel = model
+            cell.closure = { (value) in
+                if let value: String = value as? String {
+                    model.value = value
+                    tableView.reloadData()
+                }
+                
+            }
+            return cell
+        }
+        
+        else if model.cellType == .calender {
+            
+            let cell = AESelectCalenderTCell.loadCode(tableView: tableView, index: indexPath)
             cell.roundType = roundType
             cell.detailModel = model
             cell.closure = { (value) in
