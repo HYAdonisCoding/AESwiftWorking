@@ -8,6 +8,9 @@
 
 import UIKit
 
+/// 默认内边距
+let kMargin = 15.0
+
 typealias AEClosure = (_ data: Any?) -> Void
 typealias AEActionClosure = (_ data: Any?) -> Void
 typealias AETextClosure = (_ data: String?) -> Void
@@ -17,6 +20,22 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     var closure: AEClosure?
     var actionClosure: AEActionClosure?
     var textClosure: AETextClosure?
+    var roundType: AERoundType? {
+        didSet {
+            switch roundType {
+            case .top:
+                backView.configRectCorner(corner: [.topLeft, .topRight], radii: CGSize(width: 10, height: 10))
+            case .bottom:
+                backView.configRectCorner(corner: [.bottomLeft, .bottomRight], radii: CGSize(width: 10, height: 10))
+            case .all:
+                backView.configRectCorner(corner: [.allCorners], radii: CGSize(width: 10, height: 10))
+            default:
+                print("无需圆角")
+            }
+            setNeedsLayout()
+        }
+    }
+    
     
     override class func loadCode(tableView: UITableView, index: IndexPath) -> AEFormBaseTCell {
         let identifier: String = String(describing: AEFormBaseTCell.self)
@@ -44,15 +63,28 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.colorHex(0x231A2F)
-        self.contentView.addSubview(label)
+        backView.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(5)
             make.width.greaterThanOrEqualTo(0)
-            make.height.equalTo(20)
         }
         return label
     }()
     
+    lazy var backView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.white
+        self.contentView.addSubview(view)
+        view.snp.makeConstraints { (make) in
+            make.bottom.top.equalToSuperview()
+            make.left.equalToSuperview().offset(kMargin)
+            make.right.equalToSuperview().offset(-kMargin)
+            make.height.greaterThanOrEqualTo(50)
+        }
+        return view
+    }()
+    
+
     var detailModel: AEFormModel? {
         didSet {
             if (detailModel?.title?.count ?? 0) > 0 {
@@ -62,8 +94,19 @@ class AEFormBaseTCell: AEBaseTableViewCell {
         }
     }
     
-}
+    override func configEvent() {
+        super.configEvent()
+        
+    }
+    
+    override func configUI() {
+        super.configUI()
+        contentView.backgroundColor = UIColor.gray
+        setNeedsLayout()
 
+    }
+}
+/// cell表格类型
 enum AEFormType {
     case picker
     case input
@@ -72,6 +115,13 @@ enum AEFormType {
     case calender
 }
 
+/// 圆角类型
+enum AERoundType {
+    case top
+    case bottom
+    case all
+    case none
+}
 
 class AEFormListModel: AEBaseModel {
     

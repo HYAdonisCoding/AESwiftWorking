@@ -9,6 +9,16 @@ import Foundation
 import UIKit
 
 extension UIView {
+    /// 添加圆角
+    func configRectCorner(corner: UIRectCorner, radii: CGSize) {
+        let maskPath = UIBezierPath.init(roundedRect: self.bounds, byRoundingCorners: corner, cornerRadii: radii)
+        let maskLayer = CAShapeLayer.init()
+        maskLayer.frame = self.bounds
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
+
+
     func pathShadow(_ color: UIColor, size: CGSize, shadowOpacity: Float, shadowRadius: CGFloat) {
         //设置阴影路径--避免离屏渲染
         let path = UIBezierPath.init(rect: self.bounds)

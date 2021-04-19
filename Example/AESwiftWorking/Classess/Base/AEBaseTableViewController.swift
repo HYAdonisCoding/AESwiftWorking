@@ -9,7 +9,8 @@
 import UIKit
 
 class AEBaseTableViewController: BaseViewController {
-
+    var style: UITableView.Style = .plain
+    var separatorStyle: UITableViewCell.SeparatorStyle = .singleLine
     override func configEvent() {
         super.configEvent()
     }
@@ -34,11 +35,11 @@ class AEBaseTableViewController: BaseViewController {
         }
     }
     
-    var tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: style)
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = separatorStyle
         return tableView
     }()
     var dataArray: [Any]?

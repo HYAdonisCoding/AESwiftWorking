@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class AEFormPickerTCell: AEFormBaseTCell {
 //    var actionClosure: AEActionClosure?
 //    lazy var titleLabel: UILabel = {
@@ -58,11 +60,12 @@ class AEFormPickerTCell: AEFormBaseTCell {
         button.setTitleColor(UIColor.colorHex(0x655A72), for: .normal)
 //        button.setTitleColor(UIColor.colorHex(0x040404), for: .selected)
         button.addTarget(self, action: #selector(actionButtonClick(button:)), for: UIControl.Event.touchUpInside)
-        self.contentView.addSubview(button)
+        backView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
             make.left.greaterThanOrEqualTo(titleLabel.snp.right).offset(10)
-            make.right.bottom.equalToSuperview().offset(-5)
+            make.bottom.equalToSuperview().offset(-5)
+            make.right.equalToSuperview().offset(-10)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button
