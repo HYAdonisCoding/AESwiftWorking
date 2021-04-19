@@ -21,6 +21,7 @@
 		661EF47626286486009E7037 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF47326286486009E7037 /* WeekdaysView.swift */; };
 		661EF47A2628654D009E7037 /* ICSystemAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF4792628654D009E7037 /* ICSystemAlert.swift */; };
 		661EF49E26286632009E7037 /* ICViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF49D26286632009E7037 /* ICViewExtension.swift */; };
+		662CFF38262D7D1D00425B0F /* AEFormTextFieldTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */; };
 		66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */; };
 		6640EB85261FE33100256DC4 /* AETestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB84261FE33100256DC4 /* AETestModel.swift */; };
 		6640EB89261FE35200256DC4 /* AEBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB88261FE35200256DC4 /* AEBaseModel.swift */; };
@@ -101,6 +102,7 @@
 		661EF47326286486009E7037 /* WeekdaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		661EF4792628654D009E7037 /* ICSystemAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSystemAlert.swift; sourceTree = "<group>"; };
 		661EF49D26286632009E7037 /* ICViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICViewExtension.swift; sourceTree = "<group>"; };
+		662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormTextFieldTCell.swift; sourceTree = "<group>"; };
 		66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEmptyDataSetTViewController.swift; sourceTree = "<group>"; };
 		6640EB84261FE33100256DC4 /* AETestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestModel.swift; sourceTree = "<group>"; };
 		6640EB88261FE35200256DC4 /* AEBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseModel.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				6640EB84261FE33100256DC4 /* AETestModel.swift */,
 				6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */,
 				6640EB922620439200256DC4 /* AEFormPickerTCell.swift */,
+				662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				6685A93F2626DD8000EE4E44 /* ICBaseHeaderView.swift in Sources */,
 				6613D4C3261C3FCB00083684 /* AEArcSelectionView.swift in Sources */,
 				66C5EB572612B2FF00375131 /* DispatchGroupViewController.swift in Sources */,
+				662CFF38262D7D1D00425B0F /* AEFormTextFieldTCell.swift in Sources */,
 				6685A9252626DD3F00EE4E44 /* ICDateSelectionView.swift in Sources */,
 				66C5EB762612B42600375131 /* SwizzleMethod.swift in Sources */,
 				66C5EB9E2612BF2300375131 /* AEEmptyCViewController.swift in Sources */,

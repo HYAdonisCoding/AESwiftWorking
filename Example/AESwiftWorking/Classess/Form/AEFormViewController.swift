@@ -29,11 +29,10 @@ class AEFormViewController: AEBaseTableViewController {
         
         /// 第二行
         itemModel = AEFormModel()
-        itemModel.title = "发布类型"
-        itemModel.value = "提醒类"
+        itemModel.title = "主题"
+        itemModel.value = ""
         itemModel.valueName = ""
-        itemModel.selectedArray = ["提醒类", "业绩类", "管理类", "其他"]
-        itemModel.cellType = .picker
+        itemModel.cellType = .input
         action.list?.append(itemModel)
         
         /// 第三行
@@ -140,6 +139,19 @@ extension AEFormViewController {
             }
             return cell
             
+        } else if model.cellType == .input {
+            
+            let cell = AEFormTextFieldTCell.loadCode(tableView: tableView, index: indexPath)
+            cell.roundType = roundType
+            cell.detailModel = model
+            cell.closure = { (value) in
+                if let value: String = value as? String {
+                    model.value = value
+                    tableView.reloadData()
+                }
+                
+            }
+            return cell
         }
         return UITableViewCell()
     }
