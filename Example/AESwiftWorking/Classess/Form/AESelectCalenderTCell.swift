@@ -41,8 +41,8 @@ class AESelectCalenderTCell: AEFormBaseTCell {
         button.titleLabel?.adjustsFontSizeToFitWidth = true
 
         button.setTitle("无限期", for: .normal)
-        button.setImage(UIImage(named: "selected_button_icon"), for: .normal)
-        button.setImage(UIImage(named: "no_selected_button_icon"), for: .selected)
+        button.setImage(UIImage(named: "selected_button_icon"), for: .selected)
+        button.setImage(UIImage(named: "no_selected_button_icon"), for: .normal)
         button.setTitleColor(UIColor.colorHex(0x655A72), for: .normal)
 //        button.setTitleColor(UIColor.colorHex(0x040404), for: .selected)
         button.isSelected = false
@@ -90,12 +90,7 @@ class AESelectCalenderTCell: AEFormBaseTCell {
                 titleLabel.text = detailModel?.title
             }
             if let inpout = detailModel?.value {
-                termlessButton.isSelected = false
-                if inpout == "无限期" {
-                    termlessButton.isSelected = true
-                } else {
-                    termlessButton.isSelected = false
-                }
+                termlessButton.isSelected = (inpout == "无限期")
                 dateButton.setTitle(inpout, for: .normal)
 
             }
@@ -119,6 +114,10 @@ extension AESelectCalenderTCell {
         button.isSelected = !button.isSelected
 
         guard let closure = self.closure else { return }
-        closure(button.isSelected ? "无限期" : "取消无限期")
+        var selected = "请选择限期"
+        if button.isSelected {
+            selected = "无限期"
+        }
+        closure(selected)
     }
 }
