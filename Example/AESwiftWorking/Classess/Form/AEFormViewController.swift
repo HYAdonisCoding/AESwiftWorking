@@ -10,8 +10,12 @@ import UIKit
 
 let formBackgroundColor = UIColor.gray
 
+typealias FormSaveOrSendClosure = (_ idx: Int) -> Void
 
 class AEFormViewController: AEBaseTableViewController {
+    
+    var saveOrSendClosure: FormSaveOrSendClosure?
+    
 
     override func configEvent() {
         super.configEvent()
@@ -96,7 +100,25 @@ class AEFormViewController: AEBaseTableViewController {
         
         array.append(action)
         
+        
+        /// 第三组
+        action = AEFormListModel()
+        
+        /// 第一行
+        itemModel = AEFormModel()
+        itemModel.value = ""
+        itemModel.valueName = ""
+        itemModel.selectedArray = ["保存", "发送"]
+        itemModel.cellType = .doubleAction
+        action.list?.append(itemModel)
+        
+        array.append(action)
         dataArray = array;
+        
+        /// 下一步操作
+        saveOrSendClosure = {(idx) in
+            print(idx)
+        }
     }
     
     override func configUI() {
@@ -204,6 +226,19 @@ extension AEFormViewController {
                 if let value: String = value as? String {
                     model.value = value
                     tableView.reloadData()
+                }
+                
+            }
+            return cell
+        }
+        else if model.cellType == .doubleAction {
+            
+            let cell = AEFormDoubleActionTCell.loadCode(tableView: tableView, index: indexPath)
+            cell.detailModel = model
+            cell.closure = { (value) in
+                if let value: Int = value as? Int {
+                    guard let saveOrSendClosure = self.saveOrSendClosure else { return }
+                    saveOrSendClosure(value)
                 }
                 
             }

@@ -115,7 +115,7 @@ enum AEFormType {
     case calender
     case singleChoice/// 暂时只支持2个选择
     case inputView
-
+    case doubleAction
 }
 
 /// 圆角类型

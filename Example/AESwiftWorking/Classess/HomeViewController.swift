@@ -83,6 +83,7 @@ extension HomeViewController {
         var vc = clsType.init()
         if let vc = vc as? AEFormViewController {
             vc.style = .grouped
+            vc.separatorStyle = .none
         }
 
         vc.navigationItem.title = (detail as AnyObject).replacingOccurrences(of: "ViewController", with: "")

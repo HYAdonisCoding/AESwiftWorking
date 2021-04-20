@@ -72,6 +72,7 @@
 		66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */; };
 		66D9A28B262E671E00CA53C5 /* AEFormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */; };
 		66D9A28F262E73F400CA53C5 /* AEAEFormTextViewTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A28E262E73F400CA53C5 /* AEAEFormTextViewTCell.swift */; };
+		66D9A2A5262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A2A4262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift */; };
 		9652B8135E9E68DD4F58BFBE /* Pods_AESwiftWorking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F502EDBFA36EF30AD5BC8405 /* Pods_AESwiftWorking_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSingleChoiceTCell.swift; sourceTree = "<group>"; };
 		66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSectionHeaderView.swift; sourceTree = "<group>"; };
 		66D9A28E262E73F400CA53C5 /* AEAEFormTextViewTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEAEFormTextViewTCell.swift; sourceTree = "<group>"; };
+		66D9A2A4262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormDoubleActionTCell.swift; sourceTree = "<group>"; };
 		7440E94017EFBC310F0FDC01 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESwiftWorking_Tests.release.xcconfig"; path = "Target Support Files/Pods-AESwiftWorking_Tests/Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AABD71E227068E700D945B9 /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA58474F4124D02CD1C4B77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				66D9A28E262E73F400CA53C5 /* AEAEFormTextViewTCell.swift */,
 				662CFF3B262D825A00425B0F /* AEFormCalenderTCell.swift */,
 				66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */,
+				66D9A2A4262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift */,
 				66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */,
 			);
 			path = View;
@@ -672,6 +675,7 @@
 				66C5EB762612B42600375131 /* SwizzleMethod.swift in Sources */,
 				66C5EB9E2612BF2300375131 /* AEEmptyCViewController.swift in Sources */,
 				6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */,
+				66D9A2A5262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift in Sources */,
 				662CFF3C262D825A00425B0F /* AEFormCalenderTCell.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
 				66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */,
