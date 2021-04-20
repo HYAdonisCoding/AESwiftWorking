@@ -120,6 +120,7 @@ extension AEFormSingleChoiceTCell {
 
     
     @objc func termlessAction(_ button: UIButton) {
+        AESwiftWorking_Example.endEditing()
         button.isSelected = !button.isSelected
 
         if button == firstButton {

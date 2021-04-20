@@ -102,6 +102,7 @@ class AEFormCalenderTCell: AEFormBaseTCell {
 
 extension AEFormCalenderTCell {
     @objc func showCalenderView() {
+        AESwiftWorking_Example.endEditing()
         ICDateSelectionView.dateSelectionView("") { (dateString) in
             debugPrintLog("选择了"+dateString)
             self.dateButton.setTitle(dateString, for: .normal)
@@ -111,6 +112,7 @@ extension AEFormCalenderTCell {
     }
     
     @objc func termlessAction(_ button: UIButton) {
+        AESwiftWorking_Example.endEditing()
         button.isSelected = !button.isSelected
 
         guard let closure = self.closure else { return }

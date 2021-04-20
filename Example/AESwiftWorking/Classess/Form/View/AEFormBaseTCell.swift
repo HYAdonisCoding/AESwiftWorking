@@ -114,6 +114,8 @@ enum AEFormType {
     case custom
     case calender
     case singleChoice/// 暂时只支持2个选择
+    case inputView
+
 }
 
 /// 圆角类型
@@ -150,3 +152,8 @@ class AEFormModel: AEBaseModel {
     
     
 }
+
+func endEditing() {
+    UIApplication.shared.keyWindow?.rootViewController?.view.endEditing(true)
+}
+

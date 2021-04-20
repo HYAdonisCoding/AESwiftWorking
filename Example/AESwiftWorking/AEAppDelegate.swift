@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AEAppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,12 @@ class AEAppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        /// 键盘自动收回
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
+        
         return true
     }
     

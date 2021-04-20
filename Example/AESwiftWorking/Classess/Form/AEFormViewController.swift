@@ -64,12 +64,12 @@ class AEFormViewController: AEBaseTableViewController {
         
         /// 第一行
         itemModel = AEFormModel()
-        itemModel.title = "发布类型"
-        itemModel.value = "提醒类"
+        itemModel.title = ""
+        itemModel.value = ""
         itemModel.valueName = ""
-        itemModel.selectedArray = ["提醒类", "业绩类", "管理类", "其他"]
-        itemModel.cellType = .picker
+        itemModel.cellType = .inputView
         action.list?.append(itemModel)
+        
         
         array.append(action)
         
@@ -184,6 +184,20 @@ extension AEFormViewController {
         else if model.cellType == .singleChoice {
             
             let cell = AEFormSingleChoiceTCell.loadCode(tableView: tableView, index: indexPath)
+            cell.roundType = roundType
+            cell.detailModel = model
+            cell.closure = { (value) in
+                if let value: String = value as? String {
+                    model.value = value
+                    tableView.reloadData()
+                }
+                
+            }
+            return cell
+        }
+        else if model.cellType == .inputView {
+            
+            let cell = AEAEFormTextViewTCell.loadCode(tableView: tableView, index: indexPath)
             cell.roundType = roundType
             cell.detailModel = model
             cell.closure = { (value) in

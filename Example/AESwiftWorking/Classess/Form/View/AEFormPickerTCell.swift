@@ -94,6 +94,7 @@ class AEFormPickerTCell: AEFormBaseTCell {
 
 extension AEFormPickerTCell {
     @objc func actionButtonClick(button: UIButton) {
+        AESwiftWorking_Example.endEditing()
         if detailModel?.cellType == .picker {
             ///
             let title = "选择"+(detailModel?.title ?? "")

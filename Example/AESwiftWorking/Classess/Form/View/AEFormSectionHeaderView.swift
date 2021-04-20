@@ -105,6 +105,7 @@ class AEFormSectionHeaderView: UITableViewHeaderFooterView {
     
     
     @objc func moreBtn(button: UIButton) -> Void {
+        AESwiftWorking_Example.endEditing()
         guard let headerMoreBtnClick = sectionClosure else { return }
         headerMoreBtnClick(nil)
     }
