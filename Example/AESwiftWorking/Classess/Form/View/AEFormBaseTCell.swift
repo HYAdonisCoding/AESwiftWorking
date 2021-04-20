@@ -101,7 +101,7 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     
     override func configUI() {
         super.configUI()
-        contentView.backgroundColor = UIColor.gray
+        contentView.backgroundColor = formBackgroundColor
         setNeedsLayout()
 
     }
@@ -128,9 +128,13 @@ class AEFormListModel: AEBaseModel {
     
     var list: [AEBaseModel]? = []
     var title: String?
+    var subTitle: String?
     
     /// 是否是圆角
     var round: Bool = false
+    
+    var moreActionTitle: String?
+    
     
     
 }

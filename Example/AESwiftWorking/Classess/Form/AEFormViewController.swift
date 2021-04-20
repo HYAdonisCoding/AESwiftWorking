@@ -8,6 +8,9 @@
 
 import UIKit
 
+let formBackgroundColor = UIColor.gray
+
+
 class AEFormViewController: AEBaseTableViewController {
 
     override func configEvent() {
@@ -57,6 +60,7 @@ class AEFormViewController: AEBaseTableViewController {
         
         /// 第二组
         action = AEFormListModel()
+        action.title = "请补充详细问题或意见"
         
         /// 第一行
         itemModel = AEFormModel()
@@ -194,4 +198,25 @@ extension AEFormViewController {
         return UITableViewCell()
     }
     
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sec: AEFormListModel = dataArray?[section] as? AEFormListModel ?? AEFormListModel()
+        if (sec.title?.count ?? 0) > 0 {
+            let header = AEFormSectionHeaderView.loadCode(tableView: tableView, section: section)
+            header.model = sec
+            return header
+        }
+        
+        let header = AEBaseView()
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let sec: AEFormListModel = dataArray?[section] as? AEFormListModel ?? AEFormListModel()
+        if (sec.title?.count ?? 0) > 0 {
+            return 30
+        }
+        return 10
+    }
 }
