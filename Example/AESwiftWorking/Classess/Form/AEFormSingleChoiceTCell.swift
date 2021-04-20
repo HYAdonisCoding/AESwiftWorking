@@ -1,19 +1,19 @@
 //
-//  AESelectCalenderTCell.swift
+//  AEFormSingleChoiceTCell.swift
 //  AESwiftWorking_Example
 //
-//  Created by Adam on 2021/4/19.
+//  Created by Adam on 2021/4/20.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-class AESelectCalenderTCell: AEFormBaseTCell {
+class AEFormSingleChoiceTCell: AEFormBaseTCell {
 
-    override class func loadCode(tableView: UITableView, index: IndexPath) -> AESelectCalenderTCell {
+    override class func loadCode(tableView: UITableView, index: IndexPath) -> AEFormSingleChoiceTCell {
         let identifier: String = String(describing: AEFormTextFieldTCell.self)
-        tableView.register(AESelectCalenderTCell.self, forCellReuseIdentifier: identifier)
-        let cell: AESelectCalenderTCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: index as IndexPath) as! AESelectCalenderTCell
+        tableView.register(AEFormSingleChoiceTCell.self, forCellReuseIdentifier: identifier)
+        let cell: AEFormSingleChoiceTCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: index as IndexPath) as! AEFormSingleChoiceTCell
         cell.selectionStyle = .none
         cell.indexPath = index
         cell.configEvent()
@@ -34,18 +34,17 @@ class AESelectCalenderTCell: AEFormBaseTCell {
     }
 
     //无限期
-    private lazy var termlessButton: UIButton = {
+    private lazy var firstButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.adjustsFontSizeToFitWidth = true
 
-        button.setTitle("无限期", for: .normal)
         button.setImage(UIImage(named: "selected_button_icon"), for: .selected)
         button.setImage(UIImage(named: "no_selected_button_icon"), for: .normal)
         button.setTitleColor(UIColor.colorHex(0x655A72), for: .normal)
 //        button.setTitleColor(UIColor.colorHex(0x040404), for: .selected)
-        button.isSelected = false
+//        button.isSelected = false
         button.addTarget(self, action: #selector(termlessAction(_:)), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -57,19 +56,21 @@ class AESelectCalenderTCell: AEFormBaseTCell {
         return button
     }()
     
-    private lazy var dateButton: UIButton = {
+    private lazy var secondButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.setImage(UIImage(named: "selected_date_icon"), for: .normal)
+        
+        button.setImage(UIImage(named: "selected_button_icon"), for: .selected)
+        button.setImage(UIImage(named: "no_selected_button_icon"), for: .normal)
         button.setTitleColor(UIColor.colorHex(0x655A72), for: .normal)
 //        button.setTitleColor(UIColor.colorHex(0x040404), for: .selected)
-        button.addTarget(self, action: #selector(showCalenderView), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(termlessAction(_:)), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
-            make.left.greaterThanOrEqualTo(termlessButton.snp.right).offset(20)
+            make.left.greaterThanOrEqualTo(firstButton.snp.right).offset(28)
             make.bottom.equalToSuperview().offset(-5)
             make.right.equalToSuperview().offset(-10)
             make.height.equalTo(titleLabel.snp.height)
@@ -79,19 +80,34 @@ class AESelectCalenderTCell: AEFormBaseTCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        dateButton.setLayoutType(type: .rightImage, space: 10)
+        firstButton.setLayoutType(type: .leftImage, space: 10)
 
-        termlessButton.setLayoutType(type: .leftImage, space: 10)
+        secondButton.setLayoutType(type: .leftImage, space: 10)
     }
     
     override var detailModel: AEFormModel? {
         didSet {
+            if let titles = detailModel?.selectedArray {
+                if titles.count == 1 {
+                    secondButton.isHidden = true
+                } else if titles.count >= 2 {
+                    firstButton.isHidden = false
+                    secondButton.isHidden = false
+
+                    firstButton.setTitle(titles.first, for: .normal)
+                    secondButton.setTitle(titles[1], for: .normal)
+                } else {
+                    firstButton.isHidden = true
+                    secondButton.isHidden = true
+
+                }
+            }
             if (detailModel?.title?.count ?? 0) > 0 {
                 titleLabel.text = detailModel?.title
             }
             if let inpout = detailModel?.value {
-                termlessButton.isSelected = (inpout == "无限期")
-                dateButton.setTitle(inpout, for: .normal)
+                firstButton.isSelected = (inpout == firstButton.currentTitle)
+                secondButton.isSelected = (inpout == secondButton.currentTitle)
 
             }
 
@@ -100,23 +116,25 @@ class AESelectCalenderTCell: AEFormBaseTCell {
     
 }
 
-extension AESelectCalenderTCell {
-    @objc func showCalenderView() {
-        ICDateSelectionView.dateSelectionView("") { (dateString) in
-            debugPrintLog("选择了"+dateString)
-            self.dateButton.setTitle(dateString, for: .normal)
-            guard let closure = self.closure else { return }
-            closure(dateString)
-        }
-    }
+extension AEFormSingleChoiceTCell {
+
     
     @objc func termlessAction(_ button: UIButton) {
         button.isSelected = !button.isSelected
 
+        if button == firstButton {
+            secondButton.isSelected = !button.isSelected
+        } else if button == secondButton {
+            firstButton.isSelected = !button.isSelected
+        }
+        
         guard let closure = self.closure else { return }
-        var selected = "请选择限期"
-        if button.isSelected {
-            selected = "无限期"
+        var selected = detailModel?.selectedArray?.first
+        if firstButton.isSelected {
+            selected = firstButton.currentTitle
+        } else
+        if secondButton.isSelected {
+            selected = secondButton.currentTitle
         }
         closure(selected)
     }

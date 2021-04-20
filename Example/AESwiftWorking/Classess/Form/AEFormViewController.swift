@@ -42,6 +42,16 @@ class AEFormViewController: AEBaseTableViewController {
         itemModel.valueName = ""
         itemModel.cellType = .calender
         action.list?.append(itemModel)
+        
+        /// 第三行
+        itemModel = AEFormModel()
+        itemModel.title = "是否回复"
+        itemModel.value = ""
+        itemModel.valueName = ""
+        itemModel.cellType = .singleChoice
+        itemModel.selectedArray = ["回复", "不回复"]
+        action.list?.append(itemModel)
+        
     
         array.append(action)
         
@@ -155,7 +165,21 @@ extension AEFormViewController {
         
         else if model.cellType == .calender {
             
-            let cell = AESelectCalenderTCell.loadCode(tableView: tableView, index: indexPath)
+            let cell = AEFormCalenderTCell.loadCode(tableView: tableView, index: indexPath)
+            cell.roundType = roundType
+            cell.detailModel = model
+            cell.closure = { (value) in
+                if let value: String = value as? String {
+                    model.value = value
+                    tableView.reloadData()
+                }
+                
+            }
+            return cell
+        }
+        else if model.cellType == .singleChoice {
+            
+            let cell = AEFormSingleChoiceTCell.loadCode(tableView: tableView, index: indexPath)
             cell.roundType = roundType
             cell.detailModel = model
             cell.closure = { (value) in

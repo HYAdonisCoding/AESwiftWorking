@@ -22,7 +22,7 @@
 		661EF47A2628654D009E7037 /* ICSystemAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF4792628654D009E7037 /* ICSystemAlert.swift */; };
 		661EF49E26286632009E7037 /* ICViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF49D26286632009E7037 /* ICViewExtension.swift */; };
 		662CFF38262D7D1D00425B0F /* AEFormTextFieldTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */; };
-		662CFF3C262D825A00425B0F /* AESelectCalenderTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF3B262D825A00425B0F /* AESelectCalenderTCell.swift */; };
+		662CFF3C262D825A00425B0F /* AEFormCalenderTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CFF3B262D825A00425B0F /* AEFormCalenderTCell.swift */; };
 		66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */; };
 		6640EB85261FE33100256DC4 /* AETestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB84261FE33100256DC4 /* AETestModel.swift */; };
 		6640EB89261FE35200256DC4 /* AEBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB88261FE35200256DC4 /* AEBaseModel.swift */; };
@@ -69,6 +69,7 @@
 		66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */; };
 		66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDA2613147900375131 /* AECollectionReusableView.swift */; };
 		66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDE2613158D00375131 /* AECHeaderView.swift */; };
+		66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */; };
 		9652B8135E9E68DD4F58BFBE /* Pods_AESwiftWorking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F502EDBFA36EF30AD5BC8405 /* Pods_AESwiftWorking_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +105,7 @@
 		661EF4792628654D009E7037 /* ICSystemAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSystemAlert.swift; sourceTree = "<group>"; };
 		661EF49D26286632009E7037 /* ICViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICViewExtension.swift; sourceTree = "<group>"; };
 		662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormTextFieldTCell.swift; sourceTree = "<group>"; };
-		662CFF3B262D825A00425B0F /* AESelectCalenderTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESelectCalenderTCell.swift; sourceTree = "<group>"; };
+		662CFF3B262D825A00425B0F /* AEFormCalenderTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormCalenderTCell.swift; sourceTree = "<group>"; };
 		66361CDF262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEmptyDataSetTViewController.swift; sourceTree = "<group>"; };
 		6640EB84261FE33100256DC4 /* AETestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestModel.swift; sourceTree = "<group>"; };
 		6640EB88261FE35200256DC4 /* AEBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseModel.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseTableViewController.swift; sourceTree = "<group>"; };
 		66C5EBDA2613147900375131 /* AECollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECollectionReusableView.swift; sourceTree = "<group>"; };
 		66C5EBDE2613158D00375131 /* AECHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECHeaderView.swift; sourceTree = "<group>"; };
+		66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSingleChoiceTCell.swift; sourceTree = "<group>"; };
 		7440E94017EFBC310F0FDC01 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESwiftWorking_Tests.release.xcconfig"; path = "Target Support Files/Pods-AESwiftWorking_Tests/Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AABD71E227068E700D945B9 /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA58474F4124D02CD1C4B77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -338,7 +340,8 @@
 				6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */,
 				6640EB922620439200256DC4 /* AEFormPickerTCell.swift */,
 				662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */,
-				662CFF3B262D825A00425B0F /* AESelectCalenderTCell.swift */,
+				662CFF3B262D825A00425B0F /* AEFormCalenderTCell.swift */,
+				66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -651,8 +654,9 @@
 				66C5EB762612B42600375131 /* SwizzleMethod.swift in Sources */,
 				66C5EB9E2612BF2300375131 /* AEEmptyCViewController.swift in Sources */,
 				6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */,
-				662CFF3C262D825A00425B0F /* AESelectCalenderTCell.swift in Sources */,
+				662CFF3C262D825A00425B0F /* AEFormCalenderTCell.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
+				66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
 				6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */,
 				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,

@@ -113,6 +113,7 @@ enum AEFormType {
     case show
     case custom
     case calender
+    case singleChoice/// 暂时只支持2个选择
 }
 
 /// 圆角类型
