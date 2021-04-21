@@ -116,6 +116,7 @@ enum AEFormType {
     case singleChoice/// 暂时只支持2个选择
     case inputView
     case doubleAction
+    case choiceAndCustomPush
 }
 
 /// 圆角类型
