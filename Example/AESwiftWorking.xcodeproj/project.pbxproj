@@ -372,7 +372,6 @@
 				6613D4CC261C429D00083684 /* Utils */,
 				6613D4C1261C3F5600083684 /* ArcSelection */,
 				66C5EB922612BEA600375131 /* Empty */,
-				66C5EB502612B2FF00375131 /* EmptyView */,
 				66C5EB532612B2FF00375131 /* Base */,
 				607FACD71AFB9204008FA782 /* AEViewController.swift */,
 				66C5EB4D2612B2FF00375131 /* WKWebViewController.swift */,
@@ -417,6 +416,7 @@
 		66C5EB922612BEA600375131 /* Empty */ = {
 			isa = PBXGroup;
 			children = (
+				66C5EB502612B2FF00375131 /* EmptyView */,
 				66C5EB932612BEDA00375131 /* AEEmptyViewController.swift */,
 				66C5EB992612BF1900375131 /* AEEmptyTViewController.swift */,
 				66C5EB9D2612BF2300375131 /* AEEmptyCViewController.swift */,
