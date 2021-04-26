@@ -50,6 +50,14 @@ class AEFormViewController: AEBaseTableViewController {
         itemModel.cellType = .calender
         action.list?.append(itemModel)
         
+        itemModel = AEFormModel()
+        itemModel.title = "发布等级"
+        itemModel.value = "高级"
+        itemModel.valueName = ""
+        itemModel.selectedArray = ["高级", "中级", "初级"]
+        itemModel.cellType = .picker
+        action.list?.append(itemModel)
+        
         /// 第三行
         itemModel = AEFormModel()
         itemModel.title = "是否回复"
