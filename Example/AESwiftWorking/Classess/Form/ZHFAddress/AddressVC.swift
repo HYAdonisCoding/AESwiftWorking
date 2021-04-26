@@ -22,8 +22,14 @@ class AddressVC: UIViewController,ZHFAddTitleAddressViewDelegate {
         addressBtn = UIButton.init(type: .custom)
         addressBtn.frame = CGRect.init(x: 0, y: 200, width: ScreenWidth, height: 40)
         addressBtn.backgroundColor = UIColor.lightGray
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+        addressBtn.addGestureRecognizer(tap)
+        addressBtn.isUserInteractionEnabled = true
+        
         addressBtn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
         self.view.addSubview(addressBtn)
+        
+        
         if isEdit == true { //编辑状态
             self.title = "编辑地址"
             //编辑地址要是需要直接跳到当前地址位置,需要传对应titleIDMarr = [省ID，市ID，县ID，乡ID]
@@ -61,5 +67,9 @@ class AddressVC: UIViewController,ZHFAddTitleAddressViewDelegate {
             addressBtn.setTitle(titleAddress, for: .normal)
             print("打印的对应省市县的id\(titleID)")
         }
+    }
+    
+    @objc func tapAction(_ g: UIGestureRecognizer)  {
+        print("tapAction")
     }
 }

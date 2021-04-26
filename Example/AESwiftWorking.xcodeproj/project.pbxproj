@@ -14,6 +14,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		660936E526350DC800A5EA23 /* AEEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660936E426350DC800A5EA23 /* AEEventViewController.swift */; };
+		660936EB263510D200A5EA23 /* AETestAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660936EA263510D200A5EA23 /* AETestAView.swift */; };
+		660936EF2635111000A5EA23 /* AETestBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660936EE2635111000A5EA23 /* AETestBView.swift */; };
 		6613D4C3261C3FCB00083684 /* AEArcSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */; };
 		6613D4C9261C429400083684 /* ICEfficientTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613D4C8261C429400083684 /* ICEfficientTool.swift */; };
 		661EF47426286486009E7037 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF47126286486009E7037 /* CalenderView.swift */; };
@@ -107,6 +110,9 @@
 		607FACE51AFB9204008FA782 /* AESwiftWorking_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AESwiftWorking_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		660936E426350DC800A5EA23 /* AEEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEventViewController.swift; sourceTree = "<group>"; };
+		660936EA263510D200A5EA23 /* AETestAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestAView.swift; sourceTree = "<group>"; };
+		660936EE2635111000A5EA23 /* AETestBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestBView.swift; sourceTree = "<group>"; };
 		6613D4C2261C3FCB00083684 /* AEArcSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcSelectionView.swift; sourceTree = "<group>"; };
 		6613D4C8261C429400083684 /* ICEfficientTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICEfficientTool.swift; sourceTree = "<group>"; };
 		661EF47126286486009E7037 /* CalenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
@@ -294,6 +300,16 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		660936E326350D1A00A5EA23 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				660936E426350DC800A5EA23 /* AEEventViewController.swift */,
+				660936EA263510D200A5EA23 /* AETestAView.swift */,
+				660936EE2635111000A5EA23 /* AETestBView.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		6613D4C1261C3F5600083684 /* ArcSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +384,7 @@
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				660936E326350D1A00A5EA23 /* Event */,
 				669332A5261D43C30064608F /* Form */,
 				6613D4CC261C429D00083684 /* Utils */,
 				6613D4C1261C3F5600083684 /* ArcSelection */,
@@ -665,6 +682,7 @@
 				66D9A2A9262EC5AC00CA53C5 /* AEChoiceAndCustomPushTCell.swift in Sources */,
 				66C5EB722612B40B00375131 /* EmptyDelegate.swift in Sources */,
 				66D9A28B262E671E00CA53C5 /* AEFormSectionHeaderView.swift in Sources */,
+				660936EB263510D200A5EA23 /* AETestAView.swift in Sources */,
 				664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */,
 				66C5EB582612B2FF00375131 /* UITableViewEx.swift in Sources */,
 				6685A93E2626DD8000EE4E44 /* ICBaseWebView.swift in Sources */,
@@ -674,6 +692,7 @@
 				66C5EB592612B2FF00375131 /* SemaphoreViewController.swift in Sources */,
 				66D9A2B5262ECB9200CA53C5 /* AddressVC.swift in Sources */,
 				66C5EBA22612C49D00375131 /* AEEmptyTool.swift in Sources */,
+				660936EF2635111000A5EA23 /* AETestBView.swift in Sources */,
 				66C5EB7A2612B43D00375131 /* Swizzling_Cv.swift in Sources */,
 				66C5EB6E2612B3E400375131 /* EmptyDataView.swift in Sources */,
 				6685A9402626DD8000EE4E44 /* ICBaseWebVC.swift in Sources */,
@@ -683,6 +702,7 @@
 				66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */,
 				66C5EB5A2612B2FF00375131 /* BaseViewController.swift in Sources */,
 				66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */,
+				660936E526350DC800A5EA23 /* AEEventViewController.swift in Sources */,
 				66D9A2B7262ECB9200CA53C5 /* AddressCell.swift in Sources */,
 				6685A9392626DD8000EE4E44 /* ICBaseCollectionViewCell.swift in Sources */,
 				66C5EB7E2612B45400375131 /* Swizzling_Tv.swift in Sources */,
