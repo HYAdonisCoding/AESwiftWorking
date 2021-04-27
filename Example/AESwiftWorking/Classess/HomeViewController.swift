@@ -39,13 +39,16 @@ extension HomeViewController {
         AEArcSelectionView.shared { (idx, title) in
             print("idx:\(idx) title:\(title)")
             
-            var mutile = 6
-            let Block: ((Int) -> Int)? = { num in
-                return num * mutile
+            if idx == 0 {
+                let vc = AEFormViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if idx == 1 {
+                let vc = AEReceiveMessagesViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if idx == 2 {
+                let vc = AEReceiveMessagesViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            mutile = 4
-            
-            print("\(String(describing: Block?(2)))")
         };
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

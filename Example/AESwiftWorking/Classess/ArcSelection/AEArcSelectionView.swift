@@ -48,7 +48,7 @@ class AEArcSelectionView: UIView {
         return button
     }()
     
-    class func shared(titleArray: [String] = ["发布", "接收", "我的消息"], closure: @escaping ArcSelectionClosure) {
+    class func shared(titleArray: [String] = ["新建发布", "接收消息", "我的发布"], closure: @escaping ArcSelectionClosure) {
         let view = AEArcSelectionView(frame: UIScreen.main.bounds)
         view.closure = closure
         view.titleArray = titleArray
