@@ -49,7 +49,7 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         button.addTarget(self, action: #selector(termlessAction(_:)), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.equalTo(titleLabel.snp.right).offset(20)
             make.bottom.equalToSuperview().offset(-5)
             make.height.equalTo(titleLabel.snp.height)
@@ -70,10 +70,9 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         button.addTarget(self, action: #selector(pushCustomViewController), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.equalTo(noticeLabel.snp.right).offset(5)
-            make.bottom.equalToSuperview().offset(-5)
-            make.right.equalToSuperview().offset(-10)
+            make.bottom.right.equalToSuperview().offset(-15)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button
@@ -86,7 +85,7 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
 //        label.adjustsFontSizeToFitWidth = true
         backView.addSubview(label)
         label.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.greaterThanOrEqualTo(termlessButton.snp.right).offset(5)
 //            make.right.equalTo(addButton.snp.left).offset(-5)
 //            make.width.greaterThanOrEqualTo(ScreenWidth/2)

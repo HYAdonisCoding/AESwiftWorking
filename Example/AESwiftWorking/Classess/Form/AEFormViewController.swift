@@ -170,6 +170,11 @@ extension AEFormViewController {
             /// 下方圆角
             roundType = .bottom
         }
+        var hideBottomLine = false
+        if indexPath.row == ((sec.list?.count ?? 0) - 1) {
+            hideBottomLine = true
+        }
+        
         if model.cellType == .picker {
             let cell = AEFormPickerTCell.loadCode(tableView: tableView, index: indexPath)
             cell.roundType = roundType
@@ -181,6 +186,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
             
         } else if model.cellType == .input {
@@ -195,6 +201,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         
@@ -210,6 +217,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         else if model.cellType == .singleChoice {
@@ -224,11 +232,12 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         else if model.cellType == .inputView {
             
-            let cell = AEAEFormTextViewTCell.loadCode(tableView: tableView, index: indexPath)
+            let cell = AEFormChapterTextViewTCell.loadCode(tableView: tableView, index: indexPath)
             cell.roundType = roundType
             cell.detailModel = model
             cell.closure = { (value) in
@@ -238,6 +247,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         else if model.cellType == .choiceAndCustomPush {
@@ -252,6 +262,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         else if model.cellType == .doubleAction {
@@ -265,6 +276,7 @@ extension AEFormViewController {
                 }
                 
             }
+            cell.hideBottomLine(hideBottomLine)
             return cell
         }
         return UITableViewCell()
@@ -287,7 +299,7 @@ extension AEFormViewController {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let sec: AEFormListModel = dataArray?[section] as? AEFormListModel ?? AEFormListModel()
         if (sec.title?.count ?? 0) > 0 {
-            return 30
+            return 45
         }
         return 10
     }

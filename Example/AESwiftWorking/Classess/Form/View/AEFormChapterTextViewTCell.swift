@@ -1,5 +1,5 @@
 //
-//  AEAEFormTextViewTCell.swift
+//  AEFormChapterTextViewTCell.swift
 //  AESwiftWorking_Example
 //
 //  Created by Adam on 2021/4/20.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-let kCountlimited = 200
+let kCountlimited = 1000
 
 
-class AEAEFormTextViewTCell: AEFormBaseTCell {
+class AEFormChapterTextViewTCell: AEFormBaseTCell {
 
-    override class func loadCode(tableView: UITableView, index: IndexPath) -> AEAEFormTextViewTCell {
-        let identifier: String = String(describing: AEAEFormTextViewTCell.self)
-        tableView.register(AEAEFormTextViewTCell.self, forCellReuseIdentifier: identifier)
-        let cell: AEAEFormTextViewTCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: index as IndexPath) as! AEAEFormTextViewTCell
+    override class func loadCode(tableView: UITableView, index: IndexPath) -> AEFormChapterTextViewTCell {
+        let identifier: String = String(describing: AEFormChapterTextViewTCell.self)
+        tableView.register(AEFormChapterTextViewTCell.self, forCellReuseIdentifier: identifier)
+        let cell: AEFormChapterTextViewTCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: index as IndexPath) as! AEFormChapterTextViewTCell
         cell.selectionStyle = .none
         cell.indexPath = index
         cell.configEvent()
@@ -75,7 +75,7 @@ class AEAEFormTextViewTCell: AEFormBaseTCell {
     }
 }
 
-extension AEAEFormTextViewTCell: UITextViewDelegate {
+extension AEFormChapterTextViewTCell: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text.count == 0 {
             return true

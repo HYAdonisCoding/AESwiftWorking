@@ -65,11 +65,27 @@ class AEFormBaseTCell: AEBaseTableViewCell {
         label.textColor = UIColor.colorHex(0x231A2F)
         backView.addSubview(label)
         label.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview().offset(5)
+            make.left.top.equalToSuperview().offset(15)
             make.width.greaterThanOrEqualTo(0)
+            make.bottom.equalToSuperview().offset(-15)
         }
         return label
     }()
+    
+    lazy var bottomLineView: UIView = {
+        let line = UIView()
+        line.backgroundColor = formBackgroundColor
+        backView.addSubview(line)
+        line.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(1)
+        }
+        return line
+    }()
+    
+
     
     lazy var backView: UIView = {
         let view = UIView()
@@ -102,8 +118,20 @@ class AEFormBaseTCell: AEBaseTableViewCell {
     override func configUI() {
         super.configUI()
         contentView.backgroundColor = formBackgroundColor
+        
+        let _ = backView
+        
+        let _ = bottomLineView
+        
+        
         setNeedsLayout()
 
+
+        
+    }
+    
+    func hideBottomLine(_ hide: Bool = false) {
+        bottomLineView.isHidden = hide
     }
 }
 /// cell表格类型

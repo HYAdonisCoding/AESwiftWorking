@@ -43,10 +43,9 @@ class AEFormTextFieldTCell: AEFormBaseTCell {
         inputTextField.delegate = self
         backView.addSubview(inputTextField)
         inputTextField.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.equalTo(titleLabel.snp.right).offset(10)
-            make.bottom.equalToSuperview().offset(-5)
-            make.right.equalToSuperview().offset(-10)
+            make.bottom.right.equalToSuperview().offset(-15)
             make.height.equalTo(titleLabel.snp.height)
         }
         return inputTextField

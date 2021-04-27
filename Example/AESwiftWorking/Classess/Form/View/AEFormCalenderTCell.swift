@@ -49,9 +49,9 @@ class AEFormCalenderTCell: AEFormBaseTCell {
         button.addTarget(self, action: #selector(termlessAction(_:)), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.greaterThanOrEqualTo(titleLabel.snp.right).offset(10)
-            make.bottom.equalToSuperview().offset(-5)
+            make.bottom.equalToSuperview().offset(-15)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button
@@ -68,10 +68,9 @@ class AEFormCalenderTCell: AEFormBaseTCell {
         button.addTarget(self, action: #selector(showCalenderView), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(15)
             make.left.greaterThanOrEqualTo(termlessButton.snp.right).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
-            make.right.equalToSuperview().offset(-10)
+            make.bottom.right.equalToSuperview().offset(-15)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button

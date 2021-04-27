@@ -38,28 +38,28 @@ class AEFormDoubleActionTCell: AEFormBaseTCell {
         
         backView.backgroundColor = formBackgroundColor
         
-        termlessButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
-        dateButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
+        firstButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
+        secondButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
     }
 
-    //无限期
-    private lazy var termlessButton: UIButton = {
+    
+    private lazy var firstButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.setTitleColor(UIColor.white, for: .normal)
         button.addTarget(self, action: #selector(btnClickedAction(_:)), for: UIControl.Event.touchUpInside)
+        button.backgroundColor = UIColor.colorHex(0xD3D1D7)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview().offset(5)
-            make.bottom.equalToSuperview().offset(-5)
+            make.left.top.bottom.equalToSuperview()
             make.height.equalTo(40)
         }
         return button
     }()
     
-    private lazy var dateButton: UIButton = {
+    private lazy var secondButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
@@ -68,12 +68,12 @@ class AEFormDoubleActionTCell: AEFormBaseTCell {
         button.addTarget(self, action: #selector(btnClickedAction(_:)), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
-            make.left.equalTo(termlessButton.snp.right).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
-            make.right.equalToSuperview().offset(-5)
-            make.height.equalTo(termlessButton.snp.height)
-            make.width.equalTo(termlessButton.snp.width)
+            make.right.equalToSuperview()
+            make.top.equalToSuperview()
+            make.left.equalTo(firstButton.snp.right).offset(20)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(firstButton.snp.height)
+            make.width.equalTo(firstButton.snp.width)
         }
         return button
     }()
@@ -81,17 +81,20 @@ class AEFormDoubleActionTCell: AEFormBaseTCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let width = (backView.bounds.size.width-30) / 2
-        dateButton.configRectCorner(corner: [.allCorners], radii: CGSize(width: width, height: 40))
+        if width > 0 {
+            secondButton.configRectCorner(corner: [.allCorners], radii: CGSize(width: width, height: 40))
 
-        termlessButton.configRectCorner(corner: [.allCorners], radii: CGSize(width: width, height: 40))
+            firstButton.configRectCorner(corner: [.allCorners], radii: CGSize(width: width, height: 40))
+        }
+
     }
     
     override var detailModel: AEFormModel? {
         didSet {
             if let inpout = detailModel?.selectedArray {
                 if inpout.count >= 2 {
-                    termlessButton.setTitle(inpout.first, for: .normal)
-                    dateButton.setTitle(inpout[1], for: .normal)
+                    firstButton.setTitle(inpout.first, for: .normal)
+                    secondButton.setTitle(inpout[1], for: .normal)
                 }
 
             }
