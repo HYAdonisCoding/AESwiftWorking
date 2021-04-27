@@ -28,7 +28,7 @@ class AEShowPView: AEBaseView {
     }
     
     override func configUI() {
-        super.configUI()ui
+        super.configUI()
     }
 
     private lazy var titleLabel: UILabel = {

@@ -33,7 +33,7 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         // Configure the view for the selected state
     }
 
-    //无限期
+    // 是否全员按钮
     private lazy var termlessButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
@@ -50,26 +50,28 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
-            make.left.greaterThanOrEqualTo(titleLabel.snp.right).offset(10)
+            make.left.equalTo(titleLabel.snp.right).offset(20)
             make.bottom.equalToSuperview().offset(-5)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button
     }()
     
-    private lazy var dateButton: UIButton = {
+    // 添加按钮
+    private lazy var addButton: UIButton = {
         let button = UIButton(type: .custom)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.setTitleColor(UIColor.colorHex(0x655A72), for: .normal)
-        button.setImage(UIImage(named: "right_arrow_icon"), for: .normal)
-        button.setImage(UIImage(named: "right_arrow_icon"), for: .selected)
+        button.setTitle("添加", for: .normal)
+        button.setTitleColor(UIColor.colorHex(0xAB702D), for: .normal)
+//        button.setImage(UIImage(named: "right_arrow_icon"), for: .normal)
+//        button.setImage(UIImage(named: "right_arrow_icon"), for: .selected)
         button.addTarget(self, action: #selector(pushCustomViewController), for: UIControl.Event.touchUpInside)
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
-            make.left.greaterThanOrEqualTo(termlessButton.snp.right).offset(20)
+            make.left.equalTo(noticeLabel.snp.right).offset(5)
             make.bottom.equalToSuperview().offset(-5)
             make.right.equalToSuperview().offset(-10)
             make.height.equalTo(titleLabel.snp.height)
@@ -77,9 +79,42 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         return button
     }()
     
+    private lazy var noticeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "请添加发送人"
+        label.textColor = UIColor.colorHex(0xD3D1D7)
+//        label.adjustsFontSizeToFitWidth = true
+        backView.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(5)
+            make.left.greaterThanOrEqualTo(termlessButton.snp.right).offset(5)
+//            make.right.equalTo(addButton.snp.left).offset(-5)
+//            make.width.greaterThanOrEqualTo(ScreenWidth/2)
+            make.height.equalTo(titleLabel.snp.height)
+        }
+        return label
+    }()
+    
+
+    override func configEvent() {
+        super.configEvent()
+    }
+    
+    override func configUI() {
+        super.configUI()
+        
+        let _ = titleLabel
+        let _ = termlessButton
+        let _ = noticeLabel
+        let _ = addButton
+        
+        noticeLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        dateButton.setLayoutType(type: .rightImage, space: 10)
+//        addButton.setLayoutType(type: .rightImage, space: 10)
 
         termlessButton.setLayoutType(type: .leftImage, space: 10)
     }
@@ -94,17 +129,15 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
                     termlessButton.setTitle(titles.first, for: .normal)
                 }
             }
-            dateButton.setTitle("请选择发送人", for: .normal)
+            noticeLabel.text = "请选择发送人"
 
-            if let inpout = detailModel?.value {
+            if let inpout = detailModel?.value, inpout.count > 0 {
                 termlessButton.isSelected = (inpout == "全员")
-                dateButton.setTitle(inpout, for: .selected)
-                dateButton.isSelected = (inpout != "")
+                noticeLabel.text = inpout
 
             } else {
                 termlessButton.isSelected = false
-                dateButton.setTitle("请选择发送人", for: .normal)
-                dateButton.isSelected = false
+                noticeLabel.text = "请选择发送人"
             }
 
         }

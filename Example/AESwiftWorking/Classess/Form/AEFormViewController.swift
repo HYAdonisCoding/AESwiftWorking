@@ -8,7 +8,7 @@
 
 import UIKit
 
-let formBackgroundColor = UIColor.gray
+let formBackgroundColor = UIColor.colorHex(0xf5f5f7)
 
 typealias FormSaveOrSendClosure = (_ idx: Int) -> Void
 
@@ -90,22 +90,22 @@ class AEFormViewController: AEBaseTableViewController {
         
         /// 第一行
         itemModel = AEFormModel()
-        itemModel.title = "选择发送人"
-        itemModel.value = "全员"
+        itemModel.title = "发送人"
+        itemModel.value = ""
         itemModel.valueName = ""
-        itemModel.selectedArray = ["全员"]
+//        itemModel.selectedArray = ["全员"]
         itemModel.cellType = .choiceAndCustomPush
 
         action.list?.append(itemModel)
         
         /// 第二行
-        itemModel = AEFormModel()
-        itemModel.title = "发布类型"
-        itemModel.value = "提醒类"
-        itemModel.valueName = ""
-        itemModel.selectedArray = ["提醒类", "业绩类", "管理类", "其他"]
-        itemModel.cellType = .picker
-        action.list?.append(itemModel)
+//        itemModel = AEFormModel()
+//        itemModel.title = "发布类型"
+//        itemModel.value = "提醒类"
+//        itemModel.valueName = ""
+//        itemModel.selectedArray = ["提醒类", "业绩类", "管理类", "其他"]
+//        itemModel.cellType = .picker
+//        action.list?.append(itemModel)
         
         array.append(action)
         
@@ -134,7 +134,7 @@ class AEFormViewController: AEBaseTableViewController {
         super.configUI()
         
 //        tableView.reloadData()
-        tableView.backgroundColor = UIColor.gray
+        tableView.backgroundColor = formBackgroundColor
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.15) { [self] in
             tableView.reloadData()

@@ -22,9 +22,9 @@ class AddressVC: UIViewController,ZHFAddTitleAddressViewDelegate {
         addressBtn = UIButton.init(type: .custom)
         addressBtn.frame = CGRect.init(x: 0, y: 200, width: ScreenWidth, height: 40)
         addressBtn.backgroundColor = UIColor.lightGray
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
-        addressBtn.addGestureRecognizer(tap)
-        addressBtn.isUserInteractionEnabled = true
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+//        addressBtn.addGestureRecognizer(tap)
+//        addressBtn.isUserInteractionEnabled = true
         
         addressBtn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
         self.view.addSubview(addressBtn)
@@ -69,7 +69,5 @@ class AddressVC: UIViewController,ZHFAddTitleAddressViewDelegate {
         }
     }
     
-    @objc func tapAction(_ g: UIGestureRecognizer)  {
-        print("tapAction")
-    }
+
 }
