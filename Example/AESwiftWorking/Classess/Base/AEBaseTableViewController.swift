@@ -40,6 +40,8 @@ class AEBaseTableViewController: BaseViewController {
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = separatorStyle
+        
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     var dataArray: [Any]?

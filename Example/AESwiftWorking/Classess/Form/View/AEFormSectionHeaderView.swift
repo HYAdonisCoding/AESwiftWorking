@@ -126,3 +126,16 @@ class AEFormSectionHeaderView: UITableViewHeaderFooterView {
     }
 }
 
+//extension AEFormSectionHeaderView {
+//    /// 设置headerview自适应
+//    override func didMoveToSuperview() {
+//        super.didMoveToSuperview()
+//        if superview != nil {
+//            snp.remakeConstraints { (make) in
+//                make.width.equalTo(superview!)
+//                make.edges.equalTo(superview!)
+//            }
+//            layoutIfNeeded()
+//        }
+//    }
+//}

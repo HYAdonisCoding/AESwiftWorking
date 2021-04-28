@@ -38,7 +38,7 @@ class AEFormDoubleActionTCell: AEFormBaseTCell {
         
         backView.backgroundColor = formBackgroundColor
         
-        firstButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
+//        firstButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
         secondButton.applyGradient(colours: [UIColor.colorHex(0xE8B377), UIColor.colorHex(0xA96E2B)])
     }
 
@@ -54,7 +54,7 @@ class AEFormDoubleActionTCell: AEFormBaseTCell {
         backView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.left.top.bottom.equalToSuperview()
-            make.height.equalTo(40)
+//            make.height.equalTo(40)
         }
         return button
     }()

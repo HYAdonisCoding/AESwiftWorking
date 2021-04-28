@@ -41,12 +41,17 @@ extension HomeViewController {
             
             if idx == 0 {
                 let vc = AEFormViewController()
+                vc.navigationItem.title = title
+                vc.style = .grouped
+                vc.separatorStyle = .none
                 self.navigationController?.pushViewController(vc, animated: true)
             } else if idx == 1 {
                 let vc = AEReceiveMessagesViewController()
+                vc.navigationItem.title = title
                 self.navigationController?.pushViewController(vc, animated: true)
             } else if idx == 2 {
                 let vc = AEReceiveMessagesViewController()
+                vc.navigationItem.title = title
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         };

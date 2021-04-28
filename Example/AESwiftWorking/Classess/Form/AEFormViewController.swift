@@ -135,6 +135,10 @@ class AEFormViewController: AEBaseTableViewController {
         
 //        tableView.reloadData()
         tableView.backgroundColor = formBackgroundColor
+        let rightBar = UIBarButtonItem(title: "草稿箱", style: .plain, target: self, action: #selector(draftsAction(_:)))
+        //655A72
+        rightBar.tintColor = UIColor.colorHex(0x655A72)
+        navigationItem.rightBarButtonItem = rightBar
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.15) { [self] in
             tableView.reloadData()
@@ -146,6 +150,11 @@ class AEFormViewController: AEBaseTableViewController {
 }
 
 extension AEFormViewController {
+    @objc func draftsAction(_ sender: Any) {
+        let vc = AEDraftsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return dataArray?.count ?? 0
     }

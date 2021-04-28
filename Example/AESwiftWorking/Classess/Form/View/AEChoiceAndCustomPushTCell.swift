@@ -51,7 +51,7 @@ class AEChoiceAndCustomPushTCell: AEFormBaseTCell {
         button.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(15)
             make.left.equalTo(titleLabel.snp.right).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
+//            make.bottom.equalToSuperview().offset(-5)
             make.height.equalTo(titleLabel.snp.height)
         }
         return button
