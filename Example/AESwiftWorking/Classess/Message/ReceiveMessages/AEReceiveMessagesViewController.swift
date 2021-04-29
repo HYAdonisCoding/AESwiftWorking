@@ -8,9 +8,8 @@
 
 import UIKit
 
-class AEReceiveMessagesViewController: AEBaseTableViewController {
+class AEReceiveMessagesViewController: AEDraftsViewController {
 
-    
     
     private lazy var header: AEGroupHeaderView = {
         let name = AEGroupHeaderView.headerView(value: nil) { (idx) in
@@ -28,25 +27,6 @@ class AEReceiveMessagesViewController: AEBaseTableViewController {
             make.height.equalTo(50)
         }
         return name
-    }()
-    
-
-    private lazy var foot: AEPagingFootView = {
-        let page = AEPagingFootView.pagingFootView(value: 10) { (type) in
-            print(type)
-        }
-        view.addSubview(page)
-        page.snp.makeConstraints { (make) in
-            if #available(iOS 11.0, *) {
-                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-            } else {
-                // Fallback on earlier versions
-                make.bottom.equalTo(self.bottomLayoutGuide.snp.bottom)
-            }
-            make.left.right.equalToSuperview()
-            make.height.equalTo(50)
-        }
-        return page
     }()
     
 
@@ -70,19 +50,24 @@ extension AEReceiveMessagesViewController {
     override func configUI() {
         super.configUI()
         navigationItem.title = "接收消息"
-        let _ = header
-        let _ = foot
         
         tableView.snp.remakeConstraints { (make) in
             make.bottom.equalTo(foot.snp.top)
             make.left.right.equalToSuperview()
             make.top.equalTo(header.snp.bottom)
         }
-        dataArray = ["", "", "", "", "", "", "", "", "", "", ""]
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.15) { [self] in
-            foot.layoutSubviews()
-        }
+        
+        let rightBar = UIBarButtonItem(title: "刷新", style: .plain, target: self, action: #selector(refreshAction(_:)))
+        //655A72
+        rightBar.tintColor = UIColor.colorHex(0x655A72)
+        navigationItem.rightBarButtonItem = rightBar
+        
     }
+    @objc func refreshAction(_ sender: Any) {
+        debugPrintLog("刷新")
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = AEMessageTCell.loadCode(tableView: tableView, index: indexPath)
         cell.titleLabel.text = "主题：关于中国光大银行信用卡增值服务业务调整的公告"
@@ -91,7 +76,6 @@ extension AEReceiveMessagesViewController {
         
         
         let parag = NSMutableParagraphStyle()
-//        parag.firstLineHeadIndent = -35.0 //首行缩进
         parag.lineSpacing = 6 //字体的行间距
         let firstAttributes = [
             NSAttributedString.Key.paragraphStyle: parag,
@@ -104,4 +88,10 @@ extension AEReceiveMessagesViewController {
        return cell
         
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = AEReceivedMsgDetailVC()
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }
+

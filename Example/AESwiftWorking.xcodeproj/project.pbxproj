@@ -44,12 +44,20 @@
 		6685A93E2626DD8000EE4E44 /* ICBaseWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685A9352626DD8000EE4E44 /* ICBaseWebView.swift */; };
 		6685A93F2626DD8000EE4E44 /* ICBaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685A9362626DD8000EE4E44 /* ICBaseHeaderView.swift */; };
 		6685A9402626DD8000EE4E44 /* ICBaseWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685A9372626DD8000EE4E44 /* ICBaseWebVC.swift */; };
+		668B75AC263A368A003A70B7 /* AEReceivedMsgDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B75AB263A368A003A70B7 /* AEReceivedMsgDetailVC.swift */; };
 		668C11062637E762002E98DD /* AEReceiveMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */; };
 		668C110C2637FFE7002E98DD /* AEGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */; };
 		669056CE2638F62B000046F1 /* AEMessageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056CD2638F62B000046F1 /* AEMessageTCell.swift */; };
 		669056D32638F89D000046F1 /* AEDraftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056D22638F89D000046F1 /* AEDraftsViewController.swift */; };
 		669056D92638F8AE000046F1 /* AEDraftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056D82638F8AE000046F1 /* AEDraftDetailViewController.swift */; };
 		669056DF26390AF6000046F1 /* AEPagingFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056DE26390AF5000046F1 /* AEPagingFootView.swift */; };
+		6690575F26395E84000046F1 /* ICMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690575826395E84000046F1 /* ICMineViewController.swift */; };
+		6690576026395E84000046F1 /* ICShowInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690575A26395E84000046F1 /* ICShowInfoModel.swift */; };
+		6690576126395E84000046F1 /* ICSimpleTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690575C26395E84000046F1 /* ICSimpleTCell.swift */; };
+		6690576226395E84000046F1 /* ICSingleButtonTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690575D26395E84000046F1 /* ICSingleButtonTCell.swift */; };
+		6690576326395E84000046F1 /* ICShowInfoTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690575E26395E84000046F1 /* ICShowInfoTCell.swift */; };
+		6690576726395EB6000046F1 /* ICAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690576626395EB6000046F1 /* ICAppManager.swift */; };
+		6690576B26395F1C000046F1 /* ICNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690576A26395F1C000046F1 /* ICNetworkModel.swift */; };
 		669332A7261D440A0064608F /* AEFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669332A6261D440A0064608F /* AEFormViewController.swift */; };
 		66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66933318261D816E0064608F /* AEXLFormViewController.swift */; };
 		66C5EB552612B2FF00375131 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EB4D2612B2FF00375131 /* WKWebViewController.swift */; };
@@ -147,12 +155,20 @@
 		6685A9352626DD8000EE4E44 /* ICBaseWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseWebView.swift; sourceTree = "<group>"; };
 		6685A9362626DD8000EE4E44 /* ICBaseHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseHeaderView.swift; sourceTree = "<group>"; };
 		6685A9372626DD8000EE4E44 /* ICBaseWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseWebVC.swift; sourceTree = "<group>"; };
+		668B75AB263A368A003A70B7 /* AEReceivedMsgDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEReceivedMsgDetailVC.swift; sourceTree = "<group>"; };
 		668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEReceiveMessagesViewController.swift; sourceTree = "<group>"; };
 		668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEGroupHeaderView.swift; sourceTree = "<group>"; };
 		669056CD2638F62B000046F1 /* AEMessageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMessageTCell.swift; sourceTree = "<group>"; };
 		669056D22638F89D000046F1 /* AEDraftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDraftsViewController.swift; sourceTree = "<group>"; };
 		669056D82638F8AE000046F1 /* AEDraftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDraftDetailViewController.swift; sourceTree = "<group>"; };
 		669056DE26390AF5000046F1 /* AEPagingFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEPagingFootView.swift; sourceTree = "<group>"; };
+		6690575826395E84000046F1 /* ICMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMineViewController.swift; sourceTree = "<group>"; };
+		6690575A26395E84000046F1 /* ICShowInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICShowInfoModel.swift; sourceTree = "<group>"; };
+		6690575C26395E84000046F1 /* ICSimpleTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSimpleTCell.swift; sourceTree = "<group>"; };
+		6690575D26395E84000046F1 /* ICSingleButtonTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSingleButtonTCell.swift; sourceTree = "<group>"; };
+		6690575E26395E84000046F1 /* ICShowInfoTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICShowInfoTCell.swift; sourceTree = "<group>"; };
+		6690576626395EB6000046F1 /* ICAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICAppManager.swift; sourceTree = "<group>"; };
+		6690576A26395F1C000046F1 /* ICNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICNetworkModel.swift; sourceTree = "<group>"; };
 		669332A6261D440A0064608F /* AEFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormViewController.swift; sourceTree = "<group>"; };
 		66933318261D816E0064608F /* AEXLFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEXLFormViewController.swift; sourceTree = "<group>"; };
 		66C5EB4D2612B2FF00375131 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */,
+				668B75AB263A368A003A70B7 /* AEReceivedMsgDetailVC.swift */,
 				668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */,
 				669056DE26390AF5000046F1 /* AEPagingFootView.swift */,
 				669056CD2638F62B000046F1 /* AEMessageTCell.swift */,
@@ -401,6 +418,46 @@
 				669056D82638F8AE000046F1 /* AEDraftDetailViewController.swift */,
 			);
 			path = Drafts;
+			sourceTree = "<group>";
+		};
+		6690575226395525000046F1 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				669332A5261D43C30064608F /* Form */,
+				669056D12638F81D000046F1 /* Drafts */,
+				668C11042637E71C002E98DD /* ReceiveMessages */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		6690575726395E84000046F1 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				6690576626395EB6000046F1 /* ICAppManager.swift */,
+				6690576A26395F1C000046F1 /* ICNetworkModel.swift */,
+				6690575826395E84000046F1 /* ICMineViewController.swift */,
+				6690575926395E84000046F1 /* Model */,
+				6690575B26395E84000046F1 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		6690575926395E84000046F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6690575A26395E84000046F1 /* ICShowInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6690575B26395E84000046F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6690575C26395E84000046F1 /* ICSimpleTCell.swift */,
+				6690575D26395E84000046F1 /* ICSingleButtonTCell.swift */,
+				6690575E26395E84000046F1 /* ICShowInfoTCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		669332A5261D43C30064608F /* Form */ = {
@@ -419,10 +476,9 @@
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
-				669056D12638F81D000046F1 /* Drafts */,
-				668C11042637E71C002E98DD /* ReceiveMessages */,
+				6690575726395E84000046F1 /* Mine */,
+				6690575226395525000046F1 /* Message */,
 				660936E326350D1A00A5EA23 /* Event */,
-				669332A5261D43C30064608F /* Form */,
 				6613D4CC261C429D00083684 /* Utils */,
 				6613D4C1261C3F5600083684 /* ArcSelection */,
 				66C5EB922612BEA600375131 /* Empty */,
@@ -728,17 +784,23 @@
 				6685A9262626DD3F00EE4E44 /* ICBottomListSelectionView.swift in Sources */,
 				669056DF26390AF6000046F1 /* AEPagingFootView.swift in Sources */,
 				66C5EB592612B2FF00375131 /* SemaphoreViewController.swift in Sources */,
+				668B75AC263A368A003A70B7 /* AEReceivedMsgDetailVC.swift in Sources */,
 				66D9A2B5262ECB9200CA53C5 /* AddressVC.swift in Sources */,
 				66C5EBA22612C49D00375131 /* AEEmptyTool.swift in Sources */,
 				660936EF2635111000A5EA23 /* AETestBView.swift in Sources */,
+				6690575F26395E84000046F1 /* ICMineViewController.swift in Sources */,
 				66C5EB7A2612B43D00375131 /* Swizzling_Cv.swift in Sources */,
 				66C5EB6E2612B3E400375131 /* EmptyDataView.swift in Sources */,
+				6690576B26395F1C000046F1 /* ICNetworkModel.swift in Sources */,
 				6685A9402626DD8000EE4E44 /* ICBaseWebVC.swift in Sources */,
 				66C5EBB9261308DC00375131 /* AEBaseTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* AEViewController.swift in Sources */,
 				66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */,
 				66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */,
+				6690576226395E84000046F1 /* ICSingleButtonTCell.swift in Sources */,
 				66C5EB5A2612B2FF00375131 /* BaseViewController.swift in Sources */,
+				6690576126395E84000046F1 /* ICSimpleTCell.swift in Sources */,
+				6690576026395E84000046F1 /* ICShowInfoModel.swift in Sources */,
 				66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */,
 				660936E526350DC800A5EA23 /* AEEventViewController.swift in Sources */,
 				66D9A2B7262ECB9200CA53C5 /* AddressCell.swift in Sources */,
@@ -782,6 +844,7 @@
 				6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */,
 				669056CE2638F62B000046F1 /* AEMessageTCell.swift in Sources */,
 				669056D32638F89D000046F1 /* AEDraftsViewController.swift in Sources */,
+				6690576726395EB6000046F1 /* ICAppManager.swift in Sources */,
 				66D9A2A5262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift in Sources */,
 				662CFF3C262D825A00425B0F /* AEFormCalenderTCell.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
@@ -789,6 +852,7 @@
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
 				6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */,
 				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,
+				6690576326395E84000046F1 /* ICShowInfoTCell.swift in Sources */,
 				66C5EBBD2613098C00375131 /* Const.swift in Sources */,
 				661EF49E26286632009E7037 /* ICViewExtension.swift in Sources */,
 				66D9A2B8262ECB9200CA53C5 /* ZHFAddTitleAddressView.swift in Sources */,
