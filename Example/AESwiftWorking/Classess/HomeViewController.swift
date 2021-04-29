@@ -91,7 +91,7 @@ extension HomeViewController {
         
         var vc = clsType.init()
         if let vc = vc as? AEFormViewController {
-            vc.style = .grouped
+//            vc.style = .grouped
             vc.separatorStyle = .none
         }
 

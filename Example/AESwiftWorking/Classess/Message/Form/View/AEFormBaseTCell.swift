@@ -157,7 +157,7 @@ enum AERoundType {
 
 class AEFormListModel: AEBaseModel {
     
-    var list: [AEBaseModel]? = []
+    var list: [Any]? = []
     var title: String?
     var subTitle: String?
     

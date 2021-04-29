@@ -96,6 +96,9 @@ class AEDraftDetailViewController: ICMineViewController {
         infoArray.append(infoModel)
         dataArray?.append(infoArray)
         
+        customClosure = {(data) in
+            print("继续编辑")
+        }
     }
     
     override func configUI() {

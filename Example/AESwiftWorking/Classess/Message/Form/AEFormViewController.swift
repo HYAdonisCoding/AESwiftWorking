@@ -11,11 +11,13 @@ import UIKit
 let formBackgroundColor = UIColor.colorHex(0xf5f5f7)
 
 typealias FormSaveOrSendClosure = (_ idx: Int) -> Void
+typealias FormCustomClosure = (_ data: Any?) -> Void
 
 class AEFormViewController: AEBaseTableViewController {
     
     var saveOrSendClosure: FormSaveOrSendClosure?
-    
+    /// 自定义事件
+    var customClosure: FormCustomClosure?
 
     override func configEvent() {
         super.configEvent()
@@ -159,134 +161,160 @@ extension AEFormViewController {
         return dataArray?.count ?? 0
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sec: AEFormListModel = dataArray?[section] as? AEFormListModel ?? AEFormListModel()
-        
-        return sec.list?.count ?? 0
+        let sec = dataArray?[section]
+        if let m = sec as? AEFormListModel {
+            return m.list?.count ?? 0
+        }
+//        if let m = sec as? AEFormListModel {
+//            return m.list?.count ?? 0
+//        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sec: AEFormListModel = dataArray?[indexPath.section] as? AEFormListModel ?? AEFormListModel()
-        let model: AEFormModel = sec.list?[indexPath.row] as? AEFormModel ?? AEFormModel()
-        var roundType: AERoundType = .none
-        /// 判断是否是第一个 和最后一个 及 只有一个
-        if sec.list?.count == 1 {
-            /// 上下全加圆角
-            roundType = .all
-        } else if indexPath.row == 0 {
-            /// 上方圆角
-            roundType = .top
-        } else if indexPath.row == (sec.list?.count ?? 0) - 1 {
-            /// 下方圆角
-            roundType = .bottom
-        }
-        var hideBottomLine = false
-        if indexPath.row == ((sec.list?.count ?? 0) - 1) {
-            hideBottomLine = true
-        }
-        
-        if model.cellType == .picker {
-            let cell = AEFormPickerTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
-                }
-                
+        let model = sec.list?[indexPath.row]
+        if let model = model as? AEFormModel {
+            /// 表单类
+            var roundType: AERoundType = .none
+            /// 判断是否是第一个 和最后一个 及 只有一个
+            if sec.list?.count == 1 {
+                /// 上下全加圆角
+                roundType = .all
+            } else if indexPath.row == 0 {
+                /// 上方圆角
+                roundType = .top
+            } else if indexPath.row == (sec.list?.count ?? 0) - 1 {
+                /// 下方圆角
+                roundType = .bottom
             }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
-            
-        } else if model.cellType == .input {
-            
-            let cell = AEFormTextFieldTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
-                }
-                
+            var hideBottomLine = false
+            if indexPath.row == ((sec.list?.count ?? 0) - 1) {
+                hideBottomLine = true
             }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
+            
+            if model.cellType == .picker {
+                let cell = AEFormPickerTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+                
+            } else if model.cellType == .input {
+                
+                let cell = AEFormTextFieldTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            
+            else if model.cellType == .calender {
+                
+                let cell = AEFormCalenderTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            else if model.cellType == .singleChoice {
+                
+                let cell = AEFormSingleChoiceTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            else if model.cellType == .inputView {
+                
+                let cell = AEFormChapterTextViewTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            else if model.cellType == .choiceAndCustomPush {
+                
+                let cell = AEChoiceAndCustomPushTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            else if model.cellType == .doubleAction {
+                
+                let cell = AEFormDoubleActionTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.detailModel = model
+                cell.closure = { (value) in
+                    if let value: Int = value as? Int {
+                        guard let saveOrSendClosure = self.saveOrSendClosure else { return }
+                        saveOrSendClosure(value)
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
         }
-        
-        else if model.cellType == .calender {
-            
-            let cell = AEFormCalenderTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
-                }
+        if let model = model as? ICShowInfoModel {
+            // 只展示
+            if model.type == .show {
+                let cell = ICShowInfoTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.showInfoModel = model
+                return cell
+            } else if model.type == .action {
                 
-            }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
-        }
-        else if model.cellType == .singleChoice {
-            
-            let cell = AEFormSingleChoiceTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
-                }
+                let cell = ICSingleButtonTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.titleString = model.title
+                cell.singleButtonClosure = { (data) in
+                    guard let customClosure = self.customClosure else { return }
+                    customClosure(data)
                 
-            }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
-        }
-        else if model.cellType == .inputView {
-            
-            let cell = AEFormChapterTextViewTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
                 }
-                
+                return cell
             }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
-        }
-        else if model.cellType == .choiceAndCustomPush {
-            
-            let cell = AEChoiceAndCustomPushTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.roundType = roundType
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: String = value as? String {
-                    model.value = value
-                    tableView.reloadData()
-                }
-                
-            }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
-        }
-        else if model.cellType == .doubleAction {
-            
-            let cell = AEFormDoubleActionTCell.loadCode(tableView: tableView, index: indexPath)
-            cell.detailModel = model
-            cell.closure = { (value) in
-                if let value: Int = value as? Int {
-                    guard let saveOrSendClosure = self.saveOrSendClosure else { return }
-                    saveOrSendClosure(value)
-                }
-                
-            }
-            cell.hideBottomLine(hideBottomLine)
-            return cell
         }
         return UITableViewCell()
     }
@@ -310,6 +338,6 @@ extension AEFormViewController {
         if (sec.title?.count ?? 0) > 0 {
             return 45
         }
-        return 10
+        return 15
     }
 }

@@ -31,9 +31,9 @@ class AEFormSectionHeaderView: UITableViewHeaderFooterView {
         label.textColor = UIColor.colorHex(0x655A72)
         backView.addSubview(label)
         label.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(15)
-            make.top.equalTo(8)
-            make.bottom.equalToSuperview().offset(-15)
+            make.left.top.equalToSuperview().offset(15)
+//            make.top.equalTo(8)
+//            make.bottom.equalToSuperview().offset(-15)
         }
         return label
     }()

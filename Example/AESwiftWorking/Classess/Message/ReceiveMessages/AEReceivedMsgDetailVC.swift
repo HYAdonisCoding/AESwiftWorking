@@ -96,6 +96,14 @@ class AEReceivedMsgDetailVC: ICMineViewController {
         infoModel.type = .action
         infoArray.append(infoModel)
         dataArray?.append(infoArray)
+        
+        customClosure = {(data) in
+            print("立即回复")
+            let vc = AEFormReplyMessageVC()
+//            vc.style = .grouped
+            vc.separatorStyle = .none
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func configUI() {

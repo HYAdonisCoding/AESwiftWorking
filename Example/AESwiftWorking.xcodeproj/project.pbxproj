@@ -45,6 +45,7 @@
 		6685A93F2626DD8000EE4E44 /* ICBaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685A9362626DD8000EE4E44 /* ICBaseHeaderView.swift */; };
 		6685A9402626DD8000EE4E44 /* ICBaseWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685A9372626DD8000EE4E44 /* ICBaseWebVC.swift */; };
 		668B75AC263A368A003A70B7 /* AEReceivedMsgDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B75AB263A368A003A70B7 /* AEReceivedMsgDetailVC.swift */; };
+		668B75B1263A3DFC003A70B7 /* AEFormReplyMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B75B0263A3DFC003A70B7 /* AEFormReplyMessageVC.swift */; };
 		668C11062637E762002E98DD /* AEReceiveMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */; };
 		668C110C2637FFE7002E98DD /* AEGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */; };
 		669056CE2638F62B000046F1 /* AEMessageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056CD2638F62B000046F1 /* AEMessageTCell.swift */; };
@@ -156,6 +157,7 @@
 		6685A9362626DD8000EE4E44 /* ICBaseHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseHeaderView.swift; sourceTree = "<group>"; };
 		6685A9372626DD8000EE4E44 /* ICBaseWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseWebVC.swift; sourceTree = "<group>"; };
 		668B75AB263A368A003A70B7 /* AEReceivedMsgDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEReceivedMsgDetailVC.swift; sourceTree = "<group>"; };
+		668B75B0263A3DFC003A70B7 /* AEFormReplyMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormReplyMessageVC.swift; sourceTree = "<group>"; };
 		668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEReceiveMessagesViewController.swift; sourceTree = "<group>"; };
 		668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEGroupHeaderView.swift; sourceTree = "<group>"; };
 		669056CD2638F62B000046F1 /* AEMessageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMessageTCell.swift; sourceTree = "<group>"; };
@@ -399,6 +401,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		668B75AF263A3D78003A70B7 /* ReplyMessage */ = {
+			isa = PBXGroup;
+			children = (
+				668B75B0263A3DFC003A70B7 /* AEFormReplyMessageVC.swift */,
+			);
+			path = ReplyMessage;
+			sourceTree = "<group>";
+		};
 		668C11042637E71C002E98DD /* ReceiveMessages */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +436,7 @@
 				669332A5261D43C30064608F /* Form */,
 				669056D12638F81D000046F1 /* Drafts */,
 				668C11042637E71C002E98DD /* ReceiveMessages */,
+				668B75AF263A3D78003A70B7 /* ReplyMessage */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -779,6 +790,7 @@
 				664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */,
 				66C5EB582612B2FF00375131 /* UITableViewEx.swift in Sources */,
 				6685A93E2626DD8000EE4E44 /* ICBaseWebView.swift in Sources */,
+				668B75B1263A3DFC003A70B7 /* AEFormReplyMessageVC.swift in Sources */,
 				66D9A2B6262ECB9200CA53C5 /* ProvinceModel.swift in Sources */,
 				6613D4C9261C429400083684 /* ICEfficientTool.swift in Sources */,
 				6685A9262626DD3F00EE4E44 /* ICBottomListSelectionView.swift in Sources */,

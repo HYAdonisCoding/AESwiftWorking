@@ -12,6 +12,8 @@ let kBackGroundcolor = UIColor.colorHex(0xf5f5f7)
 class ICMineViewController: ICBaseTableViewController {
 
     var dataArray: [[ICShowInfoModel]]?
+    /// 自定义事件
+    var customClosure: FormCustomClosure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,7 +184,9 @@ extension ICMineViewController {
             
             let cell = ICSingleButtonTCell.loadCode(tableView: tableView, index: indexPath)
             cell.titleString = model.title
-            cell.singleButtonClosure = { (data) in
+            cell.singleButtonClosure = { [self] (data) in
+                guard let customClosure = customClosure else { return }
+                customClosure(data)
 //                let vc = ICChangePasswordVC()
 //                self.navigationController?.pushViewController(vc, animated: true)
             }
