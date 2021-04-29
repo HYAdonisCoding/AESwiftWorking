@@ -41,7 +41,7 @@ class AEDraftsViewController: AEBaseTableViewController {
     override func configUI() {
         super.configUI()
         
-        navigationItem.title = "草稿箱"
+//        navigationItem.title = "草稿箱"
         let _ = foot
         
         tableView.snp.remakeConstraints { (make) in

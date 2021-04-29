@@ -49,7 +49,7 @@ extension AEReceiveMessagesViewController {
     }
     override func configUI() {
         super.configUI()
-        navigationItem.title = "接收消息"
+//        navigationItem.title = "接收消息"
         
         tableView.snp.remakeConstraints { (make) in
             make.bottom.equalTo(foot.snp.top)

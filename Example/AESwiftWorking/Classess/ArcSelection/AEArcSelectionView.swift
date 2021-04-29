@@ -68,7 +68,7 @@ class AEArcSelectionView: UIView {
         bottomView.addSubview(myStackView)
         for (idx, title) in titleArray!.enumerated() {
             let view = UIView()
-            let image = UIImage(named: title)!
+            let image = UIImage(named: title) ?? UIImage(named: "我的发布")
             let imageView = UIImageView(image: image)
             let lbl = UILabel()
             lbl.text = title

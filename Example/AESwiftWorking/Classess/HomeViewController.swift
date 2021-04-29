@@ -14,7 +14,8 @@ class HomeViewController: AEBaseTableViewController {
     override func configEvent() {
         super.configEvent()
         
-        dataArray = ["AEEventViewController",
+        dataArray = ["AEOperationViewController",
+                     "AEEventViewController",
                      "AEFormViewController",
                      "AEXLFormViewController",
                      "AEEmptyViewController",
@@ -54,7 +55,7 @@ extension HomeViewController {
                 vc.navigationItem.title = title
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        };
+        }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "reuseIdentifier"
@@ -91,7 +92,7 @@ extension HomeViewController {
         
         var vc = clsType.init()
         if let vc = vc as? AEFormViewController {
-//            vc.style = .grouped
+            vc.style = .grouped
             vc.separatorStyle = .none
         }
 
