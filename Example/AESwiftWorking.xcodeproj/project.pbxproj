@@ -103,6 +103,8 @@
 		66D9A2B8262ECB9200CA53C5 /* ZHFAddTitleAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A2B2262ECB9200CA53C5 /* ZHFAddTitleAddressView.swift */; };
 		66D9A2B9262ECB9200CA53C5 /* location.txt in Resources */ = {isa = PBXBuildFile; fileRef = 66D9A2B3262ECB9200CA53C5 /* location.txt */; };
 		66D9A2CD2630042400CA53C5 /* AEDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A2CC2630042400CA53C5 /* AEDictionaryExtension.swift */; };
+		66FF982126A50FDE0095A3F9 /* AEMultiLinesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FF982026A50FDE0095A3F9 /* AEMultiLinesTextView.swift */; };
+		66FF982326A510B50095A3F9 /* AEFormMultiLinesTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FF982226A510B50095A3F9 /* AEFormMultiLinesTCell.swift */; };
 		9652B8135E9E68DD4F58BFBE /* Pods_AESwiftWorking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F502EDBFA36EF30AD5BC8405 /* Pods_AESwiftWorking_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +221,8 @@
 		66D9A2B2262ECB9200CA53C5 /* ZHFAddTitleAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHFAddTitleAddressView.swift; sourceTree = "<group>"; };
 		66D9A2B3262ECB9200CA53C5 /* location.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = location.txt; sourceTree = "<group>"; };
 		66D9A2CC2630042400CA53C5 /* AEDictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDictionaryExtension.swift; sourceTree = "<group>"; };
+		66FF982026A50FDE0095A3F9 /* AEMultiLinesTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMultiLinesTextView.swift; sourceTree = "<group>"; };
+		66FF982226A510B50095A3F9 /* AEFormMultiLinesTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormMultiLinesTCell.swift; sourceTree = "<group>"; };
 		7440E94017EFBC310F0FDC01 /* Pods-AESwiftWorking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESwiftWorking_Tests.release.xcconfig"; path = "Target Support Files/Pods-AESwiftWorking_Tests/Pods-AESwiftWorking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7AABD71E227068E700D945B9 /* AESwiftWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AESwiftWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA58474F4124D02CD1C4B77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -583,12 +587,14 @@
 				6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */,
 				6640EB922620439200256DC4 /* AEFormPickerTCell.swift */,
 				662CFF37262D7D1D00425B0F /* AEFormTextFieldTCell.swift */,
+				66FF982226A510B50095A3F9 /* AEFormMultiLinesTCell.swift */,
 				66D9A28E262E73F400CA53C5 /* AEFormChapterTextViewTCell.swift */,
 				662CFF3B262D825A00425B0F /* AEFormCalenderTCell.swift */,
 				66D9A2A8262EC5AC00CA53C5 /* AEChoiceAndCustomPushTCell.swift */,
 				66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */,
 				66D9A2A4262EBA9C00CA53C5 /* AEFormDoubleActionTCell.swift */,
 				66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */,
+				66FF982026A50FDE0095A3F9 /* AEMultiLinesTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -815,6 +821,7 @@
 			files = (
 				66D9A2A9262EC5AC00CA53C5 /* AEChoiceAndCustomPushTCell.swift in Sources */,
 				66C5EB722612B40B00375131 /* EmptyDelegate.swift in Sources */,
+				66FF982126A50FDE0095A3F9 /* AEMultiLinesTextView.swift in Sources */,
 				66D9A28B262E671E00CA53C5 /* AEFormSectionHeaderView.swift in Sources */,
 				660936EB263510D200A5EA23 /* AETestAView.swift in Sources */,
 				668B75B8263A4AFC003A70B7 /* AEOperationViewController.swift in Sources */,
@@ -830,6 +837,7 @@
 				66C5EB592612B2FF00375131 /* SemaphoreViewController.swift in Sources */,
 				668B75AC263A368A003A70B7 /* AEReceivedMsgDetailVC.swift in Sources */,
 				66D9A2B5262ECB9200CA53C5 /* AddressVC.swift in Sources */,
+				66FF982326A510B50095A3F9 /* AEFormMultiLinesTCell.swift in Sources */,
 				66C5EBA22612C49D00375131 /* AEEmptyTool.swift in Sources */,
 				660936EF2635111000A5EA23 /* AETestBView.swift in Sources */,
 				668B75BE263A4D61003A70B7 /* AEAnalysisViewController.swift in Sources */,

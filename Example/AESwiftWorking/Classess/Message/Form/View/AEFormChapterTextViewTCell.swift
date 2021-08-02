@@ -108,6 +108,18 @@ class AETextView: UITextView {
         }
     }
     
+    override var textAlignment: NSTextAlignment {
+        didSet {
+            holderView.textAlignment = textAlignment
+        }
+    }
+    
+    override var font: UIFont? {
+        didSet {
+            holderView.font = font
+        }
+    }
+    
     
     lazy var holderView: UITextView = {
         let holder = UITextView(frame: CGRect.zero)

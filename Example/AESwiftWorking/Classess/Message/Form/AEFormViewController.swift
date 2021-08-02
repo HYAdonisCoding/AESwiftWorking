@@ -41,7 +41,8 @@ class AEFormViewController: AEBaseTableViewController {
         itemModel.title = "主题"
         itemModel.value = ""
         itemModel.valueName = ""
-        itemModel.cellType = .input
+        itemModel.cellType = .twoLineInput
+        itemModel.countLimited = 300
         action.list?.append(itemModel)
         
         /// 第三行
@@ -135,7 +136,6 @@ class AEFormViewController: AEBaseTableViewController {
     override func configUI() {
         super.configUI()
         
-//        tableView.reloadData()
         tableView.backgroundColor = formBackgroundColor
         let rightBar = UIBarButtonItem(title: "草稿箱", style: .plain, target: self, action: #selector(draftsAction(_:)))
         //655A72
@@ -165,9 +165,6 @@ extension AEFormViewController {
         if let m = sec as? AEFormListModel {
             return m.list?.count ?? 0
         }
-//        if let m = sec as? AEFormListModel {
-//            return m.list?.count ?? 0
-//        }
         return 0
     }
     
@@ -216,6 +213,27 @@ extension AEFormViewController {
                     if let value: String = value as? String {
                         model.value = value
                         tableView.reloadData()
+                    }
+                    
+                }
+                cell.hideBottomLine(hideBottomLine)
+                return cell
+            }
+            else if model.cellType == .twoLineInput {
+                
+                let cell = AEFormMultiLinesTCell.loadCode(tableView: tableView, index: indexPath)
+                cell.roundType = roundType
+                cell.detailModel = model
+                cell.finishedClosure = { (value, finished) in
+                    if let value: String = value as? String {
+                        model.value = value
+                        if finished {
+                            tableView.reloadData()
+                            print("输入完成")
+                        } else {
+                            tableView.reloadRows(at: [indexPath], with: .bottom)
+                            print("输入换行")
+                        }
                     }
                     
                 }

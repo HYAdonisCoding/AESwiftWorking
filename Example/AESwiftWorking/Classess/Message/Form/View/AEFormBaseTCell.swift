@@ -12,11 +12,13 @@ import UIKit
 let kMargin = 15.0
 
 typealias AEClosure = (_ data: Any?) -> Void
+
+typealias AEFinishedClosure = (_ data: Any?, _ finished: Bool) -> Void
 typealias AEActionClosure = (_ data: Any?) -> Void
 typealias AETextClosure = (_ data: String?) -> Void
 
 class AEFormBaseTCell: AEBaseTableViewCell {
-
+    var finishedClosure: AEFinishedClosure?
     var closure: AEClosure?
     var actionClosure: AEActionClosure?
     var textClosure: AETextClosure?
@@ -138,6 +140,7 @@ class AEFormBaseTCell: AEBaseTableViewCell {
 enum AEFormType {
     case picker
     case input
+    case twoLineInput
     case show
     case custom
     case calender
@@ -179,7 +182,7 @@ class AEFormModel: AEBaseModel {
     var selectedArray: [String]?
     var cellType: AEFormType?
     
-    
+    var countLimited: Int = 200
 }
 
 func endEditing() {
