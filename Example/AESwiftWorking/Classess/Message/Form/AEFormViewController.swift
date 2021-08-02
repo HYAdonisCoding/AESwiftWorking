@@ -237,6 +237,22 @@ extension AEFormViewController {
                     }
                     
                 }
+                // tell constraints they need updating
+                cell.setNeedsUpdateConstraints()
+                
+                // update constraints now so we can animate the change
+                cell.updateConstraintsIfNeeded()
+                
+                UIView.animate(withDuration: 0.01, animations: {
+                    cell.layoutIfNeeded()
+                })
+                cell.closure = { [weak self] data in
+//                    var nModel = model
+//
+//                    nModel.openOrClose = data as? Bool ?? false
+//                    self?.dataArray?[indexPath.section].list?[indexPath.row] = nModel
+                    tableView.reloadData()
+                }
                 cell.hideBottomLine(hideBottomLine)
                 return cell
             }
