@@ -31,6 +31,10 @@ class HomeViewController: AEBaseTableViewController {
         navigationItem.title = "Swift Study"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightBarAction))
+        let dec = NSDecimalNumber.init(floatLiteral: 0.56789)
+        let dec1 = NSDecimalNumber.init(string: "0.56789")
+        let float = Float("0.56789")!
+        print("\(dec) \n\(dec1)\n\(float)\n\(Int.max)\n\(Int.min)")
     }
 
 }
