@@ -15,9 +15,6 @@ PODS:
   - RxSwift (6.1.0)
   - SnapKit (5.0.1)
   - SwiftForms (1.8.2)
-  - SwiftMessages (9.0.0):
-    - SwiftMessages/App (= 9.0.0)
-  - SwiftMessages/App (9.0.0)
   - XLForm (4.3.0)
 
 DEPENDENCIES:
@@ -31,7 +28,6 @@ DEPENDENCIES:
   - RxSwift (~> 6.1.0)
   - SnapKit (~> 5.0.1)
   - SwiftForms (~> 1.8.2)
-  - SwiftMessages (~> 9.0.0)
   - XLForm (~> 4.3.0)
 
 SPEC REPOS:
@@ -46,7 +42,6 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SwiftForms
-    - SwiftMessages
     - XLForm
 
 EXTERNAL SOURCES:
@@ -65,9 +60,8 @@ SPEC CHECKSUMS:
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftForms: f0d4d30401e21de87d9b7b63a4691a3d4e22bab5
-  SwiftMessages: 55274ca3a239062398603008ed81924cfd1fe798
   XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: bc8d424a2e5ab539c24bbb97d6971a04a69f144d
+PODFILE CHECKSUM: e80fd2d5b100ee8b51e1bc446c42e50404600315
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.0

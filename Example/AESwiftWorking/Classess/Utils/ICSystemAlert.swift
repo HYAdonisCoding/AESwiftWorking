@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import SwiftMessages
+//import SwiftMessages
 import PKHUD
 
 class ICSystemAlert {
@@ -59,18 +59,18 @@ class ICSystemAlert {
     }
     
     
-    class func show(title: String = "提示", _ message: String, theme: Theme = .info) {
-        let alert = MessageView.viewFromNib(layout: .cardView)
-        alert.configureTheme(theme)
-        
-        alert.configureDropShadow()
-        alert.configureContent(title: title, body: message)
-        alert.button?.isHidden = true
-        var config = SwiftMessages.defaultConfig
-        config.presentationContext = .window(windowLevel: .alert)
-        SwiftMessages.show(config: config, view: alert)
-        
-    }
+//    class func show(title: String = "提示", _ message: String, theme: Theme = .info) {
+//        let alert = MessageView.viewFromNib(layout: .cardView)
+//        alert.configureTheme(theme)
+//        
+//        alert.configureDropShadow()
+//        alert.configureContent(title: title, body: message)
+//        alert.button?.isHidden = true
+//        var config = SwiftMessages.defaultConfig
+//        config.presentationContext = .window(windowLevel: .alert)
+//        SwiftMessages.show(config: config, view: alert)
+//        
+//    }
 }
 
 let kShowWarningDelayDurationD: Float  = 0.15
