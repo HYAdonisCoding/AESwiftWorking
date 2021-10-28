@@ -33,6 +33,7 @@
 		6640EB932620439200256DC4 /* AEFormPickerTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB922620439200256DC4 /* AEFormPickerTCell.swift */; };
 		664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F8807261C5535001BE1A9 /* AEArcView.swift */; };
 		6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664E2B126296E7A0094D0CE /* ICButtonExtension.swift */; };
+		666ABEBE272A3175006CDAC4 /* AEProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666ABEBD272A3175006CDAC4 /* AEProgressBarViewController.swift */; };
 		66815FA02636B19200AB9904 /* AEShowPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66815F9F2636B19200AB9904 /* AEShowPView.swift */; };
 		6681A0C1265E244900259066 /* AEChartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681A0C0265E244900259066 /* AEChartsTableViewController.swift */; };
 		6681A0C3265E246400259066 /* AEBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681A0C2265E246400259066 /* AEBarGraphViewController.swift */; };
@@ -152,6 +153,7 @@
 		6640EB922620439200256DC4 /* AEFormPickerTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormPickerTCell.swift; sourceTree = "<group>"; };
 		664F8807261C5535001BE1A9 /* AEArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcView.swift; sourceTree = "<group>"; };
 		6664E2B126296E7A0094D0CE /* ICButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICButtonExtension.swift; sourceTree = "<group>"; };
+		666ABEBD272A3175006CDAC4 /* AEProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEProgressBarViewController.swift; sourceTree = "<group>"; };
 		66815F9F2636B19200AB9904 /* AEShowPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEShowPView.swift; sourceTree = "<group>"; };
 		6681A0C0265E244900259066 /* AEChartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEChartsTableViewController.swift; sourceTree = "<group>"; };
 		6681A0C2265E246400259066 /* AEBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBarGraphViewController.swift; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				6697D410272792AF0010E03D /* AEGradientAnimationViewController.swift */,
+				666ABEBD272A3175006CDAC4 /* AEProgressBarViewController.swift */,
 			);
 			path = GradientBasicAnimation;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				661EF47526286486009E7037 /* MonthView.swift in Sources */,
 				661EF47426286486009E7037 /* CalenderView.swift in Sources */,
 				66C5EB942612BEDA00375131 /* AEEmptyViewController.swift in Sources */,
+				666ABEBE272A3175006CDAC4 /* AEProgressBarViewController.swift in Sources */,
 				66D9A2CD2630042400CA53C5 /* AEDictionaryExtension.swift in Sources */,
 				661EF47A2628654D009E7037 /* ICSystemAlert.swift in Sources */,
 				6640EB932620439200256DC4 /* AEFormPickerTCell.swift in Sources */,
