@@ -42,7 +42,7 @@ class AEProgressBarViewController: BaseViewController {
         
 
         let y = 100
-        for item in 0...5 {
+        for item in 0...3 {
             let progressBar = AEProgressView(frame: CGRect(x: 100, y: y*(1 + item), width: 80, height: 80))
             self.view.addSubview(progressBar)
         }

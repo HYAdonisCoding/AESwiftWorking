@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AEProgressView: AEBaseView {
+class AEProgressView: UIView {
     var shapeLayer = CAShapeLayer()
     
     
@@ -26,19 +26,27 @@ class AEProgressView: AEBaseView {
     
     var pulsatingLayer = CAShapeLayer()
     
-
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configEvent()
+        self.configUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension AEProgressView {
-    override func configEvent() {
-        super.configEvent()
+     func configEvent() {
+//        super.configEvent()
         
     }
     
-    override func configUI() {
-        super.configUI()
+     func configUI() {
+//        super.configUI()
         
-//        setupNotificationObservers()
+        setupNotificationObservers()
         
         self.backgroundColor = UIColor.backgroundColor
         
@@ -55,20 +63,22 @@ extension AEProgressView {
     
     private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
         let layer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: self.frame.size.width*0.45, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.width*0.5), radius: self.frame.size.width*0.45, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         layer.path = circularPath.cgPath
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 20*self.frame.size.width/UIScreen.main.bounds.size.width
         layer.fillColor = fillColor.cgColor
         layer.lineCap = .round
-        layer.position = self.center
+//        layer.position = self.center
+        layer.frame = self.bounds
         return layer
     }
     
     private func setupPercentageLabel() {
         self.addSubview(percentageLabel)
-        percentageLabel.frame = CGRect(x: 0, y: 0, width: self.frame.size.width*0.8, height: self.frame.size.width*0.8)
-        percentageLabel.center = self.center
+        percentageLabel.frame = CGRect(x: self.frame.size.width*0.1, y: self.frame.size.width*0.1, width: self.frame.size.width*0.8, height: self.frame.size.width*0.8)
+//        percentageLabel.center = self.center
+        
         
         
     }
