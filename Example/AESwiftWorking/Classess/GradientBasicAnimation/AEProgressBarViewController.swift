@@ -40,11 +40,17 @@ class AEProgressBarViewController: BaseViewController {
         
         view.backgroundColor = UIColor.backgroundColor
         
-
         let y = 100
-        for item in 0...3 {
-            let progressBar = AEProgressView(frame: CGRect(x: 100, y: y*(1 + item), width: 80, height: 80))
+        for item in 0...6 {
+//            let progressBar = AEProgressView(frame: CGRect(x: 100, y: (item + 1)*y + item*10, width: 80, height: 80))
+
+            let progressBar = AEProgressView(frame: CGRect.zero)
             self.view.addSubview(progressBar)
+            progressBar.snp_makeConstraints { make in
+                make.top.equalTo((item + 1)*y + item*10)
+                make.left.equalTo(100)
+                make.size.equalTo(CGSize(width: 80, height: 80))
+            }
         }
 //        setupNotificationObservers()
 //

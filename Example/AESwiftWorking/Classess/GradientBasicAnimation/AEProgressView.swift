@@ -46,15 +46,25 @@ extension AEProgressView {
      func configUI() {
 //        super.configUI()
         
-        setupNotificationObservers()
         
         self.backgroundColor = UIColor.backgroundColor
+
+         
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
-        setupCircleLayers()
-        
-        percentageLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-        
-        setupPercentageLabel()
+        if self.frame.size.width > 0 && pulsatingLayer.frame.size.width <= 0 {
+            setupNotificationObservers()
+
+            setupCircleLayers()
+            
+            percentageLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+            
+            setupPercentageLabel()
+        }
+            
     }
     
     private func setupNotificationObservers() {
