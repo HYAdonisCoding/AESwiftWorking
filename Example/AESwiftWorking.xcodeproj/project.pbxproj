@@ -32,6 +32,8 @@
 		6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */; };
 		6640EB932620439200256DC4 /* AEFormPickerTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB922620439200256DC4 /* AEFormPickerTCell.swift */; };
 		664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F8807261C5535001BE1A9 /* AEArcView.swift */; };
+		6658D0842735116D00FBFC5B /* AECustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658D0832735116D00FBFC5B /* AECustomButton.swift */; };
+		6658D086273512B500FBFC5B /* AETestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658D085273512B500FBFC5B /* AETestViewController.swift */; };
 		6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664E2B126296E7A0094D0CE /* ICButtonExtension.swift */; };
 		666ABEBE272A3175006CDAC4 /* AEProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666ABEBD272A3175006CDAC4 /* AEProgressBarViewController.swift */; };
 		666ABEC0272A70A5006CDAC4 /* AEProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666ABEBF272A70A5006CDAC4 /* AEProgressView.swift */; };
@@ -153,6 +155,8 @@
 		6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormBaseTCell.swift; sourceTree = "<group>"; };
 		6640EB922620439200256DC4 /* AEFormPickerTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormPickerTCell.swift; sourceTree = "<group>"; };
 		664F8807261C5535001BE1A9 /* AEArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcView.swift; sourceTree = "<group>"; };
+		6658D0832735116D00FBFC5B /* AECustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECustomButton.swift; sourceTree = "<group>"; };
+		6658D085273512B500FBFC5B /* AETestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestViewController.swift; sourceTree = "<group>"; };
 		6664E2B126296E7A0094D0CE /* ICButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICButtonExtension.swift; sourceTree = "<group>"; };
 		666ABEBD272A3175006CDAC4 /* AEProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEProgressBarViewController.swift; sourceTree = "<group>"; };
 		666ABEBF272A70A5006CDAC4 /* AEProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEProgressView.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 				661EF4792628654D009E7037 /* ICSystemAlert.swift */,
 				6664E2B126296E7A0094D0CE /* ICButtonExtension.swift */,
 				66D9A2CC2630042400CA53C5 /* AEDictionaryExtension.swift */,
+				6658D0832735116D00FBFC5B /* AECustomButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -394,6 +399,14 @@
 				661EF47326286486009E7037 /* WeekdaysView.swift */,
 			);
 			path = CalenderView;
+			sourceTree = "<group>";
+		};
+		6658D087273512BB00FBFC5B /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				6658D085273512B500FBFC5B /* AETestViewController.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		6681A0BF265E242400259066 /* Charts */ = {
@@ -533,6 +546,7 @@
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				6658D087273512BB00FBFC5B /* Test */,
 				6697D40F272792400010E03D /* GradientBasicAnimation */,
 				6681A0BF265E242400259066 /* Charts */,
 				668B75B6263A4AC8003A70B7 /* Operation */,
@@ -878,6 +892,7 @@
 				6685A93A2626DD8000EE4E44 /* ICBaseTableViewController.swift in Sources */,
 				66C5EB552612B2FF00375131 /* WKWebViewController.swift in Sources */,
 				66C5EBAA2612EFED00375131 /* AETableHeaderView.swift in Sources */,
+				6658D0842735116D00FBFC5B /* AECustomButton.swift in Sources */,
 				6685A9382626DD8000EE4E44 /* ICBaseViewController.swift in Sources */,
 				668C11062637E762002E98DD /* AEReceiveMessagesViewController.swift in Sources */,
 				66C5EBB1261307E800375131 /* AEBaseCollectionViewController.swift in Sources */,
@@ -921,6 +936,7 @@
 				662CFF3C262D825A00425B0F /* AEFormCalenderTCell.swift in Sources */,
 				66C5EB6A2612B39500375131 /* EmptyDataSource.swift in Sources */,
 				66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */,
+				6658D086273512B500FBFC5B /* AETestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
 				6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */,
 				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,
