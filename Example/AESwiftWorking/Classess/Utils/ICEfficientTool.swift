@@ -16,6 +16,29 @@ enum ICEncryptType {
     case outsideLanding
     case insideLanding/// 登陆内
 }
+// MARK: - 定义公共函数
+/// 取数组的元素
+/// - Returns: 下标
+func getValue<T>(in elements: [T], at index: Int) -> T? {
+    guard index >= 0 && index < elements.count else {
+        return nil
+    }
+    return elements[index]
+}
+// 处理可选值
+func unwrap(value: String?) -> String {
+    let defaultValue = "default value"
+    guard let value = value else { return defaultValue }
+    if value.isEmpty {
+        return defaultValue
+    }
+    return value
+}
+// 处理可选值 简化
+func unwrapCompressed(value val: String?) -> String {
+    return val != nil && !val!.isEmpty ? val! : "default value"
+}
+
 func decodeDataToModel<T:Decodable>(_ json : String?, type: T.Type) -> T? {
     guard let json = json else { return nil }
     
@@ -230,3 +253,75 @@ extension NSObject {
     }
 }
 
+extension Array {
+    func getValue(at index: Int) -> Element? {
+        guard index >= 0 && index < self.count else {
+            return nil
+        }
+        return self[index]
+    }
+    
+    subscript (safe index: Int) -> Element? {
+        guard index >= 0 && index < self.count else {
+            return nil
+        }
+        return self[index]
+    }
+}
+
+
+extension Collection {
+    public subscript (safe index: Self.Index) -> Iterator.Element? {
+        (startIndex ..< endIndex).contains(index) ? self[index] : nil
+    }
+}
+
+public extension String {
+    var nilIfEmpty: String? {
+        self.isEmpty ? nil : self
+    }
+}
+
+infix operator <-
+public func <- <T>(target: inout T?, value: @autoclosure () -> T) -> T {
+    let val = value()
+    target = val
+    return val
+}
+
+
+// 给 Sequence 添加扩展，这样格局就又打开了，像 ArraySlice，也支持
+extension Sequence where Element: Equatable {
+    func count(where isIncluded: (Element) -> Bool) -> Int {
+        self.filter(isIncluded).count
+    }
+}
+
+// MARK: - 去除集合中指定的重复的对象
+//第一种，内部元素是可哈希的
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var seen = Set<Element>()
+        return filter { seen.insert($0).inserted }
+    }
+}
+
+//第二种，内部元素不是可哈希的
+extension Sequence {
+    func uniqued(comparator: (Element, Element) -> Bool) -> [Element] {
+        var result: [Element] = []
+        for element in self {
+            if result.contains(where: {comparator(element, $0)}) {
+                continue
+            }
+            result.append(element)
+        }
+        return result
+    }
+}
+//第三种，keypath 版本 是对第二种的一层封装，内部依然调用的是第二种。
+extension Sequence {
+    func uniqued<T: Equatable>(_ keyPath: KeyPath<Element, T>) -> [Element] {
+        uniqued { $0[keyPath: keyPath] == $1[keyPath: keyPath] }
+    }
+}

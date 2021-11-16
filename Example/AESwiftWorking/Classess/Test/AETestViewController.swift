@@ -9,6 +9,8 @@
 import UIKit
 
 class AETestViewController: HomeViewController {
+    private weak var someViewRef: UIView?
+
     var customButton = AECustomButton()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,41 @@ class AETestViewController: HomeViewController {
         view.addSubview(customButton)
         customButton.backgroundColor = .gray
         customButton.frame = CGRect(x: ScreenWidth*0.5+10, y: view.frame.size.height/2 - 40, width: ScreenWidth*0.5 - 20, height: 120)
+        
+        
+        let someView = someViewRef <- UIView(frame: CGRect(x: ScreenWidth*0.5+10, y: view.frame.size.height/2 - 40 - 120, width: ScreenWidth*0.5 - 20, height: 100))
+        view.addSubview(someView)
+        someViewRef?.backgroundColor = .red
+        
+        test1()
+    }
+    
+    func test1() {
+        
+        let array = ["A", "A", "B", "A", "C"]
+
+        // 1.
+        var count = 0
+        for value in array {
+            if value == "A" {
+                count += 1
+            }
+        }
+        print(count)
+        // 2.
+        count = 0
+        for value in array where value == "A" {
+            count += 1
+        }
+        print(count)
+        // 3.
+        count = array.filter { $0 == "A" }.count
+        print(count)
+        
+        count = array.count(where: { $0 == "A" }) // 2
+        print(count)
+        count = array.dropLast(2).count(where: { $0 == "A" })
+        print(count)
     }
 
 }
