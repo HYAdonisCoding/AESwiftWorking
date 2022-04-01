@@ -45,6 +45,7 @@ class HomeViewController: AEBaseTableViewController {
         
         let a = TestFunc()
         a.method2()
+        a.method1()
     }
 
 }
