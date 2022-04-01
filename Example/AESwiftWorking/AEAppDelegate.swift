@@ -24,7 +24,8 @@ class AEAppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        
+        //test
+        TestObject.initializeMethod()
         return true
     }
     

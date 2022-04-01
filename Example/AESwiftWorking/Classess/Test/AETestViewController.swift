@@ -79,101 +79,101 @@ class AETestViewController: HomeViewController {
         print(count)
     }
 
-    func test2() {
-        // MARK: - 推荐后面两种写法：
-        //❌
-        for subView in view.subviews {
-            if let button = subView as? UIButton {
-                //不可描述的事情
-            }
-        }
-
-        //✅
-        for case let button as UIButton in view.subviews {
-            //不可描述的事情
-        }
-
-        //✅
-        for button in view.subviews where button is UIButton {
-            //不可描述的事情
-        }
-        
-        // MARK: - for 循环，要拿到下标值
-        //❌
-        var index: Int = 0
-        for subView in view.subviews {
-            //不可描述的事情
-            index += 1
-        }
-
-        //✅
-        for index in 0..<view.subviews.count {
-            let subView = view.subviews[index]
-            //不可描述的事情
-        }
-
-        //✅
-        //index 和 subView 在循环体中都能使用到
-        for (index, subView) in view.subviews.enumerated() {
-            //不可描述的事情
-        }
-
-        //只用到 index
-        for (index, _) in view.subviews.enumerated() {
-            //不可描述的事情
-        }
-
-        //只用到 subView
-        for (_, subView) in view.subviews.enumerated() {
-            //不可描述的事情
-        }
-        
-        // MARK: - filter 是 Swift 中几个高级函数之一，过滤集合中的元素时非常的好用
-        let article1 = ArticleModel(title: "11", content: "内容1", articleID: "11111", comments: [])
-
-        let article2 = ArticleModel(title: "11", content: "内容2", articleID: "22222", comments: [])
-
-        let article3 = ArticleModel(title: "33", content: "内容3", articleID: "3333", comments: [])
-
-        let articles = [article1, article2, article3]
-
-        //❌
-        if let article = articles.filter({ $0.articleID == "11111" }).first {
-            print("\(article.title)-\(article.content)-\(article.articleID)")
-        }
-
-        //✅
-        if let article = articles.first(where: {$0.articleID == "11111"}) {
-            print("\(article.title)-\(article.content)-\(article.articleID)")    //11-内容1-11111
-        }
-        
-        // MARK: - contains(where: )
-        //❌
-        if !articles.filter({ $0.articleID == "11111" }).isEmpty {
-            //不可描述的事情
-        }
-
-        //✅
-        if articles.contains(where: { $0.articleID == "11111"}) {
-            //不可描述的事情
-        }
-        
-        // MARK: - 当循环体内的逻辑比较简单时，forEach 往往比 for...in...来的更加简洁：
-        func removeArticleBy(ID: String) {
-            //删库跑路
-        }
-
-        //❌
-        for article in articles {
-            removeArticleBy(ID: $0.articleID)
-        }
-
-        //✅
-        articles.forEach { removeArticleBy(ID: $0.articleID) }
-        
-        
-        //
-    }
+//    func test2() {
+//        // MARK: - 推荐后面两种写法：
+//        //❌
+//        for subView in view.subviews {
+//            if let button = subView as? UIButton {
+//                //不可描述的事情
+//            }
+//        }
+//
+//        //✅
+//        for case let button as UIButton in view.subviews {
+//            //不可描述的事情
+//        }
+//
+//        //✅
+//        for button in view.subviews where button is UIButton {
+//            //不可描述的事情
+//        }
+//
+//        // MARK: - for 循环，要拿到下标值
+//        //❌
+//        var index: Int = 0
+//        for subView in view.subviews {
+//            //不可描述的事情
+//            index += 1
+//        }
+//
+//        //✅
+//        for index in 0..<view.subviews.count {
+//            let subView = view.subviews[index]
+//            //不可描述的事情
+//        }
+//
+//        //✅
+//        //index 和 subView 在循环体中都能使用到
+//        for (index, subView) in view.subviews.enumerated() {
+//            //不可描述的事情
+//        }
+//
+//        //只用到 index
+//        for (index, _) in view.subviews.enumerated() {
+//            //不可描述的事情
+//        }
+//
+//        //只用到 subView
+//        for (_, subView) in view.subviews.enumerated() {
+//            //不可描述的事情
+//        }
+//
+//        // MARK: - filter 是 Swift 中几个高级函数之一，过滤集合中的元素时非常的好用
+//        let article1 = ArticleModel(title: "11", content: "内容1", articleID: "11111", comments: [])
+//
+//        let article2 = ArticleModel(title: "11", content: "内容2", articleID: "22222", comments: [])
+//
+//        let article3 = ArticleModel(title: "33", content: "内容3", articleID: "3333", comments: [])
+//
+//        let articles = [article1, article2, article3]
+//
+//        //❌
+//        if let article = articles.filter({ $0.articleID == "11111" }).first {
+//            print("\(article.title)-\(article.content)-\(article.articleID)")
+//        }
+//
+//        //✅
+//        if let article = articles.first(where: {$0.articleID == "11111"}) {
+//            print("\(article.title)-\(article.content)-\(article.articleID)")    //11-内容1-11111
+//        }
+//
+//        // MARK: - contains(where: )
+//        //❌
+//        if !articles.filter({ $0.articleID == "11111" }).isEmpty {
+//            //不可描述的事情
+//        }
+//
+//        //✅
+//        if articles.contains(where: { $0.articleID == "11111"}) {
+//            //不可描述的事情
+//        }
+//
+//        // MARK: - 当循环体内的逻辑比较简单时，forEach 往往比 for...in...来的更加简洁：
+//        func removeArticleBy(ID: String) {
+//            //删库跑路
+//        }
+//
+//        //❌
+//        for article in articles {
+//            removeArticleBy(ID: $0.articleID)
+//        }
+//
+//        //✅
+//        articles.forEach { removeArticleBy(ID: $0.articleID) }
+//
+//
+//        //
+//    }
 }
 // MARK: - 计算属性 vs 方法 我们知道计算属性本身不存储数据，而是在 get 中返回计算后的值，在 set 中设置其他属性的值，所以和方法很类似，但比方法更简洁。一起来看下面的示例：
 //❌
@@ -189,6 +189,7 @@ class AETestViewController: HomeViewController {
 extension Date {
     func formattedString() -> String {
         //不可描述的事情
+        return ""
     }
 }
 

@@ -38,6 +38,13 @@ class HomeViewController: AEBaseTableViewController {
         let dec1 = NSDecimalNumber.init(string: "0.56789")
         let float = Float("0.56789")!
         print("\(dec) \n\(dec1)\n\(float)\n\(Int.max)\n\(Int.min)")
+        
+        /// test method change
+        let Vc = TestObject()
+        Vc.myMethod(name: "中国", age: 5000)
+        
+        let a = TestFunc()
+        a.method2()
     }
 
 }
