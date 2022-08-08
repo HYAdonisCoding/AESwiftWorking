@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+target 'AESwiftWorking_Example' do
+  pod 'AESwiftWorking', :path => '../'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'RxSwift', '~> 6.1.0'
+  pod 'RxCocoa', '~> 6.1.0'
+  
+  pod 'CryptoSwift', '~> 1.3.8'
+  #pod 'SwiftyFORM', '~> 1.8.6'# 需要ios 12.0
+  pod 'XLForm', '~> 4.3.0'
+  pod 'SwiftForms', '~> 1.8.2'
+  pod 'EmptyDataSet-Swift', '~> 5.0.0'
+  #消息提示
+  #pod 'SwiftMessages', '~> 9.0.3'
+  pod 'PKHUD', '~> 5.3.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.6'
+  pod 'Charts'
+
+  target 'AESwiftWorking_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

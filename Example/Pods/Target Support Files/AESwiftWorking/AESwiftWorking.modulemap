@@ -1,0 +1,6 @@
+framework module AESwiftWorking {
+  umbrella header "AESwiftWorking-umbrella.h"
+
+  export *
+  module * { export * }
+}
