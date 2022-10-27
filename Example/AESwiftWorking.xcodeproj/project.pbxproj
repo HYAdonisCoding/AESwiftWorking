@@ -31,6 +31,7 @@
 		6640EB89261FE35200256DC4 /* AEBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB88261FE35200256DC4 /* AEBaseModel.swift */; };
 		6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */; };
 		6640EB932620439200256DC4 /* AEFormPickerTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640EB922620439200256DC4 /* AEFormPickerTCell.swift */; };
+		6649DF9F28BF0B260026BAE0 /* TestRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649DF9E28BF0B260026BAE0 /* TestRxSwiftViewController.swift */; };
 		664F8808261C5535001BE1A9 /* AEArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F8807261C5535001BE1A9 /* AEArcView.swift */; };
 		6658D0842735116D00FBFC5B /* AECustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658D0832735116D00FBFC5B /* AECustomButton.swift */; };
 		6658D086273512B500FBFC5B /* AETestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658D085273512B500FBFC5B /* AETestViewController.swift */; };
@@ -56,6 +57,7 @@
 		668B75BE263A4D61003A70B7 /* AEAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B75BD263A4D61003A70B7 /* AEAnalysisViewController.swift */; };
 		668C11062637E762002E98DD /* AEReceiveMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */; };
 		668C110C2637FFE7002E98DD /* AEGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */; };
+		6690166528CB29B7007673DF /* HybridHandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690166428CB29B7007673DF /* HybridHandleViewController.swift */; };
 		669056CE2638F62B000046F1 /* AEMessageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056CD2638F62B000046F1 /* AEMessageTCell.swift */; };
 		669056D32638F89D000046F1 /* AEDraftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056D22638F89D000046F1 /* AEDraftsViewController.swift */; };
 		669056D92638F8AE000046F1 /* AEDraftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669056D82638F8AE000046F1 /* AEDraftDetailViewController.swift */; };
@@ -71,6 +73,9 @@
 		66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66933318261D816E0064608F /* AEXLFormViewController.swift */; };
 		6697D411272792AF0010E03D /* AEGradientAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697D410272792AF0010E03D /* AEGradientAnimationViewController.swift */; };
 		669DFE3828A396BC00DCD866 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DFE3728A396BC00DCD866 /* Circle.swift */; };
+		66B9E28728CB1A4F00632E90 /* HybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B9E28628CB1A4F00632E90 /* HybridViewController.swift */; };
+		66B9E28928CB1B8F00632E90 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 66B9E28828CB1B8F00632E90 /* index.html */; };
+		66B9E28B28CB1C4D00632E90 /* bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 66B9E28A28CB1C4D00632E90 /* bridge.js */; };
 		66C04AEA27F6A38A0065D25F /* ExchangeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C04AE927F6A38A0065D25F /* ExchangeMethod.swift */; };
 		66C2326528A4DF4B006C1265 /* AEPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C2326428A4DF4B006C1265 /* AEPerson.m */; };
 		66C2326728A4E4AF006C1265 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2326628A4E4AF006C1265 /* Car.swift */; };
@@ -159,6 +164,7 @@
 		6640EB88261FE35200256DC4 /* AEBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseModel.swift; sourceTree = "<group>"; };
 		6640EB8D262036AF00256DC4 /* AEFormBaseTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormBaseTCell.swift; sourceTree = "<group>"; };
 		6640EB922620439200256DC4 /* AEFormPickerTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormPickerTCell.swift; sourceTree = "<group>"; };
+		6649DF9E28BF0B260026BAE0 /* TestRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRxSwiftViewController.swift; sourceTree = "<group>"; };
 		664F8807261C5535001BE1A9 /* AEArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArcView.swift; sourceTree = "<group>"; };
 		6658D0832735116D00FBFC5B /* AECustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECustomButton.swift; sourceTree = "<group>"; };
 		6658D085273512B500FBFC5B /* AETestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AETestViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 		668B75BD263A4D61003A70B7 /* AEAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEAnalysisViewController.swift; sourceTree = "<group>"; };
 		668C11052637E762002E98DD /* AEReceiveMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEReceiveMessagesViewController.swift; sourceTree = "<group>"; };
 		668C110B2637FFE7002E98DD /* AEGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEGroupHeaderView.swift; sourceTree = "<group>"; };
+		6690166428CB29B7007673DF /* HybridHandleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridHandleViewController.swift; sourceTree = "<group>"; };
 		669056CD2638F62B000046F1 /* AEMessageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMessageTCell.swift; sourceTree = "<group>"; };
 		669056D22638F89D000046F1 /* AEDraftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDraftsViewController.swift; sourceTree = "<group>"; };
 		669056D82638F8AE000046F1 /* AEDraftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDraftDetailViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +206,9 @@
 		66933318261D816E0064608F /* AEXLFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEXLFormViewController.swift; sourceTree = "<group>"; };
 		6697D410272792AF0010E03D /* AEGradientAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEGradientAnimationViewController.swift; sourceTree = "<group>"; };
 		669DFE3728A396BC00DCD866 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		66B9E28628CB1A4F00632E90 /* HybridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridViewController.swift; sourceTree = "<group>"; };
+		66B9E28828CB1B8F00632E90 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		66B9E28A28CB1C4D00632E90 /* bridge.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = bridge.js; sourceTree = "<group>"; };
 		66C04AE927F6A38A0065D25F /* ExchangeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeMethod.swift; sourceTree = "<group>"; };
 		66C2326228A4DF4B006C1265 /* AESwiftWorking_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AESwiftWorking_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		66C2326328A4DF4B006C1265 /* AEPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPerson.h; sourceTree = "<group>"; };
@@ -565,8 +575,20 @@
 				66C2326428A4DF4B006C1265 /* AEPerson.m */,
 				66C2326228A4DF4B006C1265 /* AESwiftWorking_Example-Bridging-Header.h */,
 				66CD430628B793600067E2C6 /* SwiftBasics1.swift */,
+				6649DF9E28BF0B260026BAE0 /* TestRxSwiftViewController.swift */,
 			);
 			path = SwiftBasics;
+			sourceTree = "<group>";
+		};
+		66B9E28528CB1A1200632E90 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				66B9E28628CB1A4F00632E90 /* HybridViewController.swift */,
+				6690166428CB29B7007673DF /* HybridHandleViewController.swift */,
+				66B9E28828CB1B8F00632E90 /* index.html */,
+				66B9E28A28CB1C4D00632E90 /* bridge.js */,
+			);
+			path = Hybrid;
 			sourceTree = "<group>";
 		};
 		66C04AE827F6A3500065D25F /* Extension */ = {
@@ -580,6 +602,7 @@
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				66B9E28528CB1A1200632E90 /* Hybrid */,
 				669DFE3628A3968B00DCD866 /* SwiftBasics */,
 				6658D087273512BB00FBFC5B /* Test */,
 				6697D40F272792400010E03D /* GradientBasicAnimation */,
@@ -731,16 +754,16 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AE;
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 53VUVA3CT9;
+						DevelopmentTeam = N2KQ965WEJ;
 						LastSwiftMigration = 1340;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -775,10 +798,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B9E28928CB1B8F00632E90 /* index.html in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				66D9A2B9262ECB9200CA53C5 /* location.txt in Resources */,
+				66B9E28B28CB1C4D00632E90 /* bridge.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +848,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-AESwiftWorking_Example/Pods-AESwiftWorking_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AESwiftWorking/AESwiftWorking.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -838,6 +864,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AESwiftWorking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -914,6 +941,7 @@
 				607FACD81AFB9204008FA782 /* AEViewController.swift in Sources */,
 				66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */,
 				66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */,
+				6690166528CB29B7007673DF /* HybridHandleViewController.swift in Sources */,
 				6690576226395E84000046F1 /* ICSingleButtonTCell.swift in Sources */,
 				66C5EB5A2612B2FF00375131 /* BaseViewController.swift in Sources */,
 				6690576126395E84000046F1 /* ICSimpleTCell.swift in Sources */,
@@ -940,6 +968,7 @@
 				661EF47526286486009E7037 /* MonthView.swift in Sources */,
 				661EF47426286486009E7037 /* CalenderView.swift in Sources */,
 				66C5EB942612BEDA00375131 /* AEEmptyViewController.swift in Sources */,
+				6649DF9F28BF0B260026BAE0 /* TestRxSwiftViewController.swift in Sources */,
 				666ABEC0272A70A5006CDAC4 /* AEProgressView.swift in Sources */,
 				666ABEBE272A3175006CDAC4 /* AEProgressBarViewController.swift in Sources */,
 				66D9A2CD2630042400CA53C5 /* AEDictionaryExtension.swift in Sources */,
@@ -968,6 +997,7 @@
 				668C110C2637FFE7002E98DD /* AEGroupHeaderView.swift in Sources */,
 				6640EB8E262036AF00256DC4 /* AEFormBaseTCell.swift in Sources */,
 				669056CE2638F62B000046F1 /* AEMessageTCell.swift in Sources */,
+				66B9E28728CB1A4F00632E90 /* HybridViewController.swift in Sources */,
 				669DFE3828A396BC00DCD866 /* Circle.swift in Sources */,
 				669056D32638F89D000046F1 /* AEDraftsViewController.swift in Sources */,
 				6690576726395EB6000046F1 /* ICAppManager.swift in Sources */,
@@ -1131,17 +1161,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 53VUVA3CT9;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2KQ965WEJ;
 				INFOPLIST_FILE = AESwiftWorking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D OTHER";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cebbank.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hongyang.adam.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "ccccfk-test-development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST";
 				SWIFT_OBJC_BRIDGING_HEADER = "AESwiftWorking/Classess/SwiftBasics/AESwiftWorking_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1156,16 +1186,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 53VUVA3CT9;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2KQ965WEJ;
 				INFOPLIST_FILE = AESwiftWorking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cebbank.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hongyang.adam.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "ccccfk-test-development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AESwiftWorking/Classess/SwiftBasics/AESwiftWorking_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

@@ -14,7 +14,10 @@ class HomeViewController: AEBaseTableViewController {
     override func configEvent() {
         super.configEvent()
         
-        dataArray = ["AETestViewController",
+        dataArray = ["HybridHandleViewController",
+                     "HybridViewController",
+                     "TestRxSwiftViewController",
+                     "AETestViewController",
                      "AEProgressBarViewController",
                      "AEGradientAnimationViewController",
                      "AEChartsTableViewController",

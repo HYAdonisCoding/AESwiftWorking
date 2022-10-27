@@ -3,6 +3,7 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - CocoaAsyncSocket (7.6.5)
   - CryptoSwift (1.3.8)
   - EmptyDataSet-Swift (5.0.0)
   - IQKeyboardManagerSwift (6.5.6)
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - AESwiftWorking (from `../`)
   - Charts
+  - CocoaAsyncSocket
   - CryptoSwift (~> 1.3.8)
   - EmptyDataSet-Swift (~> 5.0.0)
   - IQKeyboardManagerSwift (~> 6.5.6)
@@ -33,6 +35,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Charts
+    - CocoaAsyncSocket
     - CryptoSwift
     - EmptyDataSet-Swift
     - IQKeyboardManagerSwift
@@ -51,6 +54,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AESwiftWorking: 93d01c6b157fde832c562c165482317dcb3286ba
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: 01b0f0cba1d5c212e5a335ff6c054fb75a204f00
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -62,6 +66,6 @@ SPEC CHECKSUMS:
   SwiftForms: f0d4d30401e21de87d9b7b63a4691a3d4e22bab5
   XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: e80fd2d5b100ee8b51e1bc446c42e50404600315
+PODFILE CHECKSUM: a8b4118c1942fcd34438a1c8109c65ab27ea3c37
 
 COCOAPODS: 1.11.0
