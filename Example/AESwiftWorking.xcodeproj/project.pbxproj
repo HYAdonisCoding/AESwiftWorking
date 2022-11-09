@@ -602,6 +602,7 @@
 		66C5EB4C2612B2FF00375131 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				66C7B3F5291B4B3000C797C2 /* Network */,
 				66B9E28528CB1A1200632E90 /* Hybrid */,
 				669DFE3628A3968B00DCD866 /* SwiftBasics */,
 				6658D087273512BB00FBFC5B /* Test */,
@@ -668,6 +669,13 @@
 				66C5EBA12612C49D00375131 /* AEEmptyTool.swift */,
 			);
 			path = Empty;
+			sourceTree = "<group>";
+		};
+		66C7B3F5291B4B3000C797C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		66D9A289262E66C800CA53C5 /* View */ = {
@@ -847,6 +855,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AESwiftWorking_Example/Pods-AESwiftWorking_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AESwiftWorking/AESwiftWorking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
@@ -863,6 +872,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AESwiftWorking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",

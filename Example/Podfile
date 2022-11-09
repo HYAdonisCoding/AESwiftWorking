@@ -3,6 +3,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'AESwiftWorking_Example' do
+  pod 'Alamofire', '~> 5.5.0'
   pod 'AESwiftWorking', :path => '../'
   pod 'SnapKit', '~> 5.0.1'
   pod 'RxSwift', '~> 6.1.0'

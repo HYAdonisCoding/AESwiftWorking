@@ -75,7 +75,7 @@ extension HybridHandleViewController: WKNavigationDelegate {
         decisionHandler(.allow)
     }
     // MARK: - 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
-    webView(<#T##WKWebView#>, didReceive: <#T##URLAuthenticationChallenge#>, completionHandler: <#T##(URLSession.AuthChallengeDisposition, URLCredential?) -> Void#>)
+    
     
     // MARK: - 接收到服务器跳转请求即服务重定向时之后调用
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
