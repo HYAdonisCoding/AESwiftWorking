@@ -35,7 +35,7 @@ class HybridHandleViewController: BaseViewController {
         //创建webView
         webView =  WKWebView.init(frame: self.view.bounds, configuration: config)
         //导航代理
-//        webView?.navigationDelegate = self
+        webView?.navigationDelegate = self
         //交互代理
         webView?.uiDelegate = self
         //加载网页
@@ -65,22 +65,23 @@ extension HybridHandleViewController: WKURLSchemeHandler {
     }
     
     
-    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        
-    }
 }
 
 extension HybridHandleViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        decisionHandler(.allow)
+    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
     }
-    // MARK: - 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
     
-    
-    // MARK: - 接收到服务器跳转请求即服务重定向时之后调用
-    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-        debugPrintLog(webView)
-    }
+//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+//        decisionHandler(.allow)
+//    }
+//    // MARK: - 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
+//
+//
+//    // MARK: - 接收到服务器跳转请求即服务重定向时之后调用
+//    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+//        debugPrintLog(webView)
+//    }
     // MARK: - 页面开始加载时调用
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         

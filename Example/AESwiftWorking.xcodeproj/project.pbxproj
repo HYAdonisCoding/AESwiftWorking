@@ -106,6 +106,7 @@
 		66C5EBD726130E8500375131 /* AEBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */; };
 		66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDA2613147900375131 /* AECollectionReusableView.swift */; };
 		66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDE2613158D00375131 /* AECHeaderView.swift */; };
+		66C7B3FA291B4EAC00C797C2 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */; };
 		66CD430728B793600067E2C6 /* SwiftBasics1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD430628B793600067E2C6 /* SwiftBasics1.swift */; };
 		66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */; };
 		66D9A28B262E671E00CA53C5 /* AEFormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */; };
@@ -241,6 +242,7 @@
 		66C5EBD626130E8500375131 /* AEBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEBaseTableViewController.swift; sourceTree = "<group>"; };
 		66C5EBDA2613147900375131 /* AECollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECollectionReusableView.swift; sourceTree = "<group>"; };
 		66C5EBDE2613158D00375131 /* AECHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECHeaderView.swift; sourceTree = "<group>"; };
+		66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		66CD430628B793600067E2C6 /* SwiftBasics1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasics1.swift; sourceTree = "<group>"; };
 		66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSingleChoiceTCell.swift; sourceTree = "<group>"; };
 		66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 		66C7B3F5291B4B3000C797C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -970,6 +973,7 @@
 				6685A9382626DD8000EE4E44 /* ICBaseViewController.swift in Sources */,
 				668C11062637E762002E98DD /* AEReceiveMessagesViewController.swift in Sources */,
 				66C5EBB1261307E800375131 /* AEBaseCollectionViewController.swift in Sources */,
+				66C7B3FA291B4EAC00C797C2 /* StudentsViewController.swift in Sources */,
 				6681A0C1265E244900259066 /* AEChartsTableViewController.swift in Sources */,
 				66933319261D816E0064608F /* AEXLFormViewController.swift in Sources */,
 				669056D92638F8AE000046F1 /* AEDraftDetailViewController.swift in Sources */,
@@ -1170,6 +1174,7 @@
 			baseConfigurationReference = C2B43565FBC8CA809E9E070F /* Pods-AESwiftWorking_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1195,6 +1200,7 @@
 			baseConfigurationReference = BBE0985A24174740A64C40E4 /* Pods-AESwiftWorking_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

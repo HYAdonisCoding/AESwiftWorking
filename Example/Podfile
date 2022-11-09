@@ -20,7 +20,7 @@ target 'AESwiftWorking_Example' do
   #pod 'SwiftMessages', '~> 9.0.3'
   pod 'PKHUD', '~> 5.3.0'
   pod 'IQKeyboardManagerSwift', '~> 6.5.6'
-  pod 'Charts'
+  pod 'Charts', '~> 3.6.0'
 
   target 'AESwiftWorking_Tests' do
     inherit! :search_paths
