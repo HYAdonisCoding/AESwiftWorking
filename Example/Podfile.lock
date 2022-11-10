@@ -8,6 +8,7 @@ PODS:
   - CryptoSwift (1.3.8)
   - EmptyDataSet-Swift (5.0.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - KakaJSON (1.1.2)
   - PKHUD (5.3.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
@@ -17,6 +18,7 @@ PODS:
   - RxSwift (6.1.0)
   - SnapKit (5.0.1)
   - SwiftForms (1.8.2)
+  - SwiftyJSON (5.0.1)
   - XLForm (4.3.0)
 
 DEPENDENCIES:
@@ -27,11 +29,13 @@ DEPENDENCIES:
   - CryptoSwift (~> 1.3.8)
   - EmptyDataSet-Swift (~> 5.0.0)
   - IQKeyboardManagerSwift (~> 6.5.6)
+  - KakaJSON (~> 1.1.2)
   - PKHUD (~> 5.3.0)
   - RxCocoa (~> 6.1.0)
   - RxSwift (~> 6.1.0)
   - SnapKit (~> 5.0.1)
   - SwiftForms (~> 1.8.2)
+  - SwiftyJSON
   - XLForm (~> 4.3.0)
 
 SPEC REPOS:
@@ -42,12 +46,14 @@ SPEC REPOS:
     - CryptoSwift
     - EmptyDataSet-Swift
     - IQKeyboardManagerSwift
+    - KakaJSON
     - PKHUD
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftForms
+    - SwiftyJSON
     - XLForm
 
 EXTERNAL SOURCES:
@@ -62,14 +68,16 @@ SPEC CHECKSUMS:
   CryptoSwift: 01b0f0cba1d5c212e5a335ff6c054fb75a204f00
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftForms: f0d4d30401e21de87d9b7b63a4691a3d4e22bab5
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: 6b60be04e3390344c294aa7adcfad257e90777df
+PODFILE CHECKSUM: ad3e98a9d1b4f5cd07aa7c4b49d6a9b404b16cc3
 
 COCOAPODS: 1.11.0

@@ -107,6 +107,8 @@
 		66C5EBDB2613147900375131 /* AECollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDA2613147900375131 /* AECollectionReusableView.swift */; };
 		66C5EBDF2613158D00375131 /* AECHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EBDE2613158D00375131 /* AECHeaderView.swift */; };
 		66C7B3FA291B4EAC00C797C2 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */; };
+		66C7B3FC291B81B200C797C2 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7B3FB291B81B200C797C2 /* StudentModel.swift */; };
+		66C7B3FF291B85D700C797C2 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7B3FE291B85D700C797C2 /* NetAPIManager.swift */; };
 		66CD430728B793600067E2C6 /* SwiftBasics1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD430628B793600067E2C6 /* SwiftBasics1.swift */; };
 		66D9A286262E625500CA53C5 /* AEFormSingleChoiceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */; };
 		66D9A28B262E671E00CA53C5 /* AEFormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */; };
@@ -243,6 +245,8 @@
 		66C5EBDA2613147900375131 /* AECollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECollectionReusableView.swift; sourceTree = "<group>"; };
 		66C5EBDE2613158D00375131 /* AECHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECHeaderView.swift; sourceTree = "<group>"; };
 		66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		66C7B3FB291B81B200C797C2 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
+		66C7B3FE291B85D700C797C2 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		66CD430628B793600067E2C6 /* SwiftBasics1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasics1.swift; sourceTree = "<group>"; };
 		66D9A285262E625500CA53C5 /* AEFormSingleChoiceTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSingleChoiceTCell.swift; sourceTree = "<group>"; };
 		66D9A28A262E671E00CA53C5 /* AEFormSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFormSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -676,9 +680,19 @@
 		66C7B3F5291B4B3000C797C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				66C7B3FD291B85B900C797C2 /* Manager */,
 				66C7B3F9291B4EAC00C797C2 /* StudentsViewController.swift */,
+				66C7B3FB291B81B200C797C2 /* StudentModel.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		66C7B3FD291B85B900C797C2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				66C7B3FE291B85D700C797C2 /* NetAPIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		66D9A289262E66C800CA53C5 /* View */ = {
@@ -864,12 +878,14 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KakaJSON/KakaJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftForms/SwiftForms.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -881,12 +897,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KakaJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftForms.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -961,6 +979,7 @@
 				6690576026395E84000046F1 /* ICShowInfoModel.swift in Sources */,
 				66361CE0262592BB009FA1C2 /* AEEmptyDataSetTViewController.swift in Sources */,
 				660936E526350DC800A5EA23 /* AEEventViewController.swift in Sources */,
+				66C7B3FF291B85D700C797C2 /* NetAPIManager.swift in Sources */,
 				66D9A2B7262ECB9200CA53C5 /* AddressCell.swift in Sources */,
 				66C2326528A4DF4B006C1265 /* AEPerson.m in Sources */,
 				6685A9392626DD8000EE4E44 /* ICBaseCollectionViewCell.swift in Sources */,
@@ -1022,6 +1041,7 @@
 				6658D086273512B500FBFC5B /* AETestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AEAppDelegate.swift in Sources */,
 				66CD430728B793600067E2C6 /* SwiftBasics1.swift in Sources */,
+				66C7B3FC291B81B200C797C2 /* StudentModel.swift in Sources */,
 				6664E2B226296E7A0094D0CE /* ICButtonExtension.swift in Sources */,
 				669332A7261D440A0064608F /* AEFormViewController.swift in Sources */,
 				6690576326395E84000046F1 /* ICShowInfoTCell.swift in Sources */,

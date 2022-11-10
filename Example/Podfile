@@ -4,6 +4,9 @@ use_frameworks!
 
 target 'AESwiftWorking_Example' do
   pod 'Alamofire', '~> 5.5.0'
+#  pod 'Moya', '~> 15.0'
+  pod 'KakaJSON', '~> 1.1.2'
+  pod 'SwiftyJSON', '~> 5.0.1'
   pod 'AESwiftWorking', :path => '../'
   pod 'SnapKit', '~> 5.0.1'
   pod 'RxSwift', '~> 6.1.0'
